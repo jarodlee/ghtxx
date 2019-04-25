@@ -1,4 +1,4 @@
-// JavaScript Document
+//   google-analytics 和版权相关说明，再加上国内的cnzz统计
 <p>
       <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
