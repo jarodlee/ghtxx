@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 面向对象的编程 / 继承 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第11章 面向对象的编程</th>
+<tr>
+<th width="20%" align="left"><a href="http://www.byteofpython.info/language/chinese/ch10s06.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">继承</span></th>
+<th align="right"><a href="ch11s08.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>继承</h1>
+<p>面向对象的编程带来的主要好处之一是代码的<strong>重用</strong>，实现这种重用的方法之一是通过 <dfn>继承</dfn> 机制。继承完全可以理解成类之间的 <dfn>类型和子类型</dfn> 关系。</p>
+<p>假设你想要写一个程序来记录学校之中的教师和学生情况。他们有一些共同属性，比如姓名、年龄和地址。他们也有专有的属性，比如教师的薪水、课程和假期，学生的成绩和学费。</p>
+<p>你可以为教师和学生建立两个独立的类来处理它们，但是这样做的话，如果要增加一个新的共有属性，就意味着要在这两个独立的类中都增加这个属性。这很快就会显得不实用。</p>
+<p>一个比较好的方法是创建一个共同的类称为<code>SchoolMember</code>然后让教师和学生的类 <dfn>继承</dfn> 这个共同的类。即它们都是这个类型（类）的子类型，然后我们再为这些子类型添加专有的属性。</p>
+<p>使用这种方法有很多优点。如果我们增加/改变了<code>SchoolMember</code>中的任何功能，它会自动地反映到子类型之中。例如，你要为教师和学生都增加一个新的身份证域，那么你只需简单地把它加到<code>SchoolMember</code>类中。然而，在一个子类型之中做的改动不会影响到别的子类型。另外一个优点是你可以把教师和学生对象都作为<code>SchoolMember</code>对象来使用，这在某些场合特别有用，比如统计学校成员的人数。一个子类型在任何需要父类型的场合可以被替换成父类型，即对象可以被视作是父类的实例，这种现象被称为<strong>多态现象</strong>。</p>
+<p>另外，我们会发现在 <dfn>重用</dfn> 父类的代码的时候，我们无需在不同的类中重复它。而如果我们使用独立的类的话，我们就不得不这么做了。</p>
+<p>在上述的场合中，<code>SchoolMember</code>类被称为 <dfn>基本类</dfn> 或 <dfn>超类</dfn> 。而<code>Teacher</code>和<code>Student</code>类被称为 <dfn>导出类</dfn> 或 <dfn>子类</dfn> 。</p>
+<p>现在，我们将学习一个例子程序。</p>
+
+<h2><a name="using">使用继承</a></h2>
+<p class="exampletitle"><a name="e115">例11.5 使用继承</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: inherit.py</code><br>
+<br>
+<code class="key">class </code><code class="func">SchoolMember</code><code>:</code><br>
+<code class="cite">&nbsp;&nbsp;&nbsp;&nbsp;'''Represents any school member.'''</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;def </code><code class="func">__init__</code><code>(self, name, age):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.name = name<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.age = age</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'(Initialized SchoolMember: %s)' </code><code>% self.name</code><br>
+<br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;def </code><code class="func">tell</code><code>(self):</code><br>
+<code class="cite">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''Tell my details.'''</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'Name:"%s" Age:"%s"' </code><code>% (self.name, self.age),</code><br>
+<br>
+<code class="key">class </code><code class="func">Teacher</code><code>(SchoolMember):</code><br>
+<code class="cite">&nbsp;&nbsp;&nbsp;&nbsp;'''Represents a teacher.'''</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;def </code><code class="func">__init__</code><code>(self, name, age, salary):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SchoolMember.__init__(self, name, age)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.salary = salary</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'(Initialized Teacher: %s)' </code><code>% self.name</code><br>
+<br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;def </code><code class="func">tell</code><code>(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SchoolMember.tell(self)</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'Salary: "%d"' </code><code>% self.salary</code><br>
+<br>
+<code class="key">class </code><code class="func">Student</code><code>(SchoolMember):</code><br>
+<code class="cite">&nbsp;&nbsp;&nbsp;&nbsp;'''Represents a student.'''</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;def </code><code class="func">__init__</code><code>(self, name, age, marks):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SchoolMember.__init__(self, name, age)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.marks = marks</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'(Initialized Student: %s)' </code><code>% self.name</code><br>
+<br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;def </code><code class="func">tell</code><code>(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SchoolMember.tell(self)</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'Marks: "%d"' </code><code>% self.marks<br>
+<br>
+t = Teacher(</code><code class="cite">'Mrs. Shrividya'</code><code>, </code><code class="cite">40</code><code>, </code><code class="cite">30000</code><code>)<br>
+s = Student(</code><code class="cite">'Swaroop'</code><code>, </code><code class="cite">22</code><code>, </code><code class="cite">75</code><code>)</code><br>
+<br>
+<code class="key">print </code><code class="comment"># prints a blank line</code><br>
+<br>
+<code>members = [t, s]</code><br>
+<code class="key">for </code><code>member </code><code class="key">in </code><code>members:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;member.tell() </code><code class="comment"># works for both Teachers and Students</code>
+</p>
+<p>（源文件：<a href="code/inherit.py">code/inherit.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python inherit.py<br>
+(Initialized SchoolMember: Mrs. Shrividya)<br>
+(Initialized Teacher: Mrs. Shrividya)<br>
+(Initialized SchoolMember: Swaroop)<br>
+(Initialized Student: Swaroop)<br>
+<br>
+Name:"Mrs. Shrividya" Age:"40" Salary: "30000"<br>
+Name:"Swaroop" Age:"22" Marks: "75"
+</code></p>
+
+<h2>它如何工作</h2>
+<p>为了使用继承，我们把基本类的名称作为一个元组跟在定义类时的类名称之后。然后，我们注意到基本类的<code>__init__</code>方法专门使用<code>self</code>变量调用，这样我们就可以初始化对象的基本类部分。这一点十分重要——Python不会自动调用基本类的constructor，你得亲自专门调用它。</p>
+<p>我们还观察到我们在方法调用之前加上类名称前缀，然后把<code>self</code>变量及其他参数传递给它。</p>
+<p>注意，在我们使用<code>SchoolMember</code>类的<code>tell</code>方法的时候，我们把<code>Teacher</code>和<code>Student</code>的实例仅仅作为<code>SchoolMember</code>的实例。</p>
+<p>另外，在这个例子中，我们调用了子类型的<code>tell</code>方法，而不是<code>SchoolMember</code>类的<code>tell</code>方法。可以这样来理解，Python总是首先查找对应类型的方法，在这个例子中就是如此。如果它不能在导出类中找到对应的方法，它才开始到基本类中逐个查找。基本类是在类定义的时候，在元组之中指明的。</p>
+<p>一个术语的注释——如果在继承元组中列了一个以上的类，那么它就被称作 <dfn>多重继承</dfn> 。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch11s06.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch11.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch11s08.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">类与对象的变量</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">概括</th>
+</tr>
+</table>
+
+</body>
+</html>

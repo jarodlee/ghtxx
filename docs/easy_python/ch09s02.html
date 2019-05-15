@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 数据结构 / 列表 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第9章 数据结构</th>
+<tr>
+<th width="20%" align="left"><a href="ch09.html#s01">上一页</a></th>
+<th width="60%" align="center"><span class="header2">列表</span></th>
+<th align="right"><a href="ch09s03.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>列表</h1>
+<p><code>list</code>是处理一组有序项目的数据结构，即你可以在一个列表中存储一个 <dfn>序列</dfn> 的项目。假想你有一个购物列表，上面记载着你要买的东西，你就容易理解列表了。只不过在你的购物表上，可能每样东西都独自占有一行，而在Python中，你在每个项目之间用逗号分割。</p>
+<p>列表中的项目应该包括在方括号中，这样Python就知道你是在指明一个列表。一旦你创建了一个列表，你可以添加、删除或是搜索列表中的项目。由于你可以增加或删除项目，我们说列表是 <dfn>可变的</dfn> 数据类型，即这种类型是可以被改变的。</p>
+
+<h2><a name="quick">对象与类的快速入门</a></h2>
+<p>尽管我一直推迟讨论对象和类，但是现在对它们做一点解释可以使你更好的理解列表。我们会在相应的<a href="ch11.html">章节</a>详细探索这个主题。</p>
+<p>列表是使用对象和类的一个例子。当你使用变量<code>i</code>并给它赋值的时候，比如赋整数<code>5</code>，你可以认为你创建了一个<strong>类</strong>（类型）<code>int</code>的<strong>对象</strong>（实例）<code>i</code>。事实上，你可以看一下<code>help(int)</code>以更好地理解这一点。</p>
+<p>类也有<strong>方法</strong>，即仅仅为类而定义地函数。仅仅在你有一个该类的对象的时候，你才可以使用这些功能。例如，Python为<code>list</code>类提供了<code>append</code>方法，这个方法让你在列表尾添加一个项目。例如<code>mylist.append('an item')</code>列表<code>mylist</code>中增加那个字符串。注意，使用点号来使用对象的方法。</p>
+<p>一个类也有<strong>域</strong>，它是仅仅为类而定义的变量。仅仅在你有一个该类的对象的时候，你才可以使用这些变量/名称。类也通过点号使用，例如<code>mylist.field</code>。</p>
+
+<h2><a name="using">使用列表</a></h2>
+<p class="exampletitle"><a name="e91">例9.1 使用列表</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: using_list.py<br>
+<br>
+# This is my shopping list</code><br>
+<code>shoplist = [</code><code class="cite">'apple'</code><code>, </code><code class="cite">'mango'</code><code>, </code><code class="cite">'carrot'</code><code>, </code><code class="cite">'banana'</code><code>]</code><br>
+<br>
+<code class="key">print </code><code class="cite">'I have'</code><code>, </code><code class="func">len</code><code>(shoplist),</code><code class="cite">'items to purchase.'</code><br>
+<br>
+<code class="key">print </code><code class="cite">'These items are:'</code><code>, </code><code class="comment"># Notice the comma at end of the line</code><br>
+<code class="key">for </code><code>item </code><code class="key">in </code><code>shoplist:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;print </code><code>item,</code><br>
+<br>
+<code class="key">print </code><code class="cite">'\nI also have to buy rice.'</code><br>
+<code>shoplist.append(</code><code class="cite">'rice'</code><code>)</code><br>
+<code class="key">print </code><code class="cite">'My shopping list is now'</code><code>, shoplist</code><br>
+<br>
+<code class="key">print </code><code class="cite">'I will sort my list now'</code><br>
+<code>shoplist.sort()</code><br>
+<code class="key">print </code><code class="cite">'Sorted shopping list is'</code><code>, shoplist</code><br>
+<br>
+<code class="key">print </code><code class="cite">'The first item I will buy is'</code><code>, shoplist[</code><code class="cite">0</code><code>]</code><br>
+<code>olditem = shoplist[</code><code class="cite">0</code><code>]</code><br>
+<code class="key">del </code><code>shoplist[</code><code class="cite">0</code><code>]</code><br>
+<code class="key">print </code><code class="cite">'I bought the'</code><code>, olditem</code><br>
+<code class="key">print </code><code class="cite">'My shopping list is now'</code><code>, shoplist
+</code>
+</p>
+<p>（源文件：<a href="code/using_list.py">code/using_list.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python using_list.py<br>
+I have 4 items to purchase.<br>
+These items are: apple mango carrot banana<br>
+I also have to buy rice.<br>
+My shopping list is now ['apple', 'mango', 'carrot', 'banana', 'rice']<br>
+I will sort my list now<br>
+Sorted shopping list is ['apple', 'banana', 'carrot', 'mango', 'rice']<br>
+The first item I will buy is apple<br>
+I bought the apple<br>
+My shopping list is now ['banana', 'carrot', 'mango', 'rice']
+</code></p>
+
+<h2>它如何工作</h2>
+<p>变量<code>shoplist</code>是某人的购物列表。在<code>shoplist</code>中，我们只存储购买的东西的名字字符串，但是记住，你可以在列表中添加 <dfn>任何种类的对象</dfn> 包括数甚至其他列表。</p>
+<p>我们也使用了<code>for..in</code>循环在列表中各项目间递归。从现在开始，你一定已经意识到列表也是一个序列。序列的特性会在后面的<a href="ch09s05.html">章节</a>中讨论。</p>
+<p>注意，我们在<code>print</code>语句的结尾使用了一个 <dfn>逗号</dfn> 来消除每个<code>print</code>语句自动打印的换行符。这样做有点难看，不过确实简单有效。</p>
+<p>接下来，我们使用<code>append</code>方法在列表中添加了一个项目，就如前面已经讨论过的一样。然后我们通过打印列表的内容来检验这个项目是否确实被添加进列表了。打印列表只需简单地把列表传递给<code>print</code>语句，我们可以得到一个整洁的输出。</p>
+<p>再接下来，我们使用列表的<code>sort</code>方法来对列表排序。需要理解的是，这个方法影响列表本身，而不是返回一个修改后的列表——这与字符串工作的方法不同。这就是我们所说的列表是 <dfn>可变的</dfn> 而字符串是 <dfn>不可变的</dfn> 。</p>
+<p>最后，但我们完成了在市场购买一样东西的时候，我们想要把它从列表中删除。我们使用<code>del</code>语句来完成这个工作。这里，我们指出我们想要删除列表中的哪个项目，而<code>del</code>语句为我们从列表中删除它。我们指明我们想要删除列表中的第一个元素，因此我们使用<code>del shoplist[0]</code>（记住，Python从0开始计数）。</p>
+<p>如果你想要知道列表对象定义的所有方法，可以通过<code>help(list)</code>获得完整的知识。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch09.html#s01">上一页</a></th>
+<th width="60%" align="center"><a href="ch09.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch09s03.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">简介</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">元组</th>
+</tr>
+</table>
+
+</body>
+</html>

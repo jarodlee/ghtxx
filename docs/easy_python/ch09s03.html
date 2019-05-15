@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 数据结构 / 元组 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第9章 数据结构</th>
+<tr>
+<th width="20%" align="left"><a href="ch09s02.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">元组</span></th>
+<th align="right"><a href="ch09s04.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>元组</h1>
+<p>元组和列表十分类似，只不过元组和字符串一样是 <dfn>不可变的</dfn> 即你不能修改元组。元组通过圆括号中用逗号分割的项目定义。元组通常用在使语句或用户定义的函数能够安全地采用一组值的时候，即被使用的元组的值不会改变。</p>
+
+<h2><a name="using">使用元组</a></h2>
+<p class="exampletitle"><a name="e92">例9.2 使用元组</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: using_tuple.py</code><br>
+<br>
+<code>zoo = (</code><code class="cite">'wolf'</code><code>, </code><code class="cite">'elephant'</code><code>, </code><code class="cite">'penguin'</code><code>)</code><br>
+<code class="key">print </code><code class="cite">'Number of animals in the zoo is'</code><code>, </code><code class="func">len</code><code>(zoo)</code><br>
+<br>
+<code>new_zoo = (</code><code class="cite">'monkey'</code><code>, </code><code class="cite">'dolphin'</code><code>, zoo)</code><br>
+<code class="key">print </code><code class="cite">'Number of animals in the new zoo is'</code><code>, </code><code class="func">len</code><code>(new_zoo)</code><br>
+<code class="key">print </code><code class="cite">'All animals in new zoo are'</code><code>, new_zoo</code><br>
+<code class="key">print </code><code class="cite">'Animals brought from old zoo are'</code><code>, new_zoo[</code><code class="cite">2</code><code>]</code><br>
+<code class="key">print </code><code class="cite">'Last animal brought from old zoo is'</code><code>, new_zoo[</code><code class="cite">2</code><code>][</code><code class="cite">2</code><code>]</code>
+</p>
+<p>（源文件：<a href="code/using_tuple.py">code/using_tuple.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python using_tuple.py<br>
+Number of animals in the zoo is 3<br>
+Number of animals in the new zoo is 3<br>
+All animals in new zoo are ('monkey', 'dolphin', ('wolf', 'elephant', 'penguin'))<br>
+Animals brought from old zoo are ('wolf', 'elephant', 'penguin')<br>
+Last animal brought from old zoo is penguin
+</code></p>
+
+<h2>它如何工作</h2>
+<p>变量<code>zoo</code>是一个元组，我们看到<code>len</code>函数可以用来获取元组的长度。这也表明元组也是一个<a href="ch09s05.html">序列</a>。</p>
+<p>由于老动物园关闭了，我们把动物转移到新动物园。因此，<code>new_zoo</code>元组包含了一些已经在那里的动物和从老动物园带过来的动物。回到话题，注意元组之内的元组不会失去它的身份。</p>
+<p>我们可以通过一对方括号来指明某个项目的位置从而来访问元组中的项目，就像我们对列表的用法一样。这被称作 <dfn>索引</dfn> 运算符。我们使用<code>new_zoo[2]</code>来访问<code>new_zoo</code>中的第三个项目。我们使用<code>new_zoo[2][2]</code>来访问<code>new_zoo</code>元组的第三个项目的第三个项目。</p>
+<p><strong>含有0个或1个项目的元组。</strong>一个空的元组由一对空的圆括号组成，如<code>myempty = ()</code>。然而，含有单个元素的元组就不那么简单了。你必须在第一个（唯一一个）项目后跟一个逗号，这样Python才能区分元组和表达式中一个带圆括号的对象。即如果你想要的是一个包含项目<code>2</code>的元组的时候，你应该指明<code>singleton = (2 , )</code>。</p>
+
+<p class="notebox">
+<span class="boxtitle">给Perl程序员的注释</span><br>
+列表之中的列表不会失去它的身份，即列表不会像Perl中那样被打散。同样元组中的元组，或列表中的元组，或元组中的列表等等都是如此。只要是Python，它们就只是使用另一个对象存储的对象。
+</p>
+
+<h2><a name="tuples">元组与打印语句</a></h2>
+<p>元组最通常的用法是用在打印语句中，下面是一个例子：</p>
+
+<p class="exampletitle"><a name="e93">例9.3 使用元组输出</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: print_tuple.py</code><br>
+<br>
+<code>age = </code><code class="cite">22</code><br>
+<code>name = </code><code class="cite">'Swaroop'</code><br>
+<br>
+<code class="key">print </code><code class="cite">'%s is %d years old' </code><code>% (name, age)</code><br>
+<code class="key">print </code><code class="cite">'Why is %s playing with that python?' </code><code>% name</code>
+</p>
+<p>（源文件：<a href="code/print_tuple.py">code/print_tuple.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python print_tuple.py<br>
+Swaroop is 22 years old<br>
+Why is Swaroop playing with that python?
+</code></p>
+
+<h2>它如何工作</h2>
+
+<p><code>print</code>语句可以使用跟着<code>%</code>符号的项目元组的字符串。这些字符串具备定制的功能。定制让输出满足某种特定的格式。定制可以是<code>%s</code>表示字符串或<code>%d</code>表示整数。元组必须按照相同的顺序来对应这些定制。</p>
+<p>观察我们使用的第一个元组，我们首先使用<code>%s</code>，这对应变量<code>name</code>，它是元组中的第一个项目。而第二个定制是<code>%d</code>，它对应元组的第二个项目<code>age</code>。</p>
+<p>Python在这里所做的是把元组中的每个项目转换成字符串并且用字符串的值替换定制的位置。因此<code>%s</code>被替换为变量<code>name</code>的值，依此类推。</p>
+<p><code>print</code>的这个用法使得编写输出变得极其简单，它避免了许多字符串操作。它也避免了我们一直以来使用的逗号。</p>
+<p>在大多数时候，你可以只使用<code>%s</code>定制，而让Python来提你处理剩余的事情。这种方法对数同样奏效。然而，你可能希望使用正确的定制，从而可以避免多一层的检验程序是否正确。</p>
+<p>在第二个<code>print</code>语句中，我们使用了一个定制，后面跟着<code>%</code>符号后的单个项目——没有圆括号。这只在字符串中只有一个定制的时候有效。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch09s02.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch09.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch09s04.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">列表</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">字典</th>
+</tr>
+</table>
+
+</body>
+</html>

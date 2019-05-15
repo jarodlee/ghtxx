@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+/*@import url(stylesheet/box.css);*/
+-->
+</style>
+<title>简明 Python 教程 / 运算符与表达式 / 运算符优先级 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第5章 运算符与表达式</th>
+<tr>
+<th width="20%" align="left"><a href="ch05s02.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">运算符优先级</span></th>
+<th align="right"><a href="ch05s04.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>运算符优先级</h1>
+<p>如果你有一个如<code>2 + 3 * 4</code>那样的表达式，是先做加法呢，还是先做乘法？我们的中学数学告诉我们应当先做乘法——这意味着乘法运算符的优先级高于加法运算符。</p>
+<p>下面这个表给出Python的运算符优先级，从最低的优先级（最松散地结合）到最高的优先级（最紧密地结合）。这意味着在一个表达式中，Python会首先计算表中较下面的运算符，然后在计算列在表上部的运算符。</p>
+<p>下面这张表（与Python参考手册中的那个表一模一样）已经顾及了完整的需要。事实上，我建议你使用圆括号来分组运算符和操作数，以便能够明确地指出运算的先后顺序，使程序尽可能地易读。例如，<code>2 + (3 * 4)</code>显然比<code>2 + 3 * 4</code>清晰。与此同时，圆括号也应该正确使用，而不应该用得过滥（比如<code>2 + (3 + 4)</code>）。</p>
+
+<p class="exampletitle"><a name="t52">表5.2 运算符优先级</a></p>
+<table width="40%" border="1">
+<tr>
+<th width="50%" align="center">运算符</th>
+<th width="50%" align="center">描述</th>
+</tr>
+<tr>
+<td>lambda</td>
+<td>Lambda表达式</td>
+</tr>
+<tr>
+<td>or</td>
+<td>布尔“或”</td>
+</tr>
+<tr>
+<td>and</td>
+<td>布尔“与”</td>
+</tr>
+<tr>
+<td>not x</td>
+<td>布尔“非”</td>
+</tr>
+<tr>
+<td>in，not in</td>
+<td>成员测试</td>
+</tr>
+<tr>
+<td>is，is not</td>
+<td>同一性测试</td>
+</tr>
+<tr>
+<td>&lt;，&lt;=，&gt;，&gt;=，!=，==</td>
+<td>比较</td>
+</tr>
+<tr>
+<td>|</td>
+<td>按位或</td>
+</tr>
+<tr>
+<td>^</td>
+<td>按位异或</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>按位与</td>
+</tr>
+<tr>
+<td>&lt;&lt;，&gt;&gt;</td>
+<td>移位</td>
+</tr>
+<tr>
+<td>+，-</td>
+<td>加法与减法</td>
+</tr>
+<tr>
+<td>*，/，%</td>
+<td>乘法、除法与取余</td>
+</tr>
+<tr>
+<td>+x，-x</td>
+<td>正负号</td>
+</tr>
+<tr>
+<td>~x</td>
+<td>按位翻转</td>
+</tr>
+<tr>
+<td>**</td>
+<td>指数</td>
+</tr>
+<tr>
+<td>x.attribute</td>
+<td>属性参考</td>
+</tr>
+<tr>
+<td>x[index]</td>
+<td>下标</td>
+</tr>
+<tr>
+<td>x[index:index]</td>
+<td>寻址段</td>
+</tr>
+<tr>
+<td>f(arguments...)</td>
+<td>函数调用</td>
+</tr>
+<tr>
+<td>(experession,...)</td>
+<td>绑定或元组显示</td>
+</tr>
+<tr>
+<td>[expression,...]</td>
+<td>列表显示</td>
+</tr>
+<tr>
+<td>{key:datum,...}</td>
+<td>字典显示</td>
+</tr>
+<tr>
+<td>'expression,...'</td>
+<td>字符串转换</td>
+</tr>
+</table>
+
+<p>其中我们还没有接触过的运算符将在后面的章节中介绍。</p>
+<p>在表中列在同一行的运算符具有 <dfn>相同优先级</dfn> 。例如，<code>+</code>和<code>-</code>有相同的优先级。</p>
+
+<h2><a name="order">计算顺序</a></h2>
+<p>默认地，运算符优先级表决定了哪个运算符在别的运算符之前计算。然而，如果你想要改变它们的计算顺序，你得使用圆括号。例如，你想要在一个表达式中让加法在乘法之前计算，那么你就得写成类似<code>(2 + 3) * 4</code>的样子。</p>
+
+<h2><a name="associativity">结合规律</a></h2>
+<p>运算符通常由左向右结合，即具有相同优先级的运算符按照从左向右的顺序计算。例如，<code>2 + 3 + 4</code>被计算成<code>(2 + 3) + 4</code>。一些如赋值运算符那样的运算符是由右向左结合的，即<code>a = b = c</code>被处理为<code>a = (b = c)</code>。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch05s02.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch05.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch05s04.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">运算符</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">表达式</th>
+</tr>
+</table>
+
+</body>
+</html>

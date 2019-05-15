@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 更多Python的内容 / 在函数中接收元组和列表 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第15章 更多Python的内容</th>
+<tr>
+<th width="20%" align="left"><a href="ch15s03.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">在函数中接收元组和列表</span></th>
+<th align="right"><a href="ch15s05.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>在函数中接收元组和列表</h1>
+<p>当要使函数接收元组或字典形式的参数的时候，有一种特殊的方法，它分别使用<code>*</code>和<code>**</code>前缀。这种方法在函数需要获取可变数量的参数的时候特别有用。</p>
+
+<p class="codebox"><code>
+&gt;&gt;&gt; def powersum(power, *args):<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''Return the sum of each argument raised to specified power.'''<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total = 0<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for i in args:<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total += pow(i, power)<br>
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return total<br>
+...<br>
+&gt;&gt;&gt; powersum(2, 3, 4)<br>
+25<br>
+<br>
+&gt;&gt;&gt; powersum(2, 10)<br>
+100
+</code></p>
+
+<p>由于在<code>args</code>变量前有<code>*</code>前缀，所有多余的函数参数都会作为一个元组存储在<code>args</code>中。如果使用的是<code>**</code>前缀，多余的参数则会被认为是一个字典的键/值对。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch15s03.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch15.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch15s05.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">列表综合</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">lambda形式</th>
+</tr>
+</table>
+
+</body>
+</html>

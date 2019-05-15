@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+/*@import url(stylesheet/box.css);*/
+-->
+</style>
+<title>简明 Python 教程 / 解决问题——编写一个Python脚本 / 问题 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第10章 解决问题——编写一个Python脚本</th>
+<tr>
+<th width="20%" align="left"><a href="ch09s08.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">问题</span></th>
+<th align="right"><a href="ch10s02.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>第10章 解决问题——编写一个Python脚本</h1>
+<p><strong>目录表</strong></p>
+<dl>
+<dt><a href="ch10.html#s01">问题</a></dt>
+<dt><a href="ch10s02.html">解决方案</a></dt>
+<dd><a href="ch10s02.html#first">版本一</a></dd>
+<dd><a href="ch10s02.html#second">版本二</a></dd>
+<dd><a href="ch10s02.html#third">版本三</a></dd>
+<dd><a href="ch10s02.html#fourth">版本四</a></dd>
+<dd><a href="ch10s02.html#more">进一步优化</a></dd>
+<dt><a href="ch10s03.html">软件开发过程</a></dt>
+<dt><a href="ch10s04.html">概括</a></dt>
+</dl>
+
+<p>我们已经研究了Python语言的众多内容，现在我们将来学习一下怎么把这些内容结合起来。我们将设计编写一个能够 <dfn>做</dfn> 一些确实有用的事情的程序。</p>
+
+<h1><a name="s01">问题</a></h1>
+
+<p>我提出的问题是： <dfn>我想要一个可以为我的所有重要文件创建备份的程序。</dfn></p>
+<p>尽管这是一个简单的问题，但是问题本身并没有给我们足够的信息来解决它。进一步的<strong>分析</strong>是必需的。例如，我们如何确定该备份哪些文件？备份保存在哪里？我们怎么样存储备份？</p>
+<p>在恰当地分析了这个问题之后，我们开始<strong>设计</strong>我们的程序。我们列了一张表，表示我们的程序应该如何工作。对于这个问题，我已经创建了下面这个列表以说明 <dfn>我</dfn> 如何让它工作。如果是你设计的话，你可能不会这样来解决问题——每个人都有其做事的方法，这很正常。</p>
+
+<ol>
+<li><p>需要备份的文件和目录由一个列表指定。</p></li>
+<li><p>备份应该保存在主备份目录中。</p></li>
+<li><p>文件备份成一个zip文件。</p></li>
+<li><p>zip存档的名称是当前的日期和时间。</p></li>
+<li><p>我们使用标准的<strong>zip</strong>命令，它通常默认地随Linux/Unix发行版提供。Windows用户可以使用Info-Zip程序。注意你可以使用任何地存档命令，只要它有命令行界面就可以了，那样的话我们可以从我们的脚本中传递参数给它。</p></li>
+</ol>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch09s08.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch10.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch10s02.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">概括</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">解决方案</th>
+</tr>
+</table>
+
+</body>
+</html>

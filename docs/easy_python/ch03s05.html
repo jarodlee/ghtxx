@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 最初的步骤 / 可执行的Python程序 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第3章 最初的步骤</th>
+<tr>
+<th width="20%" align="left"><a href="ch03s04.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">可执行的Python程序</span></th>
+<th align="right"><a href="ch03s06.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>可执行的Python程序</h1>
+
+<p>这部分内容只对Linux/Unix用户适用，不过Windows用户可能也对程序的第一行比较好奇。首先我们需要通过<strong>chmod</strong>命令，给程序可执行的许可，然后 <dfn>运行</dfn> 程序。</p>
+
+<p class="codebox">
+<code>$ chmod a+x helloworld.py<br>
+$ ./helloworld.py<br>
+Hello World</code>
+</p>
+
+<p>chmod命令用来 <dfn>改变</dfn> 文件的 <dfn>模式</dfn> ，给系统中所有用户这个源文件的执行许可。然后我们可以直接通过指定源文件的位置来执行程序。我们使用./来指示程序位于当前目录。</p>
+<p>为了更加有趣一些，你可以把你的文件名改成仅仅<code>helloworld</code>，然后运行<strong>./helloworld</strong>。这样，这个程序仍然可以工作，因为系统知道它必须用源文件第一行指定的那个解释器来运行程序。</p>
+<p>只要知道程序的确切位置，你现在就可以运行程序了——但是如果你希望你的程序能够从各个位置运行呢？那样的话，你可以把你的程序保存在PATH环境变量中的目录之一。每当你运行任何程序，系统会查找列在PATH环境变量中的各个目录。然后运行那个程序。你只要简单地把这个源文件复制到PATH所列目录之一就可以使你的程序在任何位置都可用了。</p>
+
+<p class="codebox">
+<code>$ echo $PATH<br>
+/opt/mono/bin/:/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin:/home/swaroop/bin<br>
+$ cp helloworld.py /home/swaroop/bin/helloworld<br>
+$ helloworld<br>
+Hello World</code>
+</p>
+
+<p>我们能够用<strong>echo</strong>命令来显示PATH变量，用$给变量名加前缀以向shell表示我们需要这个变量的值。我们看到<code>/home/swaroop/bin</code>是PATH变量中的目录之一。<strong>swaroop</strong>是我的系统中使用的用户名。通常，在你的系统中也会有一个相似的目录。你也可以把你选择的目录添加到PATH变量中去——这可以通过运行<strong>PATH=$PATH:/home/swaroop/mydir</strong>完成，其中“<code>/home/swaroop/mydir</code>”是我想要添加到PATH变量中的目录。</p>
+<p>当你想要在任何时间、任何地方运行你的程序的时候，这个方法十分有用。它就好像创造你自己的指令，如同<strong>cd</strong>或其他Linux终端或DOS提示符命令那样。</p>
+
+<p class="notebox">
+<span class="boxtitle">提示</span><br>
+对于Python来说，程序、脚本或者软件都是指同一个东西。
+</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch03s04.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch03.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch03s06.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">使用源文件</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">获取帮助</th>
+</tr>
+</table>
+
+</body>
+</html>

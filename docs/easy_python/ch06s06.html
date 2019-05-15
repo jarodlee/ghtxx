@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 控制流 / continue语句 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第6章 控制流</th>
+<tr>
+<th width="20%" align="left"><a href="ch06s05.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">continue语句</span></th>
+<th align="right"><a href="ch06s07.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>continue语句</h1>
+<p><code>continue</code>语句被用来告诉Python跳过当前循环块中的剩余语句，然后 <dfn>继续</dfn> 进行下一轮循环。</p>
+<h2><a name="using">使用continue语句</a></h2>
+<p class="exampletitle"><a name="e65">例6.5 使用continue语句</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: continue.py</code><br>
+<br>
+<code class="key">while </code><code class="func">True</code><code>:</code><br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;s = </code><code class="func">raw_input</code><code>(</code><code class="cite">'Enter something : '</code><code>)</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;if </code><code>s == </code><code class="cite">'quit'</code><code>:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;if </code><code class="func">len</code><code>(s) &lt; </code><code class="cite">3</code><code>:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'Input is of sufficient length'</code><br>
+<code class="comment">&nbsp;&nbsp;&nbsp;&nbsp;# Do other kinds of processing here...</code>
+</p>
+<p>（源文件：<a href="code/continue.py">code/continue.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python continue.py<br>
+Enter something : a<br>
+Enter something : 12<br>
+Enter something : abc<br>
+Input is of sufficient length<br>
+Enter something : quit
+</code></p>
+
+<h2>它如何工作</h2>
+<p>在这个程序中，我们从用户处取得输入，但是我们仅仅当它们有至少3个字符长的时候才处理它们。所以，我们使用内建的<code>len</code>函数来取得长度。如果长度小于3，我们将使用<code>continue</code>语句忽略块中的剩余的语句。否则，这个循环中的剩余语句将被执行，我们可以在这里做我们希望的任何处理。</p>
+<p>注意，<code>continue</code>语句对于<code>for</code>循环也有效。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch06s05.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch06.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch06s07.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">break语句</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">概括</th>
+</tr>
+</table>
+
+</body>
+</html>

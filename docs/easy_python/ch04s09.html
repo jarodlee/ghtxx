@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 基本概念 / 缩进 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第4章 基本概念</th>
+<tr>
+<th width="20%" align="left"><a href="ch04s08.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">缩进</span></th>
+<th align="right"><a href="ch04s10.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>缩进</h1>
+<p>空白在Python中是重要的。事实上<strong>行首的空白是重要的</strong>。它称为<strong>缩进</strong>。在逻辑行首的空白（空格和制表符）用来决定逻辑行的缩进层次，从而用来决定语句的分组。</p>
+<p>这意味着同一层次的语句<strong>必须</strong>有相同的缩进。每一组这样的语句称为一个<strong>块</strong>。我们将在后面的章节中看到有关块的用处的例子。</p>
+<p>你需要记住的一样东西是错误的缩进会引发错误。例如：</p>
+
+<p class="filebox">
+<code>i = </code><code class="cite">5</code><br>
+&nbsp;<code class="key">print </code><code class="cite">'Value is'</code><code>, i </code><code class="comment"># Error! Notice a single space at the start of the line</code><br>
+<code class="key">print </code><code class="cite">'I repeat, the value is'</code><code>, i</code>
+</p>
+
+<p>当你运行这个程序的时候，你会得到下面的错误：</p>
+
+<p class="codebox"><code>
+&nbsp;&nbsp;File "whitespace.py", line 4<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print 'Value is', i # Error! Notice a single space at the start of the line<br>
+&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+SyntaxError: invalid syntax
+</code></p>
+
+<p>注意，在第二行的行首有一个空格。Python指示的这个错误告诉我们程序的语法是无效的，即程序没有正确地编写。它告诉你， <dfn>你不能随意地开始新的语句块</dfn> （当然除了你一直在使用的主块）。何时你能够使用新块，将会在后面的章节，如<a href="ch06.html">控制流</a>中详细介绍。</p>
+
+<p class="notebox">
+<span class="boxtitle">如何缩进</span><br>
+<strong>不要</strong>混合使用制表符和空格来缩进，因为这在跨越不同的平台的时候，无法正常工作。我 <dfn>强烈建议</dfn> 你在每个缩进层次使用 <dfn>单个制表符</dfn> 或 <dfn>两个或四个空格</dfn> 。<br>
+选择这三种缩进风格之一。更加重要的是，选择一种风格，然后<strong>一贯地</strong>使用它，即 <dfn>只</dfn> 使用这一种风格。
+</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch04s08.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch04.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch04s10.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">逻辑行与物理行</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">概括</th>
+</tr>
+</table>
+
+</body>
+</html>

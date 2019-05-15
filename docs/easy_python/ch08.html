@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 模块 / 简介 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第8章 模块</th>
+<tr>
+<th width="20%" align="left"><a href="ch07s08.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">简介</span></th>
+<th align="right"><a href="ch08s02.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>第8章 模块</h1>
+<p><strong>目录表</strong></p>
+<dl>
+<dt><a href="ch08.html#s01">简介</a></dt>
+<dd><a href="ch08.html#using">使用sys模块</a></dd>
+<dt><a href="ch08s02.html">字节编译的.pyc文件</a></dt>
+<dt><a href="ch08s03.html">from..import语句</a></dt>
+<dt><a href="ch08s04.html">模块的__name__</a></dt>
+<dd><a href="ch08s04.html#using">使用模块的__name__</a></dd>
+<dt><a href="ch08s05.html">制造你自己的模块</a></dt>
+<dd><a href="ch08s05.html#creating">创建你自己的模块</a></dd>
+<dd><a href="ch08s05.html#from">from..import</a></dd>
+<dt><a href="ch08s06.html">dir()函数</a></dt>
+<dd><a href="ch08s06.html#using">使用dir函数</a></dd>
+<dt><a href="ch08s07.html">概括</a></dt>
+</dl>
+
+<h1><a name="s01">简介</a></h1>
+<p>你已经学习了如何在你的程序中定义一次函数而重用代码。如果你想要在其他程序中重用很多函数，那么你该如何编写程序呢？你可能已经猜到了，答案是使用模块。模块基本上就是一个包含了所有你定义的函数和变量的文件。为了在其他程序中重用模块，模块的文件名<strong>必须</strong>以<code>.py</code>为扩展名。</p>
+<p>模块可以从其他程序 <dfn>输入</dfn> 以便利用它的功能。这也是我们使用Python标准库的方法。首先，我们将学习如何使用标准库模块。</p>
+
+<h2><a name="using">使用sys模块</a></h2>
+<p class="exampletitle"><a name="e81">例8.1 使用sys模块</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: using_sys.py</code><br>
+<br>
+<code class="key">import </code><code class="func">sys</code><br>
+<br>
+<code class="key">print </code><code class="cite">'The command line arguments are:'</code><br>
+<code class="key">for </code><code>i </code><code class="key">in </code><code class="func">sys</code><code>.argv:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;print </code><code>i</code><br>
+<br>
+<code class="key">print </code><code class="cite">'\n\nThe PYTHONPATH is'</code><code>, </code><code class="func">sys</code><code>.path, </code><code class="cite">'\n'</code>
+</p>
+<p>（源文件：<a href="code/using_sys.py">code/using_sys.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python using_sys.py we are arguments<br>
+The command line arguments are:<br>
+using_sys.py<br>
+we<br>
+are<br>
+arguments<br>
+<br>
+<br>
+The PYTHONPATH is ['/home/swaroop/byte/code', '/usr/lib/python23.zip',<br>
+'/usr/lib/python2.3', '/usr/lib/python2.3/plat-linux2',<br>
+'/usr/lib/python2.3/lib-tk', '/usr/lib/python2.3/lib-dynload',<br>
+'/usr/lib/python2.3/site-packages', '/usr/lib/python2.3/site-packages/gtk-2.0']</code></p>
+
+<h2>它如何工作</h2>
+<p>首先，我们利用<code>import</code>语句 <dfn>输入</dfn> <code>sys</code>模块。基本上，这句语句告诉Python，我们想要使用这个模块。<code>sys</code>模块包含了与Python解释器和它的环境有关的函数。</p>
+<p>当Python执行<code>import sys</code>语句的时候，它在<code>sys.path</code>变量中所列目录中寻找<code>sys.py</code>模块。如果找到了这个文件，这个模块的主块中的语句将被运行，然后这个模块将能够被你 <dfn>使用</dfn> 。注意，初始化过程仅在我们 <dfn>第一次</dfn> 输入模块的时候进行。另外，“sys”是“system”的缩写。</p>
+<p><code>sys</code>模块中的<code>argv</code>变量通过使用点号指明——<code>sys.argv</code>——这种方法的一个优势是这个名称不会与任何在你的程序中使用的<code>argv</code>变量冲突。另外，它也清晰地表明了这个名称是<code>sys</code>模块的一部分。</p>
+<p><code>sys.argv</code>变量是一个字符串的 <dfn>列表</dfn> （列表会在后面的<a href="ch09s02.html">章节</a>详细解释）。特别地，<code>sys.argv</code>包含了 <dfn>命令行参数</dfn> 的列表，即使用命令行传递给你的程序的参数。</p>
+<p>如果你使用IDE编写运行这些程序，请在菜单里寻找一个指定程序的命令行参数的方法。</p>
+<p>这里，当我们执行<code>python using_sys.py we are arguments</code>的时候，我们使用<strong>python</strong>命令运行<code>using_sys.py</code>模块，后面跟着的内容被作为参数传递给程序。Python为我们把它存储在<code>sys.argv</code>变量中。</p>
+<p>记住，脚本的名称总是<code>sys.argv</code>列表的第一个参数。所以，在这里，<code>'using_sys.py'</code>是<code>sys.argv[0]</code>、<code>'we'</code>是<code>sys.argv[1]</code>、<code>'are'</code>是<code>sys.argv[2]</code>以及<code>'arguments'</code>是<code>sys.argv[3]</code>。注意，Python从0开始计数，而非从1开始。</p>
+<p><code>sys.path</code>包含输入模块的目录名列表。我们可以观察到<code>sys.path</code>的第一个字符串是空的——这个空的字符串表示当前目录也是<code>sys.path</code>的一部分，这与<code>PYTHONPATH</code>环境变量是相同的。这意味着你可以直接输入位于当前目录的模块。否则，你得把你的模块放在<code>sys.path</code>所列的目录之一。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch07s08.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch08.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch08s02.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">概括</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">字节编译的.pyc文件</th>
+</tr>
+</table>
+
+</body>
+</html>

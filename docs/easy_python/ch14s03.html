@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / Python标准库 / os模块 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第14章 Python标准库</th>
+<tr>
+<th width="20%" align="left"><a href="ch14s02.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">os模块</span></th>
+<th align="right"><a href="ch14s04.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>os模块</h1>
+<p>这个模块包含普遍的操作系统功能。如果你希望你的程序能够与平台无关的话，这个模块是尤为重要的。即它允许一个程序在编写后不需要任何改动，也不会发生任何问题，就可以在Linux和Windows下运行。一个例子就是使用<code>os.sep</code>可以取代操作系统特定的路径分割符。</p>
+<p>下面列出了一些在<code>os</code>模块中比较有用的部分。它们中的大多数都简单明了。</p>
+
+<ul>
+<li><p><code>os.name</code>字符串指示你正在使用的平台。比如对于Windows，它是<code>'nt'</code>，而对于Linux/Unix用户，它是<code>'posix'</code>。</p></li>
+<li><p><code>os.getcwd()</code>函数得到当前工作目录，即当前Python脚本工作的目录路径。</p></li>
+<li><p><code>os.getenv()</code>和<code>os.putenv()</code>函数分别用来读取和设置环境变量。</p></li>
+<li><p><code>os.listdir()</code>返回指定目录下的所有文件和目录名。</p></li>
+<li><p><code>os.remove()</code>函数用来删除一个文件。</p></li>
+<li><p><code>os.system()</code>函数用来运行shell命令。</p></li>
+<li><p><code>os.linesep</code>字符串给出当前平台使用的行终止符。例如，Windows使用<code>'\r\n'</code>，Linux使用<code>'\n'</code>而Mac使用<code>'\r'</code>。</p></li>
+<li><p><code>os.path.split()</code>函数返回一个路径的目录名和文件名。</p>
+<p class="codebox"><code>
+&gt;&gt;&gt; os.path.split('/home/swaroop/byte/code/poem.txt')<br>
+('/home/swaroop/byte/code', 'poem.txt')
+</code></p></li>
+<li><p><code>os.path.isfile()</code>和<code>os.path.isdir()</code>函数分别检验给出的路径是一个文件还是目录。类似地，<code>os.path.existe()</code>函数用来检验给出的路径是否真地存在。</p></li>
+</ul>
+<p>你可以利用Python标准文档去探索更多有关这些函数和变量的详细知识。你也可以使用<code>help(sys)</code>等等。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch14s02.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch14.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch14s04.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">sys模块</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">概括</th>
+</tr>
+</table>
+
+</body>
+</html>

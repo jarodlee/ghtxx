@@ -1,0 +1,26 @@
+.titlebox {
+background-color:#FBF8D2;
+border:thin solid #000000;
+text-align:center;
+}
+
+.notebox {
+margin: 0em 3em;
+background-color:#E1E4FB;
+border:thin solid #000000;
+padding:5px 1em 5px 1em;
+}
+
+.codebox {
+margin: 0em 3em;
+background-color:#FEECE0;
+border:thin solid #000000;
+padding:5px 1em 5px 1em;
+}
+
+.filebox {
+margin: 0em 3em;
+background-color:#FBF8D2;
+border:thin solid #000000;
+padding:5px 1em 5px 1em;
+}

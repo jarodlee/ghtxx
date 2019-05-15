@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 模块 / dir()函数 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第8章 模块</th>
+<tr>
+<th width="20%" align="left"><a href="ch08s05.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">dir()函数</span></th>
+<th align="right"><a href="ch08s07.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>dir()函数</h1>
+<p>你可以使用内建的<code>dir</code>函数来列出模块定义的标识符。标识符有函数、类和变量。</p>
+<p>当你为<code>dir()</code>提供一个模块名的时候，它返回模块定义的名称列表。如果不提供参数，它返回当前模块中定义的名称列表。</p>
+
+<h2><a name="using">使用dir函数</a></h2>
+<p class="exampletitle"><a name="e84">例8.4 使用dir函数</a></p>
+<p class="codebox"><code>
+$ python<br>
+&gt;&gt;&gt; import sys<br>
+&gt;&gt;&gt; dir(sys) # get list of attributes for sys module<br>
+['__displayhook__', '__doc__', '__excepthook__', '__name__', '__stderr__',<br>
+'__stdin__', '__stdout__', '_getframe', 'api_version', 'argv',<br>
+'builtin_module_names', 'byteorder', 'call_tracing', 'callstats',<br>
+'copyright', 'displayhook', 'exc_clear', 'exc_info', 'exc_type',<br>
+'excepthook', 'exec_prefix', 'executable', 'exit', 'getcheckinterval',<br>
+'getdefaultencoding', 'getdlopenflags', 'getfilesystemencoding',<br>
+'getrecursionlimit', 'getrefcount', 'hexversion', 'maxint', 'maxunicode',<br>
+'meta_path','modules', 'path', 'path_hooks', 'path_importer_cache',<br>
+'platform', 'prefix', 'ps1', 'ps2', 'setcheckinterval', 'setdlopenflags',<br>
+'setprofile', 'setrecursionlimit', 'settrace', 'stderr', 'stdin', 'stdout',<br>
+'version', 'version_info', 'warnoptions']<br>
+&gt;&gt;&gt; dir() # get list of attributes for current module<br>
+['__builtins__', '__doc__', '__name__', 'sys']<br>
+&gt;&gt;&gt;<br>
+&gt;&gt;&gt; a = 5 # create a new variable 'a'<br>
+&gt;&gt;&gt; dir()<br>
+['__builtins__', '__doc__', '__name__', 'a', 'sys']<br>
+&gt;&gt;&gt;<br>
+&gt;&gt;&gt; del a # delete/remove a name<br>
+&gt;&gt;&gt;<br>
+&gt;&gt;&gt; dir()<br>
+['__builtins__', '__doc__', '__name__', 'sys']<br>
+&gt;&gt;&gt;
+</code></p>
+
+<h2>它如何工作</h2>
+<p>首先，我们来看一下在输入的<code>sys</code>模块上使用<code>dir</code>。我们看到它包含一个庞大的属性列表。</p>
+<p>接下来，我们不给<code>dir</code>函数传递参数而使用它——默认地，它返回当前模块的属性列表。注意，输入的模块同样是列表的一部分。</p>
+<p>为了观察<code>dir</code>的作用，我们定义一个新的变量<code>a</code>并且给它赋一个值，然后检验<code>dir</code>，我们观察到在列表中增加了以上相同的值。我们使用<code>del</code>语句删除当前模块中的变量/属性，这个变化再一次反映在<code>dir</code>的输出中。</p>
+<p>关于<code>del</code>的一点注释——这个语句在运行后被用来 <dfn>删除</dfn> 一个变量/名称。在这个例子中，<code>del a</code>，你将无法再使用变量<code>a</code>——它就好像从来没有存在过一样。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch08s05.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch08.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch08s07.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">制造你自己的模块</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">概括</th>
+</tr>
+</table>
+
+</body>
+</html>
