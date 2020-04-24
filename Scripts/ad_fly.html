@@ -1,0 +1,80 @@
+ <!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="gbk" />
+<title>到处乱飘的广告</title>
+<meta name="keywords" content="" />
+<meta name="description" content=""    />
+<script src="http://apps.bdimg.com/libs/jquery/1.8.0/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="piaofu" style="position:absolute; z-index:9999; border:0px solid #ccc;">
+    <div style="text-align:right;">
+        <a href="javascript:void(0)" onclick="javascript:closePiaofu()" style="background-color: #A00;color:#fff; padding:0px 5px; text-decoration:none; font-size:12px;">[关闭]</a>
+    </div>
+    <a href="https://www.ghtxx.cn" target="_blank" style="">
+        <img src="/logo.png" border="0" width="315" height="81" />
+    </a>
+</div>
+<script>
+
+function closePiaofu(){
+    document.getElementById("piaofu").style.display = "none";
+}
+
+var x = 50,y = 160;
+var xin = true, yin = true;
+var step = 0.8;
+var delay = 10;
+var obj=document.getElementById("piaofu");
+function piaofu(){
+    var L=T=0;
+    var R = $(document).width()-obj.offsetWidth;
+    var B = $(window).height()-obj.offsetHeight;
+    $("#piaofu").css('left', function(){return x + $(document).scrollLeft();});
+    $("#piaofu").css('top', function(){return y + $(document).scrollTop();});
+    
+    x = x + step*(xin?1:-1)
+    if (x < L){ xin = true; x = L;}
+    if (x > R){ xin = false; x = R;}
+    y = y + step*(yin?1:-1);
+    if (y < T) { yin = true; y = T; }
+    if (y > B) { yin = false; y = B; }
+}
+var itl = setInterval("piaofu()", delay);    
+obj.onmouseover=function(){clearInterval(itl)}
+obj.onmouseout=function(){itl=setInterval("piaofu()", delay)}
+
+</script>
+
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+
+</body>
+</html>
+
+
