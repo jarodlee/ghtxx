@@ -5,4 +5,4 @@ ghtxx website
 欢迎同学们参与创建自己的程序项目，创新改进学校的网站。<br>
 学校的网址是:https://i.ghtxx.cn <br>
 每位同学注册后都可以fork并修改，推送将由李老师验收。<br>
-推送修改前请认真阅读帮助文档：https://help.github.com/cn/github <br>
+推送修改前请认真阅读帮助文档：https://help.github.com/cn/github/collaborating-with-issues-and-pull-requests <br>
