@@ -6,3 +6,4 @@ ghtxx website
 学校的网址是:https://i.ghtxx.cn <br>
 每位同学注册后都可以fork并修改，推送将由李老师验收，也可加入编程组：https://github.com/GHTxx2018 <br>
 推送修改前请认真阅读帮助文档：https://help.github.com/cn/github/collaborating-with-issues-and-pull-requests <br>
+建议使用简化名称。
