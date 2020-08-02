@@ -1,0 +1,350 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0042)http://www.ghtxx.com/bbs/editor/panel2.htm -->
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<STYLE type=text/css>BODY {
+	FONT-SIZE: 9pt; COLOR: #333333; FONT-FAMILY: 宋体
+}
+INPUT {
+	FONT-SIZE: 9pt; COLOR: #333333; FONT-FAMILY: 宋体
+}
+SELECT {
+	FONT-SIZE: 9pt; COLOR: #333333; FONT-FAMILY: 宋体
+}
+</STYLE>
+
+<META content="MSHTML 5.50.4611.1300" name=GENERATOR></HEAD>
+<BODY bgColor=#eeeeee leftMargin=0 topMargin=0 scroll=no>
+<SCRIPT language=JavaScript1.2>
+<!--
+function email() {
+	if (parent.helpstat) {
+		alert("Email 标记\n插入 Email 超级链接\n用法1: [email]phpiscool\@163.com[/email]\n用法2: [email=phpiscool\@163.com]旅行[/email]");
+	} else if (parent.basic) {
+		AddTxt="[email][/email]";
+		parent.AddText(AddTxt);
+	} else {
+		txt2=prompt("链接显示的文字.\n如果为空，那么将只显示你的 Email 地址","");
+		if (txt2!=null) {
+			txt=prompt("Email 地址.","name\@domain.com");      
+			if (txt!=null) {
+				if (txt2=="") {
+					AddTxt="[email]"+txt+"[/email]";
+				} else {
+					AddTxt="[email="+txt+"]"+txt2;
+					parent.AddText(AddTxt);
+					AddTxt="[/email]";
+				}
+				parent.AddText(AddTxt);
+			}
+		}
+	}
+}
+
+function bold() {
+	if (parent.helpstat) {
+		alert("加粗标记\n使文本加粗.\n用法: [b]这是加粗的文字[/b]");
+	} else if (parent.basic) {
+		AddTxt="[b][/b]";
+		parent.AddText(AddTxt);
+	} else {
+		txt=prompt("文字将被变粗.","文字");
+		if (txt!=null) {
+			AddTxt="[b]"+txt;
+			parent.AddText(AddTxt);
+			AddTxt="[/b]";
+			parent.AddText(AddTxt);
+		}
+	}
+}
+
+function italicize() {
+	if (parent.helpstat) {
+		alert("斜体标记\n使文本字体变为斜体.\n用法: [i]这是斜体字[/i]");
+	} else if (parent.basic) {
+		AddTxt="[i][/i]";
+		parent.AddText(AddTxt);
+	} else {
+		txt=prompt("文字将变斜体","文字");
+		if (txt!=null) {
+			AddTxt="[i]"+txt;
+			parent.AddText(AddTxt);
+			AddTxt="[/i]";
+			parent.AddText(AddTxt);
+		}
+	}
+}
+
+function quoteme() {
+	if (parent.helpstat){
+		alert("引用标记\n引用一些文字.\n用法: [quote]引用内容[/quote]");
+	} else if (parent.basic) {
+		AddTxt="[quote][/quote]";
+		parent.AddText(AddTxt);
+	} else {
+		txt=prompt("被引用的文字","文字");
+		if(txt!=null) {
+			AddTxt="[quote]"+txt;
+			parent.AddText(AddTxt);
+			AddTxt="[/quote]";
+			parent.AddText(AddTxt);
+		}
+	}
+}
+function setfly() {
+ 	if (parent.helpstat){
+		alert("飞行标记\n使文字飞行.\n用法: [fly]文字为这样文字[/fly]");
+	} else if (parent.basic) {
+		AddTxt="[fly][/fly]";
+		parent.AddText(AddTxt);
+	} else {
+		txt=prompt("飞行文字","文字");
+		if (txt!=null) {
+			AddTxt="[fly]"+txt;
+			parent.AddText(AddTxt);
+			AddTxt="[/fly]";
+			parent.AddText(AddTxt);
+		}
+	}
+}
+
+function movesign() {
+	if (parent.helpstat) {
+		alert("移动标记\n使文字产生移动效果.\n用法: [move]要产生移动效果的文字[/move]");
+	} else if (parent.basic) {
+		AddTxt="[move][/move]";
+		parent.AddText(AddTxt);
+	} else {
+		txt=prompt("要产生移动效果的文字","文字");
+		if (txt!=null) {
+			AddTxt="[move]"+txt;
+			parent.AddText(AddTxt);
+			AddTxt="[/move]";
+			parent.AddText(AddTxt);
+		}
+	}
+}
+
+function shadow() {
+	if (parent.helpstat) {
+alert("阴影标记\n使文字产生阴影效果.\n用法: [SHADOW=宽度, 颜色, 边界]要产生阴影效果的文字[/SHADOW]");
+	} else if (parent.basic) {
+		AddTxt="[SHADOW=255,blue,1][/SHADOW]";
+		parent.AddText(AddTxt);
+	} else {
+		txt2=prompt("文字的长度、颜色和边界大小","255,blue,1");
+		if (txt2!=null) {
+			txt=prompt("要产生阴影效果的文字","文字");
+			if (txt!=null) {
+				if (txt2=="") {
+					AddTxt="[shadow=255, blue, 1]"+txt;
+					parent.AddText(AddTxt);
+					AddTxt="[/shadow]";
+					parent.AddText(AddTxt);
+				} else {
+					AddTxt="[shadow="+txt2+"]"+txt;
+					parent.AddText(AddTxt);
+					AddTxt="[/shadow]";
+					parent.AddText(AddTxt);
+				}
+			}
+		}
+	}
+}
+
+function glow() {
+	if (parent.helpstat) {
+		alert("光晕标记\n使文字产生光晕效果.\n用法: [GLOW=宽度, 颜色, 边界]要产生光晕效果的文字[/GLOW]");
+	} else if (parent.basic) {
+		AddTxt="[glow=255,red,2][/glow]";
+		parent.AddText(AddTxt);
+	} else {
+		txt2=prompt("文字的长度、颜色和边界大小","255,red,2");
+		if (txt2!=null) {
+			txt=prompt("要产生光晕效果的文字.","文字");
+			if (txt!=null) {
+				if (txt2=="") {
+					AddTxt="[glow=255,red,2]"+txt;
+					parent.AddText(AddTxt);
+					AddTxt="[/glow]";
+					parent.AddText(AddTxt);
+				} else {
+					AddTxt="[glow="+txt2+"]"+txt;
+					parent.AddText(AddTxt);
+					AddTxt="[/glow]";
+					parent.AddText(AddTxt);
+				}
+			}
+		}
+	}
+}
+
+function center() {
+ 	if (parent.helpstat) {
+		alert("对齐标记\n使用这个标记, 可以使文本左对齐、居中、右对齐.\n用法: [align=center|left|right]要对齐的文本[/align]");
+	} else if (parent.basic) {
+		AddTxt="[align=center|left|right][/align]";
+		parent.AddText(AddTxt);
+	} else {
+		txt2=prompt("对齐样式\n输入 'center' 表示居中, 'left' 表示左对齐, 'right' 表示右对齐.","center");
+		while ((txt2!="") && (txt2!="center") && (txt2!="left") && (txt2!="right") && (txt2!=null)) {
+			txt2=prompt("错误!\n类型只能输入 'center' 、 'left' 或者 'right'.","");
+		}
+		txt=prompt("要对齐的文本","文本");
+		if (txt!=null) {
+			AddTxt="\r[align="+txt2+"]"+txt;
+			parent.AddText(AddTxt);
+			AddTxt="[/align]";
+			parent.AddText(AddTxt);
+		}
+	}
+}
+
+function hyperlink() {
+	if (parent.helpstat) {
+		alert("超级链接标记\n插入一个超级链接标记\n使用方法: [url]http://phpiscool.yeah.net[/url]\nUSE: [url=http://phpiscool.yeah.net]链接文字[/url]");
+	} else if (parent.basic) {
+		AddTxt="[url][/url]";
+		parent.AddText(AddTxt);
+	} else {
+		txt2=prompt("链接文本显示.\n如果不想使用, 可以为空, 将只显示超级链接地址. ","");
+		if (txt2!=null) {
+			txt=prompt("超级链接.","http://");
+			if (txt!=null) {
+				if (txt2=="") {
+					AddTxt="[url]"+txt;
+					parent.AddText(AddTxt);
+					AddTxt="[/url]";
+					parent.AddText(AddTxt);
+				} else {
+					AddTxt="[url="+txt+"]"+txt2;
+					parent.AddText(AddTxt);
+					AddTxt="[/url]";
+					parent.AddText(AddTxt);
+				}
+			}
+		}
+	}
+}
+
+function image() {
+	if (parent.helpstat){
+		alert("图片标记\n插入图片\n用法： [img]http:\/\/www.php.net\/images\/php.gif[/img]");
+	} else if (parent.basic) {
+		AddTxt="[img][/img]";
+		parent.AddText(AddTxt);
+	} else {
+		txt=prompt("图片的 URL","http://");
+		if(txt!=null) {
+			AddTxt="\r[img]"+txt;
+			parent.AddText(AddTxt);
+			AddTxt="[/img]";
+			parent.AddText(AddTxt);
+		}
+	}
+}
+
+function showcode() {
+	if (parent.helpstat) {
+		alert("代码标记\n使用代码标记，可以使你的程序代码里面的 html 等标志不会被破坏.\n使用方法:\n [code]这里是代码文字[/code]");
+	} else if (parent.basic) {
+		AddTxt="\r[code]\r[/code]";
+		parent.AddText(AddTxt);
+	} else {
+		txt=prompt("输入代码","");
+		if (txt!=null) { 
+			AddTxt="\r[code]"+txt;
+			parent.AddText(AddTxt);
+			AddTxt="[/code]";
+			parent.AddText(AddTxt);
+		}
+	}
+}
+
+function list() {
+	if (parent.helpstat) {
+		alert("列表标记\n建造一个文字或则数字列表.\nUSE: [list]\n[*]item1\n[*]item2\n[*]item3\n[/list]");
+	} else if (parent.basic) {
+		AddTxt="\r[list]\r[*]\r[*]\r[*]\r[/list]";
+		parent.AddText(AddTxt);
+	} else {
+		txt=prompt("列表类型\n输入 'A' 表示有序列表, '1' 表示无序列表, 留空表示无序列表.","");
+		while ((txt!="") && (txt!="A") && (txt!="a") && (txt!="1") && (txt!=null)) {
+			txt=prompt("错误!\n类型只能输入 'A' 、 '1' 或者留空.","");
+		}
+		if (txt!=null) {
+			if ((txt=="") || (txt=="1")) {
+				AddTxt="\r[list]\r\n";
+			} else {
+				AddTxt="\r[olist]\r\n";
+			}
+			ltxt="1";
+			while ((ltxt!="") && (ltxt!=null)) {
+				ltxt=prompt("列表项\n空白表示结束列表","");
+				if (ltxt!="") {
+					AddTxt+="[*]"+ltxt+"\r";
+				}
+			}
+			if ((txt=="") || (txt=="1")) {
+				AddTxt+="[/list]\r\n";
+			} else {
+				AddTxt+="[/olist]\r\n";
+			} 
+			parent.AddText(AddTxt);
+		}
+	}
+}
+function underline() {
+  	if (parent.helpstat) {
+		alert("下划线标记\n给文字加下划线.\n用法: [u]要加下划线的文字[/u]");
+	} else if (parent.basic) {
+		AddTxt="[u][/u]";
+		parent.AddText(AddTxt);
+	} else {
+		txt=prompt("下划线文字.","文字");
+		if (txt!=null) {
+			AddTxt="[u]"+txt;
+			parent.AddText(AddTxt);
+			AddTxt="[/u]";
+			parent.AddText(AddTxt);
+		}
+	}
+}
+
+function setswf() {
+ 	if (parent.helpstat){
+		alert("Flash 动画\n插入 Flash 动画.\n用法: [swf]Flash 文件的地址[/swf]");
+	} else if (parent.basic) {
+		AddTxt="[swf][/swf]";
+		parent.AddText(AddTxt);
+	} else {
+		txt=prompt("Flash 文件的地址","http://");
+		if (txt!=null) {
+			AddTxt="[swf]"+txt;
+			parent.AddText(AddTxt);
+			AddTxt="[/swf]";
+			parent.AddText(AddTxt);
+		}
+	}
+}
+-->
+</SCRIPT>
+<IMG onclick=bold() height=22 alt=粗体字 src="panel2.files/bold.gif" width=23 
+border=0> <IMG onclick=italicize() height=22 alt=斜体字 
+src="panel2.files/italicize.gif" width=23 border=0> <IMG onclick=underline() 
+height=22 alt=下划线 src="panel2.files/underline.gif" width=23 border=0> <IMG 
+onclick=center() height=22 alt=居中 src="panel2.files/center.gif" width=23 
+border=0> <IMG onclick=hyperlink() height=22 alt=插入超级链接 
+src="panel2.files/url.gif" width=23 border=0> <IMG onclick=email() height=22 
+alt=插入邮件地址 src="panel2.files/email.gif" width=23 border=0> <IMG onclick=image() 
+height=22 alt=插入图片 src="panel2.files/image.gif" width=23 border=0> <IMG 
+onclick=setswf() height=22 alt="插入 Flash 动画" src="panel2.files/swf.gif" width=23 
+border=0> <IMG onclick=showcode() height=22 alt=插入代码 src="panel2.files/code.gif" 
+width=23 border=0> <IMG onclick=quoteme() height=22 alt=插入引用 
+src="panel2.files/quote.gif" width=23 border=0> <IMG onclick=list() height=22 
+alt=插入列表 src="panel2.files/list.gif" width=23 border=0> <IMG onclick=setfly() 
+height=22 alt=飞行字 src="panel2.files/fly.gif" width=23 border=0> <IMG 
+onclick=movesign() height=22 alt=移动字 src="panel2.files/move.gif" width=23 
+border=0> <IMG onclick=glow() height=22 alt=发光字 src="panel2.files/glow.gif" 
+width=23 border=0> <IMG onclick=shadow() height=22 alt=阴影字 
+src="panel2.files/shadow.gif" width=23 border=0> </BODY></HTML>

@@ -1,0 +1,321 @@
+<html>
+<head>
+<title>高花亭小学教育论坛</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+p,input,select{font-size:9pt; color:333333; FONT-FAMILY: 宋体}
+TABLE{BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 2px }
+td{BORDER-RIGHT: 1px; BORDER-TOP: 0px; FONT-SIZE: 9pt; color:#333333; font-family:宋体}
+a {text-decoration:none; }
+a:hover {color:#333355;text-decoration: underline;}
+BODY {
+	FONT-SIZE: 9pt; FONT-FAMILY: 宋体
+	COLOR: #CCAAAA;
+	SCROLLBAR-BASE-COLOR: #B0B0C5;
+	SCROLLBAR-ARROW-COLOR: #EEEEEE;
+	SCROLLBAR-HIGHLIGHT-COLOR: #9090B0;
+}
+TEXTAREA {FONT-SIZE: 9pt; FONT-FAMILY: 宋体}
+.menu {
+	FILTER: revealTrans(transition=23,duration=0.5) blendTrans(duration=0.5); VISIBILITY: hidden; POSITION: absolute;
+	height:20px; z-index:1; background-color: #FFFFFF; layer-background-color: #FFFFFF; border: 1px none #500000; top:82px;
+}
+.title { color:FFFFFF }
+.cau { color:333366 }
+-->
+</style>
+<script language=JavaScript1.2>
+var x =0
+var y=0
+drag = 0
+move = 0
+window.document.onmousemove = mouseMove
+window.document.onmousedown = mouseDown
+window.document.onmouseup = mouseUp
+window.document.ondragstart = mouseStop
+function Show(divid) {
+	divid.filters.revealTrans.apply(); 
+	divid.style.visibility = "visible"; 
+	divid.filters.revealTrans.play(); 
+}
+function Hide(divid) {
+	divid.filters.revealTrans.apply();
+	divid.style.visibility = "hidden";
+	divid.filters.revealTrans.play();
+}
+function mouseUp() {
+move = 0;
+}
+function mouseDown() {
+	if (drag) {
+		clickleft = window.event.x - parseInt(dragObj.style.left);
+		clicktop = window.event.y - parseInt(dragObj.style.top);
+		dragObj.style.zIndex += 1;
+		move = 1;
+	}
+}
+function mouseMove() {
+	if (move) {
+		dragObj.style.left = window.event.x - clickleft;
+		dragObj.style.top = window.event.y - clicktop;
+	}
+}
+function mouseStop() {
+	window.event.returnValue = false;
+}
+function openScript(url, width, height) {
+var Win = window.open(url,"openScript",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=yes,status=yes' );
+}
+</script>
+</head>
+<body bgcolor=FEFEFF leftmargin=0 topmargin=0 vlink=333333 link=333333 alink=333333>
+
+<!-------------------- DIVs --------------------------------->
+<div id="me1" class=menu style="left:26px; width:294px;">
+<table width=100% bgcolor=444444 cellspacing=0 cellpadding=2>
+<tr>
+<td>
+<table width=100% cellspacing=0 cellpadding=1 bgcolor=FFFFFF>
+<tr>
+<td> * <a href="wdblogin.php?job=relogin">重新登录</a> <a href="wdblogin.php?job=quit">退出登录</a>
+<a href="http://www.ghtxx.com">返回网站</a> <a href="wdblogin.php?job=qandr">退出并返回网站</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id="me2" class=menu style="left:30; width:380px;">
+<table width=100% bgcolor=444444 cellspacing=0 cellpadding=2>
+<tr>
+<td>
+<table width=100% cellspacing=0 cellpadding=1 bgcolor=FFFFFF>
+<tr>
+<td> * <a onclick="Show(messanger);" href="messanger.php?job=receivebox" target=msg>收件箱</a>
+<a onclick="Show(messanger);" href="messanger.php?job=sendbox" target=msg>发件箱</a> <a href="messanger.php?job=write" onclick="Show(messanger)" target=msg>写新消息</a>
+<a onclick="Show(messanger);" href="messanger.php?job=clear" target=msg>清空旧消息</a> |
+您目前有 <b>0</b> 条新消息</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id="me3" class=menu style="left:120px;width:220px;"> 
+<table width=100% bgcolor=444444 cellspacing=0 cellpadding=2>
+<tr> 
+<td> 
+<table width=100% cellspacing=0 cellpadding=1 bgcolor=FFFFFF>
+<tr> 
+<td> * <a href="wdbprofile.php">查看/修改</a> <a href="wdbprofile.php?job=testsign">预览签名</a>
+<a href="wdbprofile.php?job=kill">用户注销</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id="me4" class=menu style="left:175; width:350px;">
+<table width=100% bgcolor=444444 cellspacing=0 cellpadding=2><form action=search.php method=POST>
+<tr><td>
+<table width=100% cellspacing=0 cellpadding=1 bgcolor=FFFFFF>
+<tr>
+<td> *快速检索： 关键字<input type=text name=keyword size=12 style="background-color:#ffffff; color:#FF90CD; border: 1 double #B4B4B4" onMouseOver = "this.style.backgroundColor = '#E5F0FF'" onMouseOut = "this.style.backgroundColor = ''">&nbsp;&nbsp;
+<input type=submit value=送出资料 style="font-size: 9pt; height:20px;background-color:#f3f3f3;border:1 solid black" onMouseOver ="this.style.backgroundColor='#FFC864'" onMouseOut ="this.style.backgroundColor='#f3f3f3'">
+</td></tr>
+</table>
+ </td></tr></form>
+</table>
+</div>
+<div id="messanger" style="FILTER: revealTrans(transition=23,duration=0.5) blendTrans(duration=0.5); POSITION: absolute; z-index:1; background-color: #FFFFFF; border: 1px none #500000; top:82px;left:530;width:230px; visibility: hidden"> 
+<table width=100% border=0 cellspacing=0 cellpadding=1 bgcolor=333333>
+<tr>
+<td>
+<table width=100% bgcolor=8888b0 border=0 cellspacing=0 cellpadding=2 onMouseOver="dragObj=messanger; drag=1;move=0" style="WIDTH: 100%; CURSOR: move" onMouseOut="drag=0">
+<tr>
+<td><font color=FFFFFF>短消息提醒</font></td>
+</tr>
+</table>
+<table width=100% bgcolor=FFFFFF border=0 cellspacing=0 cellpadding=2>
+<tr>
+<td>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td><a href="messanger.php?job=receivebox" target=msg>收件箱</a> 
+<a href="messanger.php?job=sendbox" target=msg>发件箱</a> 
+<a href="messanger.php?job=write" target=msg>写新消息</a> 
+<a href="messanger.php?job=clear" target=msg>清空</a> 
+<span style="CURSOR:hand" onclick="Hide(messanger);">关闭窗口</span><br>
+<hr noshade size=1>
+<iframe name=msg noresize frameborder=0 width=225></iframe> 
+您有 <b>0</b> 条新消息 -- <a href="messanger.php?job=receivebox" target=msg>查看</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id="me5" class=menu style="left:280px; width:230px;">
+<table width=100% bgcolor=444444 cellspacing=0 cellpadding=2>
+  <tr><td>
+<table width=100% cellspacing=0 cellpadding=2 bgcolor=FFFFFF>
+<tr>
+<td> * <a href=wdbcode.htm>WDB代码说明</a> <a href=http://wdb.yesky.net target=_blank>常见问题</a> <a href=about.htm>作者声明</a></td>
+</tr>
+</table>
+  </td></tr>
+</table>
+</div>
+
+<!-------------------- DIVs --------------------------------->
+<script language=JavaScript1.2>
+document.lastdiv=me5;
+</script>
+<table width=100% border=0 cellspacing=0 cellpadding=1>
+<tr bgcolor=636385>
+<td colspan=2><b><font color=FFFFFF>&nbsp;高花亭小学教育论坛欢迎你的到来</font></b></td>
+</tr>
+<tr bgcolor=FFFFFF>
+<td><a href=http://phpiscool.yeah.net target=_blank><img src="images/system/wdblogo.gif" border=0 align=left></a></td>
+<td align=right valign=bottom><ACRONYM TITLE="点击图标将把本论坛加入收藏夹"><img style="CURSOR: hand" src="images/system/addfav.gif" onClick="window.external.AddFavorite('http://www.ghtxx.com/bbs/index.php','高花亭小学教育论坛')"></ACRONYM>加入收藏夹&nbsp;<br>你好，查振祥，欢迎你来到讨论区&nbsp;</td>
+</tr>
+<tr bgcolor=777777><td colspan=2 height=1></td></tr>
+<tr bgcolor=D9D9E6>
+<td width=600><font face="Verdana, Arial" class=menutext><b>&nbsp;功能选项｜</b>『
+<a class=menutext href="wdblogin.php" onMouseOver="Hide(lastdiv); document.lastdiv=me1;Show(lastdiv);">登录选项</a>
+| <font style="CURSOR:hand" onclick="Show(messanger);" onMouseOver="Hide(lastdiv); document.lastdiv=me2;Show(lastdiv);">短消息</font>
+| <a class=menutext href="wdbprofile.php" onMouseOver="Hide(lastdiv); document.lastdiv=me3;Show(lastdiv);">个人信息</a> 
+| <a class=menutext href="search.php" onMouseOver="Hide(lastdiv); document.lastdiv=me4;Show(lastdiv);">搜 索</a> 
+| <font style="CURSOR: hand" onMouseOver="Hide(lastdiv); document.lastdiv=me5;Show(lastdiv);">帮 助</font>
+| <a class=menutext href="sendmail.php?job=toadmin" onMouseOver="Hide(lastdiv);">站长信箱</a> | <a class=menutext href="userlist.php" onMouseOver="Hide(lastdiv);">用户列表</a> 』
+</td>
+<td width=* align=right><b class=menutext>&gt;&gt;<a class=menutext href="http://www.ghtxx.com">返回主页</a></b></td>
+</tr>
+</table>
+<table cellspacing=0 cellpadding=0 width=100% align=center bgcolor=666666 border=0><tr><td height=1></td></tr></table>
+
+<!-- Header End -->
+<img src='' height=5 width=1><br><table width=97% border=0 cellspacing=0 cellpadding=0 align=center>
+  <tr> 
+    <td class=cau><b>=== 讨论区动态 === </b>(2004-2-29)</td>
+  </tr>
+</table>
+<table width=97% border=0 cellspacing=0 cellpadding=1 align=center>
+  <tr> 
+    <td width=65% valign=top align=left> 
+    <img src="images/system/announce.gif">
+    <font class=cau>管理员公告：</font><br>
+暂时没有发布公告    </td>
+    <td width=35% align=right valign=top>
+<div align=left><img src="images/system/statistic.gif">
+<font class=cau>数据统计：</font></div>
+目前论坛有会员 <b>9</b> 人， 文章 <b>6</b> 篇<br>
+热烈欢迎新会员 <a href="wdbprofile.php?job=show&target=查振祥">查振祥</a> 的加入
+</td>
+</tr>
+</table>
+
+<table cellspacing=0 cellpadding=0 width=97% align=center border=0>
+<tr> 
+<td> 
+<table cellspacing=1 cellpadding=5 width=100% border=0 bgcolor=000033>
+<tr align=center height=22 bgcolor=8888b0>
+<td width=26><b class=title>图标</b></td>
+<td width=*><b class=title>讨论区名称</b></td>
+<td width=74><b class=title>斑竹</b></td>
+<td width=54><b class=title>文章</b></td>
+<td width=168><b class=title>最后更新</b></td>
+<td width=26><b class=title>收藏</b></td>
+</tr>
+
+<tr><td bgcolor=e0e0e9 colspan=7><img src='' width=5 height=5><font color=333333>-=> 教育同行 </font></td></tr><tr align=center valign=middle bgcolor=E0E0E3>
+<td width=26><a href="wdblist.php?forumid=1"><img src="images/system/forum.gif" border=0></a></td>
+<td width=* bgcolor=F3F3F7 align=left><a href="wdblist.php?forumid=1"><font face=verdana color=000066>『 百家谈 』</font></a><br><font color=555577>自由交流，天南地北，教育为先。</font></td>
+<td width=74></td><td width=54 bgcolor=E0E0E3 valign=middle align=center><b><font class=cau>5</font></b></td>
+<td width=168 bgcolor=F3F3F7 align=left>&nbsp;<font class=cau>标题：</font><a href="wdbread.php?forumid=1&filename=f_5">新年礼物</a><br>&nbsp;<font class=cau>作者</font>：<a href="wdbprofile.php?job=show&target=中国教育家">中国教育家</a><br>&nbsp;<font class=cau>时间：</font>2004-1-1 9:39</td>
+<td width=26><span style="CURSOR: hand" onClick="window.external.AddFavorite('http://www.ghtxx.com/bbs/wdblist.php?forumid=1', '百家谈')"><img alt='将百家谈添加到收藏夹' src="images/system/addfav.gif" width=15 border=0></span></td>
+</tr></table>
+    </td>
+  </tr>
+</table><img src='' height=5 width=9><br>
+<table cellspacing=0 cellpadding=0 width=97% align=center border=0>
+ <tr>
+  <td>
+    <table cellspacing=1 cellpadding=5 width=100% border=0 bgcolor=000033>
+     <tr><td bgcolor=e0e0e9 colspan=7><img src='' width=5 height=5><font color=333333>-=> 家长网谈</font></td></tr><tr align=center valign=middle bgcolor=E0E0E3>
+<td width=26><a href="wdblist.php?forumid=2"><img src="images/system/forum.gif" border=0></a></td>
+<td width=* bgcolor=F3F3F7 align=left><a href="wdblist.php?forumid=2"><font face=verdana color=000066>『 家校联教 』</font></a><br><font color=555577>家长学校网络化试验区</font></td>
+<td width=74></td><td width=54 bgcolor=E0E0E3 valign=middle align=center><b><font class=cau>1</font></b></td>
+<td width=168 bgcolor=F3F3F7 align=left>&nbsp;<font class=cau>标题：</font><a href="wdbread.php?forumid=2&filename=f_1">一位聋儿的家教</a><br>&nbsp;<font class=cau>作者</font>：<a href="wdbprofile.php?job=show&target=查振祥">查振祥</a><br>&nbsp;<font class=cau>时间：</font>2004-2-29 21:10</td>
+<td width=26><span style="CURSOR: hand" onClick="window.external.AddFavorite('http://www.ghtxx.com/bbs/wdblist.php?forumid=2', '家校联教')"><img alt='将家校联教添加到收藏夹' src="images/system/addfav.gif" width=15 border=0></span></td>
+</tr>     </table>
+    </td>
+  </tr>
+</table>
+<img src='' width=9 height=8><br>
+<table cellpadding=0 cellspacing=0 border=0 width=97% bgcolor=000033 align=center>
+<tr><td><table cellpadding=5 cellspacing=1 border=0 width=100%>
+<tr bgcolor=8888b0>
+  <td colspan=2><b class=title>-=&gt; 你的信息</b></td>
+</tr>
+<tr>
+  <td bgcolor=E0E0E3 width=26 align=center><img src="images/system/inboxnonew.gif"></td>
+  <td bgcolor=F3F3F7>今次你的IP：<font class=cau>61.191.156.212</font> 来自:<font class=cau>亚洲</font> 浏览器:<font class=cau>微软探索者(IE) 6.0</font> 操作系统:<font class=cau>Windows 2000</font><br>您的短消息收件箱里有 <b>0</b> 条新消息，目前您已发表了 <b>1</b> 篇文章，您目前的等级是 <b>学前班</b></td>
+</tr>
+<tr bgcolor=8888b0> 
+  <td colspan=2><b class=title>-=&gt; 论坛在线统计</b></td>
+</tr>
+<tr>
+  <td bgcolor=E0E0E3 width=26 align=center><img src="images/system/online.gif"></td>
+  <td bgcolor=F3F3F7>&nbsp;<a onclick='Show(messanger)' href='messanger.php?job=write&target=查振祥' alt=给该用户留言 target=msg><img border=0 src='images/system/ren.gif'></a><span title=查看该用户资料><a href='wdbprofile.php?job=show&target=查振祥'>查振祥</a></span><br>&nbsp;目前共计有 <b>1</b> 位注册用户和 <b>0</b> 位访客</td>
+</tr>
+     </table>
+    </td>
+  </tr>
+</table>
+<br>
+
+<!---Illustration Begin------->
+<table cellpadding=0 cellspacing=0 border=0 width=97% bgcolor=000033 align=center>
+<tr><td>
+  <table cellpadding=5 cellspacing=1 border=0 width=100%>
+   <tr bgcolor=8888b0>
+    <td><b class=title>-=&gt; 图标信息说明</b></td>
+    <td noWrap width=18% align=right class=title>所有时间 - 中国时间</td>
+   </tr>
+   <tr bgcolor=F9F9Fa><td colspan=2>
+	<table cellspacing=4 cellpadding=0 width=92% border=0 align=center>
+	 <tr align=center>
+	  <td><img src="images/system/forum.gif"></td>
+	  <td align=left>开放的论坛版块</td>
+	  <td><img src="images/system/forumnew.gif"></td>
+	  <td align=left>有新贴的开放版块</td>
+	  <td><img src="images/system/selection.gif"></td>
+	  <td align=left>只读封闭版块/精华区</td>
+	  <td><img src="images/system/shareforum.gif"></td>
+	  <td align=left>共享/联盟论坛</td>
+	</tr>
+	</table>
+     </td>
+   </tr>
+  </table>
+</td></tr>
+</table>
+<!---Illustration End------->
+
+
+<!--footer begin -->
+</td></tr></table>
+<br>
+<center>
+［ <a href="http://www.ghtxx.com">联系我们</a> - <a href="http://www.ghtxx.com">高花亭网校</a> ］
+<br><img src='' height=6 width=1><br>
+&copy;Wandererboard 版本 2.0.0 | <a href="http://phpiscool.yeah.net" target=_blank>PHPの酷</a> 版权所有<br>
+All files written by <font face=verdana>Lyra Studio</font> - <a href="http://lvxing.net" target=_blank>旅行</a>
+</center>
+</body>
+</html>

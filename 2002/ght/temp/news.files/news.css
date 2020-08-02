@@ -1,0 +1,90 @@
+.INPUT {
+	BORDER-RIGHT: #555555 1px solid; BORDER-TOP: #555555 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #555555 1px solid; COLOR: #000000; BORDER-BOTTOM: #555555 1px solid
+}
+TD {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 13pt
+}
+TABLE {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 13pt
+}
+BODY {
+	FONT-SIZE: 9pt
+}
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+TEXTAREA {
+	COLOR: #000000; BACKGROUND-COLOR: #ffffff
+}
+SELECT {
+	FONT-SIZE: 9pt; BORDER-LEFT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; COLOR: #000000; BORDER-TOP-COLOR: #000000; BACKGROUND-COLOR: #ffffff; BORDER-RIGHT-COLOR: #000000
+}
+.white_bg {
+	FONT-SIZE: 9pt; COLOR: #000000
+}
+A.white_bg:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.white_bg:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.white_bg:active {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.white_bg:hover {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+.bai {
+	FONT-SIZE: 9pt; COLOR: #ffffff; FONT-FAMILY: verdana,arial,helvetica
+}
+A.bai:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.bai:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.bai:active {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.bai:hover {
+	COLOR: #ffff00; TEXT-DECORATION: none
+}
+.hei_bai {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A.hei_bai:link {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A.hei_bai:visited {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A.hei_bai:active {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.hei_bai:hover {
+	COLOR: #ffffff; TEXT-DECORATION: underline overline
+}
+.bai1 {
+	FONT-SIZE: 9pt; COLOR: #ffffff
+}
+A.bai1:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.bai1:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.bai1:active {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.bai1:hover {
+	COLOR: #ffff00; TEXT-DECORATION: none
+}
