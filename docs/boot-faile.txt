@@ -1,3 +1,5 @@
+AMD的最后启动失败LOG文件：
+
 Initializing cgroup subsys cpuset
 Initializing cgroup subsys cpu
 Linux version 2.6.32-696.20.1.el6.x86_64 (mockbuild@x86_64_01.bsys.centos.org) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-18) (GCC) ) #1 SMP Fri Jan 26 17:51:45 UTC 2018
