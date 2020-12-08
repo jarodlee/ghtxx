@@ -18,7 +18,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 
 title      : 高花亭小学2021版
 email      : lxj@ghtxx.cn #this is also the email contact forms will go to
-description: "团结 诚实 勤奋 进取""
+description: "团结 诚实 勤奋 进取"
 author     : GHTxx
 # logo:     #optional, defaults to site title
   # path: assets\img\clients\creative-market.jpg
