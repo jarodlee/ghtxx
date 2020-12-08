@@ -1,164 +1,61 @@
 # Welcome to Jekyll!
 #
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the
-# server process.
-theme: "lone-wolf-theme"
-remote_theme: # "manid2/lone-wolf-theme"
-bootswatch_theme: "united" # cerulean, spacelab, united
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that.
+# This file is *NOT* reloaded automatically when you use 'bundle exec jekyll serve'.
+# If you change this file, please restart the server process.
 
-# site Settings
-lang: "en_US"
-title: "安庆市高花亭小学2021版""
-description: "安庆市高花亭小学2021版""
-url: https://x.ghtxx.cn
-baseurl: "" # the subpath of your site, e.g. "/blog"
-repository: GHTxx2018/ghtxx
-teaser: "lwt-logo-wolf-v2.png" # default teaser image for blog posts
-logo: "lwt-logo-wolf-v2.png" # logo image to be ujsed in masthead
-og_image: "lwt-logo-wolf-v2.png" # for seo, social share image
-masthead_title: # overrides the website title displayed in the masthead
-words_per_minute: 200 # TODO: TBD
+# Site settings
+# are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
 
-# comments settings
-comments:
-  provider: false # false (default), "disqus", "discourse"
-  disqus:
-    # refer what is disqus shortname article online
-    shortname:
+theme: jekyll-agency
 
-# feed
-atom_feed:
-  path: # blank (default) uses feed.xml
+url    : "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
 
-# site search settings
-search: # true, false (default)
-search_full_content: # true, false (default)
-search_provider: # google
+title      : 高花亭小学2021版
+email      : lxj@ghtxx.cn #this is also the email contact forms will go to
+description: "团结 诚实 勤奋 进取""
+author     : GHTxx
+# logo:     #optional, defaults to site title
+  # path: assets\img\clients\creative-market.jpg
+  # height: 60 #height in px, defaults to 52px
 
-google:
-  search_engine_id: # YOUR_SEARCH_ENGINE_ID
-  instant_search: # false (default), true
-
-# site verifications, for seo
-webmaster_verifications:
-  google: # 1234
-  bing: # 1234
-  alexa: # 1234
-  yandex: # 1234
-  baidu: # 1234
-
-# Analytics
-analytics:
-  provider: false # false (default), "google", "google-universal", "custom"
-  google:
-    tracking_id:
-    anonymize_ip: # true, false (default)
-
-# Reading Files
-include:
-  - .htaccess
-  - _pages
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - vendor
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-  - Capfile
-  - CHANGELOG
-  - config
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
-  - node_modules
-  - package.json
-  - Rakefile
-  - README
-  - tmp
-  - /docs # ignore /docs in theme
-  - /test # ignore /test in theme
-keep_files:
-  - .git
-  - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-# Conversion
-markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
-
-# Markdown Processing
-kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-  style: compressed
-
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: "" # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
-# Plugins (previously gems:)
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
 
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
+analytics:
+  google: #Google Analytics tracking code here
 
-# HTML Compression
-# - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
+collections:
+  portfolio:
 
-# site defaults
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-      show_hero: true
-      show_author: true
-      show_toc: true
-      share: true
-      show_comments: false
-      show_ads: false
+markdown: kramdown
+
+# Uncomment following line to use Formspree form ID based URL instead of email based URL
+# Details: https://help.formspree.io/hc/en-us/articles/360017735154-How-to-prevent-spam
+# formspree_form_path: "f/a_form_id"
+
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
