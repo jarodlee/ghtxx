@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 基本概念 / 对象 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第4章 基本概念</th>
+<tr>
+<th width="20%" align="left"><a href="ch04s06.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">对象</span></th>
+<th align="right"><a href="ch04s08.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>对象</h1>
+<p>记住，Python把在程序中用到的任何东西都称为 <dfn>对象</dfn> 。这是从广义上说的。因此我们不会说“某某 <dfn>东西</dfn> ”，我们说“某个 <dfn>对象</dfn> ”。</p>
+
+<p class="notebox">
+<span class="boxtitle">给面向对象编程用户的注释</span><br>
+就每一个东西包括数、字符串甚至函数都是对象这一点来说，Python是极其完全地面向对象的。
+</p>
+
+<p>我们将看一下如何使用变量和字面意义上的常量。保存下面这个例子，然后运行程序。</p>
+
+<p class="notebox">
+<span class="boxtitle">如何编写Python程序</span><br>
+下面是保存和运行Python程序的标准流程。<br>
+&nbsp;&nbsp;&nbsp;1. 打开你最喜欢的编辑器。<br>
+&nbsp;&nbsp;&nbsp;2. 输入例子中的程序代码。<br>
+&nbsp;&nbsp;&nbsp;3. 用注释中给出的文件名把它保存为一个文件。我按照惯例把所有的Python程序都以扩展名<code>.py</code>保存。<br>
+&nbsp;&nbsp;&nbsp;4. 运行解释器命令<strong>python <dfn>program.py</dfn></strong>或者使用IDLE运行程序。你也可以使用先前介绍的<a href="ch03s05.html">可执行的方法</a>。</p>
+
+<p class="exampletitle"><a name="e41">例4.1 使用变量和字面意义上的常量</a></p>
+<p class="filebox">
+<code class="comment"># Filename : var.py</code><br>
+<code>i = 5</code><br>
+<code class="key">print </code><code>i</code><br>
+<code>i = i + </code><code class="cite">1</code><br>
+<code class="key">print </code><code>i</code><br>
+<br>
+<code>s = </code><code class="cite">'''This is a multi-line string.<br>
+This is the second line.'''</code><br>
+<code class="key">print </code><code>s</code>
+</p>
+<p>（源文件：<a href="code/var.py">code/var.py</a>）</p>
+
+<h2><a name="output">输出</a></h2>
+<p class="codebox"><code>
+$ python var.py<br>
+5<br>
+6<br>
+This is a multi-line string.<br>
+This is the second line.
+</code></p>
+
+<h2><a name="how">它如何工作</a></h2>
+<p>下面来说明一下这个程序如何工作。首先我们使用赋值运算符（<code>=</code>）把一个字面意义上的常数<code>5</code>赋给变量<code>i</code>。这一行称为一个语句。语句声明需要做某件事情，在这个地方我们把变量名<code>i</code>与值<code>5</code>连接在一起。接下来，我们用<code>print</code>语句打印<code>i</code>的值，就是把变量的值打印在屏幕上。</p>
+<p>然后我们对<code>i</code>中存储的值加<code>1</code>，再把它存回<code>i</code>。我们打印它时，得到期望的值<code>6</code>。</p>
+<p>类似地，我们把一个字面意义上的字符串赋给变量<code>s</code>然后打印它。</p>
+
+<p class="notebox">
+<span class="boxtitle">给C/C++程序员的注释</span><br>
+使用变量时只需要给它们赋一个值。不需要声明或定义数据类型。
+</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch04s06.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch04.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch04s08.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">数据类型</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">逻辑行与物理行</th>
+</tr>
+</table>
+
+</body>
+</html>

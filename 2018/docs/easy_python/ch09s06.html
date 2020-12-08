@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 数据结构 / 参考 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第9章 数据结构</th>
+<tr>
+<th width="20%" align="left"><a href="ch09s05.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">参考</span></th>
+<th align="right"><a href="ch09s07.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>参考</h1>
+<p>当你创建一个对象并给它赋一个变量的时候，这个变量仅仅 <dfn>参考</dfn> 那个对象，而不是表示这个对象本身！也就是说，变量名指向你计算机中存储那个对象的内存。这被称作名称到对象的<strong>绑定</strong>。</p>
+<p>一般说来，你不需要担心这个，只是在参考上有些细微的效果需要你注意。这会通过下面这个例子加以说明。</p>
+
+<h2><a name="objects">对象与参考</a></h2>
+<p class="exampletitle"><a name="e96">例9.6 对象与参考</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: reference.py</code><br>
+<br>
+<code class="key">print </code><code class="cite">'Simple Assignment'</code><br>
+<code>shoplist = [</code><code class="cite">'apple'</code><code>, </code><code class="cite">'mango'</code><code>, </code><code class="cite">'carrot'</code><code>, </code><code class="cite">'banana'</code><code>]</code><br>
+<code>mylist = shoplist </code><code class="comment"># mylist is just another name pointing to the same object!</code><br>
+<br>
+<code class="key">del </code><code>shoplist[</code><code class="cite">0</code><code>]</code><br>
+<br>
+<code class="key">print </code><code class="cite">'shoplist is'</code><code>, shoplist</code><br>
+<code class="key">print </code><code class="cite">'mylist is'</code><code>, mylist</code><br>
+<code class="comment"># notice that both shoplist and mylist both print the same list without<br>
+# the 'apple' confirming that they point to the same object</code><br>
+<br>
+<code class="key">print </code><code class="cite">'Copy by making a full slice'</code><br>
+<code>mylist = shoplist[:] </code><code class="comment"># make a copy by doing a full slice</code><br>
+<code class="key">del </code><code>mylist[</code><code class="cite">0</code><code>] </code><code class="comment"># remove first item</code><br>
+<br>
+<code class="key">print </code><code class="cite">'shoplist is'</code><code>, shoplist</code><br>
+<code class="key">print </code><code class="cite">'mylist is'</code><code>, mylist</code><br>
+<code class="comment"># notice that now the two lists are different</code>
+</p>
+<p>（源文件：<a href="code/reference.py">code/reference.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python reference.py<br>
+Simple Assignment<br>
+shoplist is ['mango', 'carrot', 'banana']<br>
+mylist is ['mango', 'carrot', 'banana']<br>
+Copy by making a full slice<br>
+shoplist is ['mango', 'carrot', 'banana']<br>
+mylist is ['carrot', 'banana']
+</code></p>
+
+<h2>它如何工作</h2>
+<p>大多数解释已经在程序的注释中了。你需要记住的只是如果你想要复制一个列表或者类似的序列或者其他复杂的对象（不是如整数那样的简单 <dfn>对象</dfn> ），那么你必须使用切片操作符来取得拷贝。如果你只是想要使用另一个变量名，两个名称都 <dfn>参考</dfn> 同一个对象，那么如果你不小心的话，可能会引来各种麻烦。</p>
+
+<p class="notebox">
+<span class="boxtitle">给Perl程序员的注释</span><br>
+记住列表的赋值语句<strong>不</strong>创建拷贝。你得使用切片操作符来建立序列的拷贝。
+</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch09s05.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch09.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch09s07.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">序列</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">更多字符串的内容</th>
+</tr>
+</table>
+
+</body>
+</html>

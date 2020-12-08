@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 基本概念 / 逻辑行与物理行 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第4章 基本概念</th>
+<tr>
+<th width="20%" align="left"><a href="ch04s07.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">逻辑行与物理行</span></th>
+<th align="right"><a href="ch04s09.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>逻辑行与物理行</h1>
+<p>物理行是你在编写程序时所 <dfn>看见</dfn> 的。逻辑行是Python <dfn>看见</dfn> 的单个语句。Python假定每个 <dfn>物理行</dfn> 对应一个 <dfn>逻辑行</dfn> 。</p>
+<p>逻辑行的例子如<code>print 'Hello World'</code>这样的语句——如果它本身就是一行（就像你在编辑器中看到的那样），那么它也是一个物理行。</p>
+<p>默认地，Python希望每行都只使用一个语句，这样使得代码更加易读。</p>
+<p>如果你想要在一个物理行中使用多于一个逻辑行，那么你需要使用分号（;）来特别地标明这种用法。分号表示一个逻辑行/语句的结束。例如：</p>
+
+<p class="filebox">
+<code>i = </code><code class="cite">5</code><br>
+<code class="key">print </code><code>i</code>
+</p>
+
+<p>与下面这个相同：</p>
+
+<p class="filebox">
+<code>i = </code><code class="cite">5</code><code>;</code><br>
+<code class="key">print </code><code>i</code><code>;</code>
+</p>
+
+<p>同样也可以写成：</p>
+
+<p class="filebox">
+<code>i = </code><code class="cite">5</code><code>; </code><code class="key">print </code><code>i</code><code>;</code>
+</p>
+
+<p>甚至可以写成：</p>
+
+<p class="filebox">
+<code>i = </code><code class="cite">5</code><code>; </code><code class="key">print </code><code>i</code>
+</p>
+
+<p>然而，我<strong>强烈建议</strong>你坚持<strong>在每个物理行只写一句逻辑行</strong>。仅仅当逻辑行太长的时候，在多于一个物理行写一个逻辑行。这些都是为了尽可能避免使用分号，从而让代码更加易读。事实上，我 <dfn>从来没有</dfn> 在Python程序中使用过或看到过分号。</p>
+<p>下面是一个在多个物理行中写一个逻辑行的例子。它被称为<strong>明确的行连接</strong>。</p>
+
+<p class="filebox">
+<code>s = </code><code class="cite">'This is a string. \<br>
+This continues the string.'</code><br>
+<code class="key">print </code><code>s</code>
+</p>
+
+<p>它的输出：</p>
+
+<p class="codebox"><code>
+This is a string. This continues the string.
+</code></p>
+
+<p>类似地，</p>
+
+<p class="filebox">
+<code class="key">print </code><code>\<br>
+i</code>
+</p>
+
+<p>与如下写法效果相同：</p>
+
+<p class="filebox">
+<code class="key">print </code><code>i</code>
+</p>
+
+<p>有时候，有一种暗示的假设，可以使你不需要使用反斜杠。这种情况出现在逻辑行中使用了圆括号、方括号或波形括号的时候。这被称为<strong>暗示的行连接</strong>。你会在后面介绍如何使用<a href="ch09s02.html">列表</a>的章节中看到这种用法。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch04s07.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch04.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch04s09.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">对象</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">缩进</th>
+</tr>
+</table>
+
+</body>
+</html>

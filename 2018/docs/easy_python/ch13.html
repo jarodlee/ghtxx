@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 异常 / 错误 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第13章 异常</th>
+<tr>
+<th width="20%" align="left"><a href="ch12s03.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">错误</span></th>
+<th align="right"><a href="ch13s02.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>第13章 异常</h1>
+
+<p><strong>目录表</strong></p>
+<dl>
+<dt><a href="ch13.html#s01">错误</a></dt>
+<dt><a href="ch13s02.html">try..except</a></dt>
+<dd><a href="ch13s02.html#handling">处理异常</a></dd>
+<dt><a href="ch13s03.html">引发异常</a></dt>
+<dd><a href="ch13s03.html#how">如何引发异常</a></dd>
+<dt><a href="ch13s04.html">try..finally</a></dt>
+<dd><a href="ch13s04.html#using">使用finally</a></dd>
+<dt><a href="ch13s05.html">概括</a></dt>
+</dl>
+
+<p>当你的程序中出现某些 <dfn>异常的</dfn> 状况的时候，异常就发生了。例如，当你想要读某个文件的时候，而那个文件不存在。或者在程序运行的时候，你不小心把它删除了。上述这些情况可以使用<strong>异常</strong>来处理。</p>
+<p>假如你的程序中有一些无效的语句，会怎么样呢？Python会<strong>引发</strong>并告诉你那里有一个<strong>错误</strong>，从而处理这样的情况。</p>
+
+<h1><a name="s01">错误</a></h1>
+
+<p>考虑一个简单的<code>print</code>语句。假如我们把<code>print</code>误拼为<code>Print</code>，注意大写，这样Python会 <dfn>引发</dfn> 一个语法错误。</p>
+
+<p class="codebox"><code>
+&gt;&gt;&gt; Print 'Hello World'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;File "&lt;stdin&gt;", line 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Print 'Hello World'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+SyntaxError: invalid syntax<br>
+<br>
+&gt;&gt;&gt; print 'Hello World'<br>
+Hello World
+</code></p>
+
+<p>我们可以观察到有一个<code>SyntaxError</code>被引发，并且检测到的错误位置也被打印了出来。这是这个错误的 <dfn>错误处理器</dfn> 所做的工作。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch12s03.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch13.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch13s02.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">概括</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">try..except</th>
+</tr>
+</table>
+
+</body>
+</html>

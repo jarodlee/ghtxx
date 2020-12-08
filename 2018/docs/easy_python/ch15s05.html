@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 更多Python的内容 / lambda形式 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第15章 更多Python的内容</th>
+<tr>
+<th width="20%" align="left"><a href="ch15s04.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">lambda形式</span></th>
+<th align="right"><a href="ch15s06.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>lambda形式</h1>
+<p><code>lambda</code>语句被用来创建新的函数对象，并且在运行时返回它们。</p>
+
+<p class="exampletitle"><a name="e152">例15.2 使用lambda形式</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: lambda.py</code><br>
+<br>
+<code class="key">def </code><code class="func">make_repeater</code><code>(n):</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;return lambda </code><code>s: s*n<br>
+<br>
+twice = make_repeater(</code><code class="cite">2</code><code>)</code><br>
+<br>
+<code class="key">print </code><code>twice(</code><code class="cite">'word'</code><code>)</code><br>
+<code class="key">print </code><code>twice(</code><code class="cite">5</code><code>)</code>
+</p>
+<p>（源文件：<a href="code/lambda.py">code/lambda.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python lambda.py<br>
+wordword<br>
+10
+</code></p>
+
+<h2>它如何工作</h2>
+<p>这里，我们使用了<code>make_repeater</code>函数在运行时创建新的函数对象，并且返回它。<code>lambda</code>语句用来创建函数对象。本质上，<code>lambda</code>需要一个参数，后面仅跟单个表达式作为函数体，而表达式的值被这个新建的函数返回。注意，即便是<code>print</code>语句也不能用在lambda形式中，只能使用表达式。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch15s04.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch15.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch15s06.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">在函数中接收元组和列表</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">exec和eval语句</th>
+</tr>
+</table>
+
+</body>
+</html>

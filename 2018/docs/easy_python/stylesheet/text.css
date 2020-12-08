@@ -1,0 +1,81 @@
+h1 {
+color:#623126;
+}
+
+p {
+line-height:120%;
+text-align:justify;
+}
+
+.rigthtalign {
+text-align:right;
+} 
+
+li {
+line-height:120%;
+text-align:justify;
+}
+ 
+dt {
+line-height:120%;
+}
+
+dd {
+line-height:120%;
+text-align:justify;
+}
+
+code {
+font-family:"Courier New";
+font-size:large;
+}
+
+code.comment {
+color:#0000FF;
+}
+
+code.key {
+color:#FF0000;
+}
+
+code.cite {
+color:#FF00FF;
+}
+
+code.func {
+color:#663300;
+}
+
+.header {
+font-size:large;
+color:#623126;
+}
+
+.header2 {
+font-weight:bold;
+}
+
+.booktitle {
+font-size:56px;
+font-family:"ºÚÌå", Arial;
+font-weight:bolder;
+line-height:200%;
+}
+
+.author {
+font-size:large;
+font-family:"ËÎÌå", Arial;
+font-weight:bold;
+line-height:150%;
+}
+
+.boxtitle {
+font-size:large;
+font-family:"ºÚÌå", Arial;
+font-weight:bold;
+line-height:150%;
+}
+
+.exampletitle {
+font-weight:bold;
+} 

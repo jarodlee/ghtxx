@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 函数 / 关键参数 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第7章 函数</th>
+<tr>
+<th width="20%" align="left"><a href="ch07s04.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">关键参数</span></th>
+<th align="right"><a href="ch07s06.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>关键参数</h1>
+<p>如果你的某个函数有许多参数，而你只想指定其中的一部分，那么你可以通过命名来为这些参数赋值——这被称作 <dfn>关键参数</dfn> ——我们使用名字（关键字）而不是位置（我们前面所一直使用的方法）来给函数指定实参。</p>
+<p>这样做有两个 <dfn>优势</dfn> ——一，由于我们不必担心参数的顺序，使用函数变得更加简单了。二、假设其他参数都有默认值，我们可以只给我们想要的那些参数赋值。</p>
+
+<h2><a name="using">使用关键参数</a></h2>
+<p class="exampletitle"><a name="e76">例7.6 使用关键参数</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: func_key.py</code><br>
+<br>
+<code class="key">def </code><code class="func">func</code><code>(a, b=</code><code class="cite">5</code><code>, c=</code><code class="cite">10</code><code>):</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'a is'</code><code>, a, </code><code class="cite">'and b is'</code><code>, b, </code><code class="cite">'and c is'</code><code>, c</code><br>
+<br>
+<code>func(</code><code class="cite">3</code><code>, </code><code class="cite">7</code><code>)</code><br>
+<code>func(</code><code class="cite">25</code><code>, c=</code><code class="cite">24</code><code>)</code><br>
+<code>func(c=</code><code class="cite">50</code><code>, a=</code><code class="cite">100</code><code>)</code>
+</p>
+<p>（源文件：<a href="code/func_key.py">code/func_key.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python func_key.py<br>
+a is 3 and b is 7 and c is 10<br>
+a is 25 and b is 5 and c is 24<br>
+a is 100 and b is 5 and c is 50
+</code></p>
+
+<h2>它如何工作</h2>
+<p>名为<code>func</code>的函数有一个没有默认值的参数，和两个有默认值的参数。</p>
+<p>在第一次使用函数的时候，<code> func(3, 7)</code>，参数<code>a</code>得到值<code>3</code>，参数<code>b</code>得到值<code>7</code>，而参数<code>c</code>使用默认值<code>10</code>。</p>
+<p>在第二次使用函数<code>func(25, c=24)</code>的时候，根据实参的位置变量<code>a</code>得到值<code>25</code>。根据命名，即关键参数，参数<code>c</code>得到值<code>24</code>。变量<code>b</code>根据默认值，为<code>5</code>。</p>
+<p>在第三次使用<code>func(c=50, a=100)</code>的时候，我们使用关键参数来完全指定参数值。注意，尽管函数定义中，<code>a</code>在<code>c</code>之前定义，我们仍然可以在<code>a</code>之前指定参数<code>c</code>的值。
+</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch07s04.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch07.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch07s06.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">默认参数值</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">return语句</th>
+</tr>
+</table>
+
+</body>
+</html>

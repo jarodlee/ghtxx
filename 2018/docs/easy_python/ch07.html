@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 函数 / 简介 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第7章 函数</th>
+<tr>
+<th width="20%" align="left"><a href="ch06s07.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">简介</span></th>
+<th align="right"><a href="ch07s02.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>第7章 函数</h1>
+<p><strong>目录表</strong></p>
+<dl>
+<dt><a href="ch07.html#s01">简介</a></dt>
+<dd><a href="ch07.html#defining">定义函数</a></dd>
+<dt><a href="ch07s02.html">函数形参</a></dt>
+<dd><a href="ch07s02.html#using">使用函数形参</a></dd>
+<dt><a href="ch07s03.html">局部变量</a></dt>
+<dd><a href="ch07s03.html#local">使用局部变量</a></dd>
+<dd><a href="ch07s03.html#global">使用global语句</a></dd>
+<dt><a href="ch07s04.html">默认参数值</a></dt>
+<dd><a href="ch07s04.html#using">使用默认参数值</a></dd>
+<dt><a href="ch07s05.html">关键参数</a></dt>
+<dd><a href="ch07s05.html#using">使用关键参数</a></dd>
+<dt><a href="ch07s06.html">return语句</a></dt>
+<dd><a href="ch07s06.html#using">使用字面意义上的语句</a></dd>
+<dt><a href="ch07s07.html">DocStrings</a></dt>
+<dd><a href="ch07s07.html#using">使用DocStrings</a></dd>
+<dt><a href="ch07s08.html">概括</a></dt>
+</dl>
+
+<h1><a name="s01">简介</a></h1>
+<p>函数是重用的程序段。它们允许你给一块语句一个名称，然后你可以在你的程序的任何地方使用这个名称任意多次地运行这个语句块。这被称为 <dfn>调用</dfn> 函数。我们已经使用了许多内建的函数，比如<code>len</code>和<code>range</code>。</p>
+<p>函数通过<code>def</code>关键字<strong>定义</strong>。def关键字后跟一个函数的 <dfn>标识符</dfn> 名称，然后跟一对圆括号。圆括号之中可以包括一些变量名，该行以冒号结尾。接下来是一块语句，它们是函数体。下面这个例子将说明这事实上是十分简单的：</p>
+
+<h2><a name="defining">定义函数</a></h2>
+<p class="exampletitle"><a name="e71">例7.1 定义函数</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: function1.py</code><br>
+<br>
+<code class="key">def </code><code class="func">sayHello</code><code>():</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'Hello World!' </code><code class="comment"># block belonging to the function</code><br>
+<br>
+<code>sayHello() </code><code class="comment"># call the function</code>
+</p>
+<p>（源文件：<a href="code/function1.py">code/function1.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python function1.py<br>
+Hello World!
+</code></p>
+
+<h2>它如何工作</h2>
+<p>我们使用上面解释的语法定义了一个称为<code>sayHello</code>的函数。这个函数不使用任何参数，因此在圆括号中没有声明任何变量。参数对于函数而言，只是给函数的输入，以便于我们可以传递不同的值给函数，然后得到相应的结果。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch06s07.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch07.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch07s02.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">概括</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">函数形参</th>
+</tr>
+</table>
+
+</body>
+</html>

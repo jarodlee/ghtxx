@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 面向对象的编程 / 对象的方法 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第11章 面向对象的编程</th>
+<tr>
+<th width="20%" align="left"><a href="ch11s03.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">对象的方法</span></th>
+<th align="right"><a href="ch11s05.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>对象的方法</h1>
+<p>我们已经讨论了类/对象可以拥有像函数一样的方法，这些方法与函数的区别只是一个额外的<code>self</code>变量。现在我们来学习一个例子。</p>
+
+<h2><a name="using">使用对象的方法</a></h2>
+<p class="exampletitle"><a name="e112">例11.2 使用对象的方法</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: method.py</code><br>
+<br>
+<code class="key">class </code><code class="func">Person</code><code>:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;def </code><code class="func">sayHi</code><code>(self):</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'Hello, how are you?'</code><br>
+<br>
+<code>p = Person()<br>
+p.sayHi()</code><br>
+<br>
+<code class="comment"># This short example can also be written as Person().sayHi()</code>
+</p>
+<p>（源文件：<a href="code/method.py">code/method.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python method.py<br>
+Hello, how are you?</code></p>
+
+<h2>它如何工作</h2>
+<p>这里我们看到了<code>self</code>的用法。注意<code>sayHi</code>方法没有任何参数，但仍然在函数定义时有<code>self</code>。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch11s03.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch11.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch11s05.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">类</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">__init__方法</th>
+</tr>
+</table>
+
+</body>
+</html>

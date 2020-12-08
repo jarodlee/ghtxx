@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 控制流 / break语句 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第6章 控制流</th>
+<tr>
+<th width="20%" align="left"><a href="ch06s04.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">break语句</span></th>
+<th align="right"><a href="ch06s06.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>break语句</h1>
+<p><code>break</code>语句是用来 <dfn>终止</dfn> 循环语句的，即哪怕循环条件没有称为<code>False</code>或序列还没有被完全递归，也停止执行循环语句。</p>
+<p>一个重要的注释是，如果你从<code>for</code>或<code>while</code>循环中 <dfn>终止</dfn> ，任何对应的循环<code>else</code>块将<strong>不</strong>执行。</p>
+
+<h2><a name="using">使用break语句</a></h2>
+<p class="exampletitle"><a name="e64">例6.4 使用break语句</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: break.py</code><br>
+<br>
+<code class="key">while </code><code class="func">True</code><code>:</code><br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;s = </code><code class="func">raw_input</code><code>(</code><code class="cite">'Enter something : '</code><code>)</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;if </code><code>s == </code><code class="cite">'quit'</code><code>:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'Length of the string is'</code><code>, </code><code class="func">len</code><code>(s)</code><br>
+<code class="key">print </code><code class="cite">'Done'</code>
+</p>
+<p>（源文件：<a href="code/break.py">code/break.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python break.py<br>
+Enter something : Programming is fun<br>
+Length of the string is 18<br>
+Enter something : When the work is done<br>
+Length of the string is 21<br>
+Enter something : if you wanna make your work also fun:<br>
+Length of the string is 37<br>
+Enter something :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;use Python!<br>
+Length of the string is 12<br>
+Enter something : quit<br>
+Done
+</code></p>
+
+<h2>它如何工作</h2>
+<p>在这个程序中，我们反复地取得用户地输入，然后打印每次输入地长度。我们提供了一个特别的条件来停止程序，即检验用户的输入是否是<code>'quit'</code>。通过 <dfn>终止</dfn> 循环到达程序结尾来停止程序。</p>
+<p>输入字符串的长度通过内建的<code>len</code>函数取得。</p>
+<p>记住，<code>break</code>语句也可以在<code>for</code>循环中使用。</p>
+
+<h2>G2的Python诗</h2>
+<p>我在这里输入的是我所写的一段小诗，称为<strong>G2的Python诗</strong>：</p>
+<p class="codebox"><code>
+Programming is fun<br>
+When the work is done<br>
+if you wanna make your work also fun:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;use Python!
+</code></p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch06s04.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch06.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch06s06.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">for循环</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">continue语句</th>
+</tr>
+</table>
+
+</body>
+</html>

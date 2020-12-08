@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 最初的步骤 / 获取帮助 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第3章 最初的步骤</th>
+<tr>
+<th width="20%" align="left"><a href="ch03s05.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">获取帮助</span></th>
+<th align="right"><a href="ch03s07.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>获取帮助</h1>
+<p>如果你需要某个Python函数或语句的快速信息帮助，那么你可以使用内建的<code>help</code>功能。尤其在你使用带提示符的命令行的时候，它十分有用。比如，运行<code>help(str)</code>——这会显示<code>str</code>类的帮助。str类用于保存你的程序使用的各种文本（字符串）。类将在后面面向对象编程的章节详细解释。</p>
+
+<p class="notebox">
+<span class="boxtitle">注释</span><br>
+按<strong>q</strong>退出帮助。
+</p>
+
+<p>类似地，你可以获取Python中几乎所有东西的信息。使用<code>help()</code>去学习更多关于<code>help</code>本身的东西！</p>
+<p>如果你想要获取关于如<code>print</code>那样操作符的帮助，那么你需要正确的设置PYTHONDOCS环境变量。这可以在Linux/Unix中轻松地通过<strong>env</strong>命令完成。</p>
+
+<p class="codebox">
+<code>$ env PYTHONDOCS=/usr/share/doc/python-docs-2.3.4/html/ python<br>
+Python 2.3.4 (#1, Oct 26 2004, 16:42:40)<br>
+[GCC 3.4.2 20041017 (Red Hat 3.4.2-6.fc3)] on linux2<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+&gt;&gt;&gt; help('print')</code>
+</p>
+
+<p>你应该注意到我特意在“<code>print</code>”上使用了引号，那样Python就可以理解我是希望获取关于“print”的帮助而不是想要它打印东西。</p>
+<p>注意，我使用的位置是在Fedora Core 3 Linux中的位置——它可能在不同的发行版和版本中有所不同。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch03s05.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch03.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch03s07.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">可执行的Python程序</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">概括</th>
+</tr>
+</table>
+
+</body>
+</html>

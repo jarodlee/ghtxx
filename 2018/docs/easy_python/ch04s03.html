@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 基本概念 / 字符串 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第4章 基本概念</th>
+<tr>
+<th width="20%" align="left"><a href="ch04s02.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">字符串</span></th>
+<th align="right"><a href="ch04s04.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>字符串</h1>
+<p>字符串是 <dfn>字符的序列</dfn> 。字符串基本上就是一组单词。</p>
+<p>我几乎可以保证你在每个Python程序中都要用到字符串，所以请特别留心下面这部分的内容。下面告诉你如何在Python中使用字符串。</p>
+
+<ul>
+<li><strong>使用单引号（'）</strong>
+<p>你可以用单引号指示字符串，就如同<code>'Quote me on this'</code>这样。所有的空白，即空格和制表符都照原样保留。</p>
+</li>
+<li><strong>使用双引号（"）</strong>
+<p>在双引号中的字符串与单引号中的字符串的使用完全相同，例如<code>"What's your name?"</code>。</p>
+</li>
+<li><strong>使用三引号（'''或"""）</strong>
+<p>利用三引号，你可以指示一个多行的字符串。你可以在三引号中自由的使用单引号和双引号。例如：</p>
+<p class="filebox"><code class="cite">
+'''This is a multi-line string. This is the first line.<br>
+This is the second line.<br>
+"What's your name?," I asked.<br>
+He said "Bond, James Bond."<br>
+'''</code></p>
+</li>
+<li><strong>转义符</strong>
+<p>假设你想要在一个字符串中包含一个单引号（'），那么你该怎么指示这个字符串？例如，这个字符串是<code>What's your name?</code>。你肯定不会用<code>'What's your name?'</code>来指示它，因为Python会弄不明白这个字符串从何处开始，何处结束。所以，你需要指明单引号而不是字符串的结尾。可以通过 <dfn>转义符</dfn> 来完成这个任务。你用<code>\'</code>来指示单引号——注意这个反斜杠。现在你可以把字符串表示为<code>'What\'s your name?'</code>。</p>
+<p>另一个表示这个特别的字符串的方法是<code>"What's your name?"</code>，即用双引号。类似地，要在双引号字符串中使用双引号本身的时候，也可以借助于转义符。另外，你可以用转义符<code>\\</code>来指示反斜杠本身。</p>
+<p>值得注意的一件事是，在一个字符串中，行末的单独一个反斜杠表示字符串在下一行继续，而不是开始一个新的行。例如：</p>
+<p class="filebox"><code class="cite">
+"This is the first sentence.\<br>
+This is the second sentence."
+</code></p>
+<p>等价于<code>"This is the first sentence. This is the second sentence."</code></p>
+</li>
+<li><strong>自然字符串</strong>
+<p>如果你想要指示某些不需要如转义符那样的特别处理的字符串，那么你需要指定一个自然字符串。自然字符串通过给字符串加上前缀<code>r</code>或<code>R</code>来指定。例如<code>r"Newlines are indicated by \n"</code>。</p>
+</li>
+<li><strong>Unicode字符串</strong>
+<p>Unicode是书写国际文本的标准方法。如果你想要用你的母语如北印度语或阿拉伯语写文本，那么你需要有一个支持Unicode的编辑器。类似地，Python允许你处理Unicode文本——你只需要在字符串前加上前缀<code>u</code>或<code>U</code>。例如，<code>u"This is a Unicode string."</code>。</p>
+<p>记住，在你处理文本文件的时候使用Unicode字符串，特别是当你知道这个文件含有用非英语的语言写的文本。</p>
+</li>
+<li><strong>字符串是不可变的</strong>
+<p>这意味着一旦你创造了一个字符串，你就不能再改变它了。虽然这看起来像是一件坏事，但实际上它不是。我们将会在后面的程序中看到为什么我们说它不是一个缺点。</p>
+</li>
+<li><strong>按字面意义级连字符串</strong>
+<p>如果你把两个字符串按字面意义相邻放着，他们会被Python自动级连。例如，<code>'What\'s' 'your name?'</code>会被自动转为<code>"What's your name?"</code>。</p>
+</li>
+</ul>
+
+<p class="notebox">
+<span class="boxtitle">给C/C++程序员的注释</span><br>
+在Python中没有专门的<code>char</code>数据类型。确实没有需要有这个类型，我相信你不会为此而烦恼。
+</p><br>
+<p class="notebox">
+<span class="boxtitle">给Perl/PHP程序员的注释</span><br>
+记住，单引号和双引号字符串是完全相同的——它们没有在任何方面有不同。
+</p><br>
+<p class="notebox">
+<span class="boxtitle">给正则表达式用户的注释</span><br>
+一定要用自然字符串处理正则表达式。否则会需要使用很多的反斜杠。例如，后向引用符可以写成<code>'\\1'</code>或<code>r'\1'</code>。
+</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch04s02.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch04.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch04s04.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">数</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">变量</th>
+</tr>
+</table>
+
+</body>
+</html>

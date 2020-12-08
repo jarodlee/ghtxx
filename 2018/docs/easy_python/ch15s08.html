@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 更多Python的内容 / repr函数 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第15章 更多Python的内容</th>
+<tr>
+<th width="20%" align="left"><a href="ch15s07.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">repr函数</span></th>
+<th align="right"><a href="ch15s09.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>repr函数</h1>
+<p><code>repr</code>函数用来取得对象的规范字符串表示。反引号（也称转换符）可以完成相同的功能。注意，在大多数时候有<code>eval(repr(object)) == object</code>。</p>
+
+<p class="codebox"><code>
+&gt;&gt;&gt; i = []<br>
+&gt;&gt;&gt; i.append('item')<br>
+&gt;&gt;&gt; `i`<br>
+"['item']"<br>
+&gt;&gt;&gt; repr(i)<br>
+"['item']"
+</code></p>
+
+<p>基本上，<code>repr</code>函数和反引号用来获取对象的可打印的表示形式。你可以通过定义类的<code>__repr__</code>方法来控制你的对象在被<code>repr</code>函数调用的时候返回的内容。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch15s07.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch15.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch15s09.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">assert语句</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">概括</th>
+</tr>
+</table>
+
+</body>
+</html>
