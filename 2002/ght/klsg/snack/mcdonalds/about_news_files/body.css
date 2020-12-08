@@ -1,0 +1,129 @@
+BODY {
+	SCROLLBAR-FACE-COLOR: #bebebe; SCROLLBAR-HIGHLIGHT-COLOR: #999999; SCROLLBAR-SHADOW-COLOR: #999999; SCROLLBAR-3DLIGHT-COLOR: #ffffff; SCROLLBAR-ARROW-COLOR: #e4e4e4; SCROLLBAR-TRACK-COLOR: #d8d9da; SCROLLBAR-DARKSHADOW-COLOR: #ffffff
+}
+.text11 {
+	FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+.text12 {
+	FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+.text12 {
+	FONT-SIZE: 12px; LINE-HEIGHT: 16px; TEXT-DECORATION: none
+}
+.service11 {
+	FONT-SIZE: 11px; COLOR: #ffffff
+}
+.service11:link {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+.service11:hover {
+	COLOR: #ffffcc; TEXT-DECORATION: none
+}
+.service11:active {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+.service11:unknown {
+	COLOR: #999999; TEXT-DECORATION: underline
+}
+.service12 {
+	FONT-SIZE: 12px; COLOR: #ffffff
+}
+.service12:link {
+	TEXT-DECORATION: underline
+}
+.service12:hover {
+	COLOR: #ffffcc; TEXT-DECORATION: none
+}
+.service12:active {
+	TEXT-DECORATION: underline
+}
+.service12:unknown {
+	TEXT-DECORATION: underline
+}
+.service12_w {
+	FONT-SIZE: 12px; COLOR: #666666
+}
+.service12_w:link {
+	TEXT-DECORATION: underline
+}
+.service12_w:hover {
+	TEXT-DECORATION: none
+}
+.service12_w:active {
+	TEXT-DECORATION: underline
+}
+.service12_w:unknown {
+	TEXT-DECORATION: underline
+}
+.service12_w1 {
+	FONT-SIZE: 12px; COLOR: #333333; TEXT-DECORATION: none
+}
+.service12_w1:link {
+	TEXT-DECORATION: none
+}
+.service12_w1:hover {
+	TEXT-DECORATION: underline
+}
+.service12_w1:active {
+	TEXT-DECORATION: none
+}
+.service12_w1:unknown {
+	TEXT-DECORATION: underline
+}
+.service12_blue {
+	FONT-SIZE: 12px; COLOR: #333399
+}
+.service12_blue:link {
+	TEXT-DECORATION: underline
+}
+.service12_blue:hover {
+	TEXT-DECORATION: none
+}
+.service12_blue:active {
+	TEXT-DECORATION: underline
+}
+.service12_blue:unknown {
+	TEXT-DECORATION: underline
+}
+.service12_green {
+	FONT-SIZE: 12px; COLOR: #009f9a
+}
+.service12_green:link {
+	TEXT-DECORATION: underline
+}
+.service12_green:hover {
+	TEXT-DECORATION: none
+}
+.service12_green:active {
+	TEXT-DECORATION: underline
+}
+.service12_green:unknown {
+	TEXT-DECORATION: underline
+}
+.service12_red {
+	FONT-SIZE: 12px; COLOR: #ff0000; TEXT-DECORATION: none
+}
+.service12_red:link {
+	TEXT-DECORATION: none
+}
+.service12_red:hover {
+	TEXT-DECORATION: underline
+}
+.service12_red:active {
+	TEXT-DECORATION: none
+}
+.service12_red:unknown {
+	TEXT-DECORATION: none
+}
+.mode {
+	BORDER-RIGHT: #999999 2px dotted; BORDER-TOP: #999999 2px dotted; BORDER-LEFT: #999999 2px dotted; BORDER-BOTTOM: #999999 2px dotted
+}
+.text13_words {
+	FONT-SIZE: 13px; COLOR: #a2a2a2; LINE-HEIGHT: 18px; LETTER-SPACING: 1px; TEXT-DECORATION: none
+}
+.text10 {
+	FONT-SIZE: 10px; COLOR: #666666; TEXT-DECORATION: none
+}
+.text12_orange {
+	FONT-SIZE: 12px; COLOR: #9c3f06; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}

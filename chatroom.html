@@ -55,6 +55,42 @@
     <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0b42e50c.js","daovoice")</script>
 </head>
 <body>
+    
+        client.join(<TOKEN_OR_KEY>, <CHANNEL_NAME>, <UID>, function(uid) {
+          console.log("User " + uid + " join channel successfully");
+        }, function(err) {
+          console.log("Join channel failed", err);
+        });
+
+        //publish local stream
+        client.publish(localStream, function (err) {
+          console.log("Publish local stream error: " + err);
+        });
+
+        client.on('stream-published', function (evt) {
+          console.log("Publish local stream successfully");
+        });
+
+        //subscribe remote stream
+        client.on('stream-added', function (evt) {
+          var stream = evt.stream;
+          console.log("New stream added: " + stream.getId());
+          client.subscribe(stream, function (err) {
+            console.log("Subscribe stream failed", err);
+          });
+        });
+
+        client.on('stream-subscribed', function (evt) {
+          var remoteStream = evt.stream;
+          console.log("Subscribe remote stream successfully: " + remoteStream.getId());
+          remoteStream.play('agora_remote' + remoteStream.getId());
+        })
+      
+    https://console.agora.io/invite?sign=YXBwSWQlM0QxOWFiNWFkYzAzZmU0ZDM1ODQ0MGVmNGM0NmE2NGE2ZCUyNm5hbWUlM0RKYXJvZCUyNnRpbWVzdGFtcCUzRDE1OTY1MDQ3MjA=
+    
+    
+    
+    
     <textarea id="messages" rows="5" cols="20"></textarea><br />
     <input id="text" type="text" />
     <input id="send" type="button" value="send" /><br />

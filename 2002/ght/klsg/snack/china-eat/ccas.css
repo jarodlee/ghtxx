@@ -1,0 +1,111 @@
+a:link {
+	font-size: 12px;
+	text-decoration: none;
+	color: #000000;
+}
+a:visited {
+	font-size: 12px;
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	font-size: 12px;
+	color: #FF6600;
+	text-decoration: none;
+}
+a:active {
+	font-size: 12px;
+	text-decoration: none;
+	color: #000000;
+}
+.unnamed1 {  font-size: 11px}
+.unnamed2 {  font-size: 12px; font-style: normal; color: #000000; height: auto; line-height: 19px}
+.unnamed3 {  background-image: url(image/di.gif); background-repeat: no-repeat; background-position: center center; font-size: 12px; color: 7B5202}
+.unnamed4 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+}
+.unnamed5 {
+}
+.di {
+	background-attachment: fixed;
+	background-image: url(image/5-1.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+.di2 {
+	background-attachment: fixed;
+	background-image: url(image/di-1.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.tex2 {
+	font-size: 12px;
+	color: #CC3300;
+}
+.di-3 {
+	background-attachment: fixed;
+	background-image: url(image/5-7.gif);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.di-4 {
+	background-attachment: fixed;
+	background-image: url(image/5-8.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+.txt1 {
+	font-size: 12px;
+	line-height: 20px;
+	color: #006600;
+}
+.txt1 {
+	font-size: 12px;
+	line-height: 20px;
+}
+.txt2 {
+	font-size: 13px;
+	font-weight: bold;
+}
+.huadi {
+	background-attachment: fixed;
+	background-image: url(image/diwen2.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+.link1 {
+	font-size: 13px;
+	font-weight: bold;
+	color: #990000;
+	text-decoration: none;
+}
+.name {
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.di-5 {
+	background-attachment: fixed;
+	background-image: url(image/5-9.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+.di-6 {
+	background-attachment: fixed;
+	background-image: url(image/5-91.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+.di-7 {
+	background-attachment: fixed;
+	background-image: url(image/5-92.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+.di-8 {
+	background-attachment: fixed;
+	background-image: url(di2.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
