@@ -38,20 +38,30 @@ timeline:
         desc: "1985年9月市教育委员会任命熊德芳同志为高花亭小学校长，主持学校工作，筹备学校成立事宜。1985年11月学校正式挂牌成立"
         image: assets/img/timeline/1.jpg
         alt:
-      - title: "An Agency is Born"
-        year: "March 2011"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
-        image: assets/img/timeline/2.jpg
+      - title: "网校上线"
+        year: "2001.04.28-2002.03"
+        desc: "借助网络免费空间与域名上线第一版文字与flash版网校,主要目的在于宣传,内容非常简洁"
+        image: assets/img/timeline/2001.jpg
         alt:
-      - title: "Jekyll Theme is created"
-        year: "2019"
-        desc: "Ravi Riley converted Agency, a Bootstrap-based theme, into a Jekyll theme. The Jekyll theme can be installed as a Ruby gem, or remotely. For more information, visit the documentation."
+      - title: "2002精制版网校"
+        year: "2002-2005"
+        desc: "由电教组牵头,组合当时骨干教师团队为全校所有老师制作了个人主页,并上线了全校的整合内容,原计划2003年3月举办网校上线仪式,由于当年突发SARS疫情,仪式取消,网校快速上线接入教学辅助功能.2005年采用了ghtxx.com运行"
+        image: assets/img/timeline/2003.jpg
+        alt: 2003网校上线仪式定制了一个exe工具
+      - title: "2012全功能网校上线"
+        year: "2012-2017"
+        desc: "采用Discuz技术制作了一个整合SNS功能的全功能网校,并提供每位师生的网络空间与学校邮箱"
+        image: assets/img/timeline/2012.jpg
+        alt: 互联网档案馆中保存的网站截图
+      - title: "2018开源版网校上线"
+        year: "2018-2020"
+        desc: "大道至简,随着移动互联网的兴起,学校网站全面转入github全球开源大潮,并采用HTML5与微信结合,让校园信息更快的与家长们互动"
+        image: assets/img/timeline/2018.jpg
+        alt: 极简截图
+      - title: "2021 Jekyll Start"
+        year: "2020 ~"
+        desc: "未来以来,未来可期!"
         image: assets/img/timeline/3.jpg
-        alt: image alt text
-      - title: "Title"
-        year: "2009-2011"
-        desc: "Your description here, **Markdown** is fully supported."
-        image: assets/img/timeline/4.jpg
         alt:
         # you can enforce the aligment
         align: right
@@ -68,16 +78,16 @@ clients:
     horizontal-scrolling: "" #"yes/no"
     list:
       - title: "envato"
-        url: https://github.com/jarodlee/mail-aqde
+        url: https://github.com/GHTxx2018/ghtxx
         logo: assets/img/clients/envato.jpg
       - title: "designmodo"
-        url: https://github.com/jarodlee/mail-aqde
+        url: https://github.com/GHTxx2018/ghtxx
         logo: assets/img/clients/designmodo.jpg
       - title: "themeforest"
-        url: https://github.com/jarodlee/mail-aqde
+        url: https://github.com/GHTxx2018/ghtxx
         logo: assets/img/clients/themeforest.jpg
       - title: "Creative Market"
-        url: https://github.com/jarodlee/mail-aqde
+        url: https://github.com/GHTxx2018/ghtxx
         logo: assets/img/clients/creative-market.jpg
 
 team:
@@ -131,7 +141,7 @@ footer:
         icon: "fab fa-facebook-f"
       - url: https://nas.aqde.net:1980
         icon: "fab fa-linkedin-in"
-      - url: https://github.com/jarodlee/mail-aqde
+      - url: https://github.com/GHTxx2018/ghtxx
         icon: "fab fa-github"
       - url: https://mail.ghtxx.cn
         icon: "fab fa-instagram"
