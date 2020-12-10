@@ -2,15 +2,15 @@ header:
     title: Welcome to our GHTxx!
     text: It's Nice To Meet You
     button: 课题研究
-    buttonlink: "https://mp.weixin.qq.com/mp/homepage?__biz=MjM5NDQxNzgyMQ==&hid=2&sn=d7c6a18e6516f39e7dee5d0ceae49c08
+    buttonlink: "https://mp.weixin.qq.com/mp/homepage?__biz=MjM5NDQxNzgyMQ==&hid=2&sn=d7c6a18e6516f39e7dee5d0ceae49c08"
 
 services:
-    title: "Services"
-    text: "Lorem ipsum"
+    title: "教育理念"
+    text: "面向未来的儿童教育"
     section: services
     list:
-      - title: "E-Commerce"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+      - title: "为了孩子的一切"
+        desc: "每个孩子都是家庭的希望，更是国家与民族的未来，每个孩子的天性都是我们挖掘潜力的方向"
         icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
       - title: "Responsive Design"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
