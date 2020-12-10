@@ -1,17 +1,17 @@
 nav:
-  - title: "Services"
+  - title: "教育理念"
     section: services
 
-  - title: "Portfolio"
+  - title: "教育特色"
     section: portfolio
 
-  - title: "About"
+  - title: "校史校貌""
     section: timeline
 
-  - title: "Team"
+  - title: "教育团队"
     section: team
 
-  - title: "联系我们"
+  - title: "信息反馈"
     section: contact
 
   - title: "少儿编程"

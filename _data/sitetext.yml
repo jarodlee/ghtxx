@@ -1,7 +1,7 @@
 header:
-    title: Welcome to our Studio!
+    title: Welcome to our GHTxx!
     text: It's Nice To Meet You
-    button: Tell Me More
+    button: 课题研究
     buttonlink: "#services"
 
 services:
