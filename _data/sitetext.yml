@@ -12,11 +12,11 @@ services:
       - title: "为了孩子的一切"
         desc: "每个孩子都是家庭的希望，更是国家与民族的未来，每个孩子的天性都是我们挖掘潜力的方向"
         icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
-      - title: "Responsive Design"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+      - title: "为了一切孩子"
+        desc: "我们坚持有教无类,每一个孩子进入高花亭小学都是我们的学生,无论出身贫富,无论学习差异,无论体能高低,我们都将每一个学生视为瑰宝"
         icon: fas fa-laptop
-      - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"
-        desc: "Your description here, full **Markdown** support"
+      - title: "[一切为了孩子](https://en.wikipedia.org/wiki/Markdown)"
+        desc: "学习，教育都与家庭生活密不可分 **健康成长** 包括智力，体能，还有心理素质，我们努力做到每一次教育帮助孩子提升一点！"
         icon: fab fa-markdown
 
 portfolio:
