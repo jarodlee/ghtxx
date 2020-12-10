@@ -5,7 +5,7 @@ nav:
   - title: "教育特色"
     section: portfolio
 
-  - title: "校史校貌"
+  - title: "校史文化"
     section: timeline
 
   - title: "教育团队"
@@ -15,4 +15,4 @@ nav:
     section: contact
 
   - title: "少儿编程"
-    url: https://www.geek-8.com/
+    url: https://i.ghtxx.cn/2018/program.html

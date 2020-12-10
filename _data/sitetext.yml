@@ -27,15 +27,15 @@ portfolio:
 
 
 timeline:
-    title: "About"
-    text: "Lorem ipsum timeline"
+    title: "校史文化"
+    text: "高花亭小学简史"
     section: timeline
     # left is the default
     #start_align: "left"
     events:
-      - title: "Our Humble Beginnings"
-        year: "2009-2011"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+      - title: "创校阶段"
+        year: "1985-1998"
+        desc: "1985年9月市教育委员会任命熊德芳同志为高花亭小学校长，主持学校工作，筹备学校成立事宜。1985年11月学校正式挂牌成立"
         image: assets/img/timeline/1.jpg
         alt:
       - title: "An Agency is Born"
@@ -55,7 +55,7 @@ timeline:
         alt:
         # you can enforce the aligment
         align: right
-    end: "Be Part <br> of Our <br> Story!"
+    end: "高花亭 <br> 继续 <br> 创新教育!"
 
 about:
     title: "About Us"
@@ -81,7 +81,7 @@ clients:
         logo: assets/img/clients/creative-market.jpg
 
 team:
-    title: "OUR AMAZING TEAM"
+    title: "优秀的教师团队"
     text: "Lorem ipsum dolor sit amet consectetur."
     subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported.
     section: team
@@ -133,7 +133,7 @@ footer:
         icon: "fab fa-linkedin-in"
       - url: https://github.com/jarodlee/mail-aqde
         icon: "fab fa-github"
-      - url: https://mail.aqde.net
+      - url: https://mail.ghtxx.cn
         icon: "fab fa-instagram"
 
 
