@@ -52,12 +52,12 @@ timeline:
         year: "2012-2017"
         desc: "网站变更使用 **i.ghtxx.cn** 域名,转换采用Discuz技术制作了一个整合SNS功能的全功能网校,并提供每位师生的网络空间与学校邮箱"
         image: assets/img/timeline/4.jpg
-        alt: 
+        alt:
       - title: "开源版网校"
         year: "2018-2020"
         desc: "大道至简,随着移动互联网的兴起,学校网站全面转入github全球开源大潮,并采用HTML5与微信结合,让校园信息更快的与家长们互动"
         image: assets/img/timeline/5.jpg
-        alt: 
+        alt:
       - title: "2021 Jekyll Start"
         year: "2020 Dec."
         desc: "未来已来,未来可期!"
@@ -92,39 +92,39 @@ clients:
 
 team:
     title: "优秀的教师团队"
-    text: "Lorem ipsum dolor sit amet consectetur."
-    subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported.
+    text: "好的学校离不开优秀的团队"
+    subtext: 每个学科都是孩子们学习的摇篮,每位老师都在努力创新. **高花亭小学** 一直在前进.
     section: team
     people:
-      - name: "Kay Garland"
-        role: "Lead Designer"
-        image: assets/img/team/500x500.jpg
+      - name: "语文组"
+        role: "国学、语言、文字"
+        image: assets/img/team/yuwen.jpg
         social:
-          - url: https://weibo.com/jarodlee
+          - url: http://jtj.anqing.gov.cn/
             icon: fab fa-twitter
-          - url: https://courses.geek-8.com/curriculum
+          - url: http://www.ahedu.cn/eschool/index.php?m=School&c=Index&a=index&schoolId=2300000001000636340
             icon: fab fa-facebook-f
-          - url: https://nas.aqde.net:1980
+          - url: http://www.ahedu.cn/
             icon: fab fa-linkedin-in
-      - name: "Jarod Lee"
-        role: "主讲老师"
+      - name: "综合组"
+        role: "信息技术"
         image: assets/img/team/lxj.jpg
         social:
           - url: https://weibo.com/jarodlee
             icon: fab fa-twitter
           - url: https://courses.geek-8.com/curriculum
             icon: fab fa-facebook-f
-          - url: https://nas.aqde.net:1980
+          - url: http://www.ahedu.cn/
             icon: fab fa-linkedin-in
-      - name: "Diana Perterson"
-        role: "Lead Developer"
-        image: assets/img/team/500x500.jpg
+      - name: "数学组"
+        role: "万物皆数字"
+        image: assets/img/team/shuxue.jpg
         social:
-          - url: https://weibo.com/jarodlee
+          - url: http://jtj.anqing.gov.cn/
             icon: fab fa-twitter
-          - url: https://courses.geek-8.com/curriculum
+          - url: http://www.ahedu.cn/eschool/index.php?m=School&c=Index&a=index&schoolId=2300000001000636340
             icon: fab fa-facebook-f
-          - url: https://nas.aqde.net:1980
+          - url: http://www.ahedu.cn/
             icon: fab fa-linkedin-in
 
 contact:
