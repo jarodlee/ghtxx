@@ -6,7 +6,7 @@ alt: Keep Exploring
 
 caption:
   title: 教学成果
-  subtitle: Graphic Design
+  subtitle: 在学习过程中，共同成长的师生
   thumbnail: /assets/img/pr3.gif
 ---
 高花亭小学历精图治，教学成果显著!

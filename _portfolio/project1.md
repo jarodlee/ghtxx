@@ -6,7 +6,7 @@ alt: Shirts on a hanger
 
 caption:
   title: 在研课题
-  subtitle: Illustration
+  subtitle: 我们一直在探索
   thumbnail: /assets/img/pr2.png
 ---
 高花亭小学所有教师 **不忘初心** 坚持教学与教研相辅相成，不断提高各学科研究能力与水平。
