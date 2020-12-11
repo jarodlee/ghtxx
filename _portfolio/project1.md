@@ -1,18 +1,18 @@
 ---
-title: Project Threads
+title: 课题研究
 subtitle: subtitle lorem ipsum dolor sit amet consectetur.
-image: https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-agency/master/src/assets/img/portfolio/01-full.jpg
+image: /assets/img/pr2.png
 alt: Shirts on a hanger
 
 caption:
-  title: Threads
+  title: 课题研究
   subtitle: Illustration
-  thumbnail: https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-agency/master/src/assets/img/portfolio/01-thumbnail.jpg
+  thumbnail: /assets/img/pr2.png
 ---
-Use this area to describe your project. **Markdown** supported. This entry (project1.md) uses links for the image sources. All other projects in the portfolio use local images. Both work just fine! Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+高花亭小学所有教师 **不忘初心** 坚持教学与教研相辅相成，不断提高各学科研究能力与水平。
 
 {:.list-inline}
-- Date: January 2017
-- Client: Threads
-- Category: Illustration
+- 省级课题: 2项
+- 市级课题: N项
+- 区级课题: X项
 

@@ -1,18 +1,18 @@
 ---
-title: Project Name
+title: 教学成果 
 subtitle: Lorem ipsum dolor sit amet consectetur.
-image: https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-agency/master/src/assets/img/portfolio/02-full.jpg
+image: /assets/img/pr3.gif
 alt: Keep Exploring
 
 caption:
-  title: Explore
+  title: 教学成果
   subtitle: Graphic Design
-  thumbnail: https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-agency/master/src/assets/img/portfolio/02-thumbnail.jpg
+  thumbnail: /assets/img/pr3.gif
 ---
-Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+高花亭小学历精图治，教学成果显著!
 
 {:.list-inline}
-- Date: January 2017
-- Client: Explore
-- Category: Graphic Design
+- 时间 : 2002-11
+- 学科: 信息技术
+- 赛事: 全国信息技术奥赛（NOIP）
 
