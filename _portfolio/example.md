@@ -2,12 +2,12 @@
 caption: #what displays in the portfolio grid:
   title: 学科教研
   subtitle: 各学科不断探索
-  thumbnail: https://place-hold.it/400x300
+  thumbnail: /assets/img/pr1.jpg
   
 #what displays when the item is clicked:
 title: 学科教研
 subtitle: 学习是学校最重要的工作，各学科结合自身优势，不断探索.
-image: https://place-hold.it/400x300 #main image, can be a link or a file in assets/img/portfolio
+image: /assets/img/pr1.jpg #main image, can be a link or a file in assets/img/portfolio
 alt: image alt text
 
 ---

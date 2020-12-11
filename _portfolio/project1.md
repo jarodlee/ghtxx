@@ -1,11 +1,11 @@
 ---
-title: 课题研究
+title: 在研课题
 subtitle: subtitle lorem ipsum dolor sit amet consectetur.
 image: /assets/img/pr2.png
 alt: Shirts on a hanger
 
 caption:
-  title: 课题研究
+  title: 在研课题
   subtitle: Illustration
   thumbnail: /assets/img/pr2.png
 ---
