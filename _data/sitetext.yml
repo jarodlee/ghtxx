@@ -77,17 +77,17 @@ clients:
     max-height: 100px
     horizontal-scrolling: "" #"yes/no"
     list:
-      - title: "envato"
-        url: https://github.com/GHTxx2018/ghtxx
+      - title: "中国教育部"
+        url: http://www.moe.gov.cn/
         logo: assets/img/clients/envato.jpg
-      - title: "designmodo"
-        url: https://github.com/GHTxx2018/ghtxx
+      - title: "安徽教育厅"
+        url: http://jyt.ah.gov.cn/
         logo: assets/img/clients/designmodo.jpg
-      - title: "themeforest"
-        url: https://github.com/GHTxx2018/ghtxx
+      - title: "安庆教体局"
+        url: http://jtj.anqing.gov.cn/
         logo: assets/img/clients/themeforest.jpg
-      - title: "Creative Market"
-        url: https://github.com/GHTxx2018/ghtxx
+      - title: "区政务平台"
+        url: http://www.aqdg.com:8080/edoas2/oa.jsp
         logo: assets/img/clients/creative-market.jpg
 
 team:
