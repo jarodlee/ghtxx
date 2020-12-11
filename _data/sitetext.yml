@@ -133,7 +133,7 @@ contact:
     section: contact
 
 footer:
-    legal: "隐私条例""
+    legal: "Privacy Policy"
     social:
       - url: https://weibo.com/jarodlee
         icon: "fab fa-twitter"
