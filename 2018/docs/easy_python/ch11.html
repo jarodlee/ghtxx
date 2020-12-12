@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 面向对象的编程 / 简介 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第11章 面向对象的编程</th>
+<tr>
+<th width="20%" align="left"><a href="ch10s04.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">简介</span></th>
+<th align="right"><a href="ch11s02.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>第11章 面向对象的编程</h1>
+
+<p><strong>目录表</strong></p>
+<dl>
+<dt><a href="ch11.html#s01">简介</a></dt>
+<dt><a href="ch11s02.html">self</a></dt>
+<dt><a href="ch11s03.html">类</a></dt>
+<dd><a href="ch11s03.html#creating">创建一个类</a></dd>
+<dt><a href="ch11s04.html">对象的方法</a></dt>
+<dd><a href="ch11s04.html#using">使用对象的方法</a></dd>
+<dt><a href="ch11s05.html">__init__方法</a></dt>
+<dd><a href="ch11s05.html#using">使用__init__方法</a></dd>
+<dt><a href="ch11s06.html">类与对象的变量</a></dt>
+<dd><a href="ch11s06.html#using">使用类与对象的变量</a></dd>
+<dt><a href="ch11s07.html">继承</a></dt>
+<dd><a href="ch11s07.html#using">使用继承</a></dd>
+<dt><a href="ch11s08.html">概括</a></dt>
+</dl>
+
+<h1><a name="s01">简介</a></h1>
+<p>到目前为止，在我们的程序中，我们都是根据操作数据的函数或语句块来设计程序的。这被称为 <dfn>面向过程的</dfn> 编程。还有一种把数据和功能结合起来，用称为对象的东西包裹起来组织程序的方法。这种方法称为 <dfn>面向对象的</dfn> 编程理念。在大多数时候你可以使用过程性编程，但是有些时候当你想要编写大型程序或是寻求一个更加合适的解决方案的时候，你就得使用面向对象的编程技术。</p>
+<p>类和对象是面向对象编程的两个主要方面。<strong>类</strong>创建一个新类型，而<strong>对象</strong>这个类的 <dfn>实例</dfn> 。这类似于你有一个<code>int</code>类型的变量，这存储整数的变量是<code>int</code>类的实例（对象）。</p>
+
+<p class="notebox">
+<span class="boxtitle">给C/C++/Java/C#程序员的注释</span><br>
+注意，即便是整数也被作为对象（属于<code>int</code>类）。这和C++、Java（1.5版之前）把整数纯粹作为类型是不同的。通过<code>help(int)</code>了解更多这个类的详情。
+C#和Java 1.5程序员会熟悉这个概念，因为它类似与 <dfn>封装与解封装</dfn> 的概念。
+</p>
+
+<p>对象可以使用普通的 <dfn>属于</dfn> 对象的变量存储数据。属于一个对象或类的变量被称为<strong>域</strong>。对象也可以使用 <dfn>属于</dfn> 类的函数来具有功能。这样的函数被称为类的<strong>方法</strong>。这些术语帮助我们把它们与孤立的函数和变量区分开来。域和方法可以合称为类的<strong>属性</strong>。</p>
+<p>域有两种类型——属于每个实例/类的对象或属于类本身。它们分别被称为<strong>实例变量</strong>和<strong>类变量</strong>。</p>
+<p>类使用<code>class</code>关键字创建。类的域和方法被列在一个缩进块中。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch10s04.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch11.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch11s02.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">概括</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">self</th>
+</tr>
+</table>
+
+</body>
+</html>

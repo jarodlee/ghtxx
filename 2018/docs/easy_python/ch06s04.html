@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 控制流 / for循环 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第6章 控制流</th>
+<tr>
+<th width="20%" align="left"><a href="ch06s03.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">for循环</span></th>
+<th align="right"><a href="ch06s05.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>for循环</h1>
+<p><code>for..in</code>是另外一个循环语句，它在一序列的对象上 <dfn>递归</dfn> 即逐一使用队列中的每个项目。我们会在后面的章节中更加详细地学习<a href="ch09s05.html">序列</a>。</p>
+
+<h2><a name="using">使用for语句</a></h2>
+<p class="exampletitle"><a name="e63">例6.3 使用for语句</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: for.py</code><br>
+<br>
+<code class="key">for </code><code>i </code><code class="key">in </code><code class="func">range</code><code>(</code><code class="func">1</code><code>, </code><code class="func">5</code><code>):</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;print </code><code>i</code><br>
+<code class="key">else</code><code>:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'The for loop is over'</code>
+</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python for.py<br>
+1<br>
+2<br>
+3<br>
+4<br>
+The for loop is over
+</code></p>
+
+<h2>它如何工作</h2>
+<p>在这个程序中，我们打印了一个 <dfn>序列</dfn> 的数。我们使用内建的<code>range</code>函数生成这个数的序列。</p>
+<p>我们所做的只是提供两个数，<code>range</code>返回一个序列的数。这个序列从第一个数开始到第二个数为止。例如，<code>range(1,5)</code>给出序列<code>[1, 2, 3, 4]</code>。默认地，<code>range</code>的步长为1。如果我们为<code>range</code>提供第三个数，那么它将成为步长。例如，<code>range(1,5,2)</code>给出<code>[1,3]</code>。记住，range <dfn>向上</dfn> 延伸到第二个数，即它<strong>不</strong>包含第二个数。</p>
+<p><code>for</code>循环在这个范围内递归——<code>for i in range(1,5)</code>等价于<code>for i in [1, 2, 3, 4]</code>，这就如同把序列中的每个数（或对象）赋值给i，一次一个，然后以每个<code>i</code>的值执行这个程序块。在这个例子中，我们只是打印i的值。</p>
+<p>记住，<code>else</code>部分是可选的。如果包含else，它总是在<code>for</code>循环结束后执行一次，除非遇到<a href="ch06s05.html">break</a>语句。</p>
+<p>记住，<code>for..in</code>循环对于任何序列都适用。这里我们使用的是一个由内建<code>range</code>函数生成的数的列表，但是广义说来我们可以使用任何种类的由任何对象组成的序列！我们会在后面的章节中详细探索这个观点。</p>
+
+<p class="notebox">
+<span class="boxtitle">给C/C++/Java/C#程序员的注释</span><br>
+Python的<code>for</code>循环从根本上不同于C/C++的<code>for</code>循环。C#程序员会注意到Python的<code>for</code>循环与C#中的<code>foreach</code>循环十分类似。Java程序员会注意到它与Java 1.5中的<code>for (int i : IntArray)</code>相似。<br>
+在C/C++中，如果你想要写<code>for (int i = 0; i < 5; i++)</code>，那么用Python，你写成<code>for i in range(0,5)</code>。你会注意到，Python的<code>for</code>循环更加简单、明白、不易出错。
+</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch06s03.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch06.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch06s05.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">while语句</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">break语句</th>
+</tr>
+</table>
+
+</body>
+</html>

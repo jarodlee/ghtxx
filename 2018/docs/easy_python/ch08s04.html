@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 模块 / 模块的__name__ </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第8章 模块</th>
+<tr>
+<th width="20%" align="left"><a href="ch08s03.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">模块的__name__</span></th>
+<th align="right"><a href="ch08s05.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>模块的__name__</h1>
+<p>每个模块都有一个名称，在模块中可以通过语句来找出模块的名称。这在一个场合特别有用——就如前面所提到的，当一个模块被第一次输入的时候，这个模块的主块将被运行。假如我们只想在程序本身被使用的时候运行主块，而在它被别的模块输入的时候不运行主块，我们该怎么做呢？这可以通过模块的__name__属性完成。</p>
+
+<h2><a name="using">使用模块的__name__</a></h2>
+<p class="exampletitle"><a name="e82">例8.2 使用模块的__name__</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: using_name.py</code><br>
+<br>
+<code class="key">if </code><code>__name__ == </code><code class="cite">'__main__'</code><code>:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'This program is being run by itself'</code><br>
+<code class="key">else</code><code>:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'I am being imported from another module'</code>
+</p>
+<p>（源文件：<a href="code/using_name.py">code/using_name.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python using_name.py<br>
+This program is being run by itself<br>
+<br>
+$ python<br>
+&gt;&gt;&gt; import using_name<br>
+I am being imported from another module<br>
+&gt;&gt;&gt;
+</code></p>
+
+<h2>它如何工作</h2>
+<p>每个Python模块都有它的<code>__name__</code>，如果它是<code>'__main__'</code>，这说明这个模块被用户单独运行，我们可以进行相应的恰当操作。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch08s03.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch08.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch08s05.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">from..import语句</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">制造你自己的模块</th>
+</tr>
+</table>
+
+</body>
+</html>

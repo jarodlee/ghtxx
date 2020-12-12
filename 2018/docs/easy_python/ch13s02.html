@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 异常 / try..except </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第13章 异常</th>
+<tr>
+<th width="20%" align="left"><a href="ch13.html#s01">上一页</a></th>
+<th width="60%" align="center"><span class="header2">try..except</span></th>
+<th align="right"><a href="ch13s03.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>try..except</h1>
+<p>我们<strong>尝试</strong>读取用户的一段输入。按<strong>Ctrl-d</strong>，看一下会发生什么。</p>
+<p class="codebox"><code>
+&gt;&gt;&gt; s = raw_input('Enter something --&gt; ')<br>
+Enter something --&gt; Traceback (most recent call last):<br>
+&nbsp;&nbsp;File "&lt;stdin&gt;", line 1, in ?<br>
+EOFError
+</code></p>
+
+<p>Python引发了一个称为<code>EOFError</code>的错误，这个错误基本上意味着它发现一个不期望的 <dfn>文件尾</dfn> （由<strong>Ctrl-d</strong>表示）</p>
+<p>接下来，我们将学习如何处理这样的错误。</p>
+
+<h2><a name="handling">处理异常</a></h2>
+<p>我们可以使用<code>try..except</code>语句来处理异常。我们把通常的语句放在try-块中，而把我们的错误处理语句放在except-块中。</p>
+<p class="exampletitle"><a name="e131">例13.1 处理异常</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: try_except.py</code><br>
+<br>
+<code class="key">import </code><code class="func">sys</code><br>
+<br>
+<code class="key">try</code><code>:</code><br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;s = </code><code class="func">raw_input</code><code>(</code><code class="cite">'Enter something --> '</code><code>)</code><br>
+<code class="key">except </code><code>EOFError:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'\nWhy did you do an EOF on me?'</code><br>
+<code class="func">&nbsp;&nbsp;&nbsp;&nbsp;sys</code><code>.exit() </code><code class="comment"># exit the program</code><br>
+<code class="key">except</code><code>:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'\nSome error/exception occurred.'</code><br>
+<code class="comment">&nbsp;&nbsp;&nbsp;&nbsp;# here, we are not exiting the program</code><br>
+<br>
+<code class="key">print </code><code class="cite">'Done'</code>
+</p>
+<p>（源文件：<a href="code/try_except.py">code/try_except.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python try_except.py<br>
+Enter something --&gt;<br>
+Why did you do an EOF on me?<br>
+<br>
+$ python try_except.py<br>
+Enter something --&gt; Python is exceptional!<br>
+Done<br>
+</code></p>
+
+<h2>它如何工作</h2>
+<p>我们把所有可能引发错误的语句放在<code>try</code>块中，然后在<code>except</code>从句/块中处理所有的错误和异常。<code>except</code>从句可以专门处理单一的错误或异常，或者一组包括在圆括号内的错误/异常。如果没有给出错误或异常的名称，它会处理 <dfn>所有的</dfn> 错误和异常。对于每个<code>try</code>从句，至少都有一个相关联的<code>except</code>从句。</p>
+<p>如果某个错误或异常没有被处理，默认的Python处理器就会被调用。它会终止程序的运行，并且打印一个消息，我们已经看到了这样的处理。</p>
+<p>你还可以让<code>try..catch</code>块关联上一个<code>else</code>从句。当没有异常发生的时候，<code>else</code>从句将被执行。</p>
+<p>我们还可以得到异常对象，从而获取更多有个这个异常的信息。这会在下一个例子中说明。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch13.html#s01">上一页</a></th>
+<th width="60%" align="center"><a href="ch13.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch13s03.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">错误</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">引发异常</th>
+</tr>
+</table>
+
+</body>
+</html>

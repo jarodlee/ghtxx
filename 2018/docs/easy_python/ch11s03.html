@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 面向对象的编程 / 类 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第11章 面向对象的编程</th>
+<tr>
+<th width="20%" align="left"><a href="ch11s02.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">类</span></th>
+<th align="right"><a href="ch11s04.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>类</h1>
+<p>一个尽可能简单的类如下面这个例子所示。</p>
+
+<h2><a name="creating">创建一个类</a></h2>
+<p class="exampletitle"><a name="e111">例11.1 创建一个类</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: simplestclass.py</code><br>
+<br>
+<code class="key">class </code><code class="func">Person</code><code>:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;pass </code><code class="comment"># An empty block</code><br>
+<br>
+<code>p = Person()</code><br>
+<code class="key">print </code><code>p</code>
+</p>
+<p>（源文件：<a href="code/simplestclass.py">code/simplestclass.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python simplestclass.py<br>
+&lt;__main__.Person instance at 0xf6fcb18c&gt;
+</code></p>
+
+<h2>它如何工作</h2>
+<p>我们使用<code>class</code>语句后跟类名，创建了一个新的类。这后面跟着一个缩进的语句块形成类体。在这个例子中，我们使用了一个空白块，它由<code>pass</code>语句表示。</p>
+<p>接下来，我们使用类名后跟一对圆括号来创建一个对象/实例。（我们将在下面的章节中学习<a href="ch11s05.html">更多的如何创建实例的方法</a>）。为了验证，我们简单地打印了这个变量的类型。它告诉我们我们已经在<code>__main__</code>模块中有了一个<code>Person</code>类的实例。</p>
+<p>可以注意到存储对象的计算机内存地址也打印了出来。这个地址在你的计算机上会是另外一个值，因为Python可以在任何空位存储对象。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch11s02.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch11.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch11s04.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">self</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">对象的方法</th>
+</tr>
+</table>
+
+</body>
+</html>

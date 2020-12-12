@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 函数 / return语句 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第7章 函数</th>
+<tr>
+<th width="20%" align="left"><a href="ch07s05.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">return语句</span></th>
+<th align="right"><a href="ch07s07.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>return语句</h1>
+<p><code>return</code>语句用来从一个函数 <dfn>返回</dfn> 即跳出函数。我们也可选从函数 <dfn>返回一个值</dfn> 。</p>
+
+<h2><a name="using">使用字面意义上的语句</a></h2>
+<p class="exampletitle"><a name="e77">例7.7 使用字面意义上的语句</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: func_return.py</code><br>
+<br>
+<code class="key">def </code><code class="func">maximum</code><code>(x, y):</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;if </code><code>x > y:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return </code><code>x</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;else</code><code>:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return </code><code>y</code><br>
+<br>
+<code class="key">print </code><code>maximum(</code><code class="cite">2</code><code>, </code><code class="cite">3</code><code>)</code>
+</p>
+<p>（源文件：<a href="code/func_return.py">code/func_return.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python func_return.py<br>
+3
+</code></p>
+
+<h2>它如何工作</h2>
+<p><code>maximum</code>函数返回参数中的最大值，在这里是提供给函数的数。它使用简单的<code>if..else</code>语句来找出较大的值，然后 <dfn>返回</dfn> 那个值。</p>
+<p>注意，没有返回值的<code>return</code>语句等价于<code>return None</code>。<code>None</code>是Python中表示没有任何东西的特殊类型。例如，如果一个变量的值为<code>None</code>，可以表示它没有值。</p>
+<p>除非你提供你自己的<code>return</code>语句，每个函数都在结尾暗含有<code>return None</code>语句。通过运行<code>print someFunction()</code>，你可以明白这一点，函数<code>someFunction</code>没有使用<code>return</code>语句，如同：</p>
+<p class="filebox">
+<code class="key">def </code><code class="func">someFunction</code><code>():</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;pass</code>
+</p>
+
+<p><code>pass</code>语句在Python中表示一个空的语句块。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch07s05.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch07.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch07s07.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">关键参数</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">DocStrings</th>
+</tr>
+</table>
+
+</body>
+</html>

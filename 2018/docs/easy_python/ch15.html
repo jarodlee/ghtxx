@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+/*@import url(stylesheet/box.css);*/
+-->
+</style>
+<title>简明 Python 教程 / 更多Python的内容 / 特殊的方法 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第15章 更多Python的内容</th>
+<tr>
+<th width="20%" align="left"><a href="ch14s04.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">特殊的方法</span></th>
+<th align="right"><a href="ch15s02.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>第15章 更多Python的内容</h1>
+
+<p><strong>目录表</strong></p>
+<dl>
+<dt><a href="ch15.html#s01">特殊的方法</a></dt>
+<dt><a href="ch15s02.html">单语句块</a></dt>
+<dt><a href="ch15s03.html">列表综合</a></dt>
+<dd><a href="ch15s03.html#using">使用列表综合</a></dd>
+<dt><a href="ch15s04.html">在函数中接收元组和列表</a></dt>
+<dt><a href="ch15s05.html">lambda形式</a></dt>
+<dd><a href="ch15s05.html#using">使用lambda形式</a></dd>
+<dt><a href="ch15s06.html">exec和eval语句</a></dt>
+<dt><a href="ch15s07.html">assert语句</a></dt>
+<dt><a href="ch15s08.html">repr函数</a></dt>
+<dt><a href="ch15s09.html">概括</a></dt>
+</dl>
+
+<p>到目前为止，我们已经学习了绝大多数常用的Python知识。在这一章中，我们将要学习另外一些方面的Python知识，从而使我们对Python的了解更加 <dfn>完整</dfn> 。</p>
+
+<h1><a name="s01">特殊的方法</a></h1>
+<p>在类中有一些特殊的方法具有特殊的意义，比如<code>__init__</code>和<code>__del__</code>方法，它们的重要性我们已经学习过了。</p>
+<p>一般说来，特殊的方法都被用来模仿某个行为。例如，如果你想要为你的类使用<code>x[key]</code>这样的索引操作（就像列表和元组一样），那么你只需要实现<code>__getitem__()</code>方法就可以了。想一下，Python就是对<code>list</code>类这样做的！</p>
+<p>下面这个表中列出了一些有用的特殊方法。如果你想要知道所有的特殊方法，你可以在《Python参考手册》中找到一个庞大的列表。</p>
+
+<p class="exampletitle"><a name="t151">表15.1 一些特殊的方法</a></p>
+<table width="95%" border="1">
+<tr>
+<th width="20%" align="center">名称</th>
+<th width="80%" align="center">说明</th>
+</tr>
+<tr>
+<td>__init__(self,...)</td>
+<td>这个方法在新建对象恰好要被返回使用之前被调用。</td>
+</tr>
+<tr>
+<td>__del__(self)</td>
+<td>恰好在对象要被删除之前调用。</td>
+</tr>
+<tr>
+<td>__str__(self)</td>
+<td>在我们对对象使用<code>print</code>语句或是使用<code>str()</code>的时候调用。</td>
+</tr>
+<tr>
+<td>__lt__(self,other)</td>
+<td>当使用 <dfn>小于</dfn> 运算符（&lt;）的时候调用。类似地，对于所有的运算符（+，&gt;等等）都有特殊的方法。</td>
+</tr>
+<tr>
+<td>__getitem__(self,key)</td>
+<td>使用<code>x[key]</code>索引操作符的时候调用。</td>
+</tr>
+<tr>
+<td>__len__(self)</td>
+<td>对序列对象使用内建的<code>len()</code>函数的时候调用。</td>
+</tr>
+</table>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch14s04.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch15.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch15s02.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">概括</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">单语句块</th>
+</tr>
+</table>
+
+</body>
+</html>

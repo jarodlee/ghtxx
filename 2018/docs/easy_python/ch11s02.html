@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 面向对象的编程 / self </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第11章 面向对象的编程</th>
+<tr>
+<th width="20%" align="left"><a href="ch11.html#s01">上一页</a></th>
+<th width="60%" align="center"><span class="header2">self</span></th>
+<th align="right"><a href="ch11s03.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>self</h1>
+<p>类的方法与普通的函数只有一个特别的区别——它们必须有一个额外的第一个参数名称，但是在调用这个方法的时候你<strong>不</strong>为这个参数赋值，Python会提供这个值。这个特别的变量指对象本身，按照惯例它的名称是<code>self</code>。</p>
+<p>虽然你可以给这个参数任何名称，但是 <dfn>强烈建议</dfn> 你使用<code>self</code>这个名称——其他名称都是不赞成你使用的。使用一个标准的名称有很多优点——你的程序读者可以迅速识别它，如果使用<code>self</code>的话，还有些IDE（集成开发环境）也可以帮助你。</p>
+
+<p class="notebox">
+<span class="boxtitle">给C++/Java/C#程序员的注释</span><br>
+Python中的<code>self</code>等价于C++中的<code>self</code>指针和Java、C#中的<code>this</code>参考。
+</p>
+
+<p>你一定很奇怪Python如何给<code>self</code>赋值以及为何你不需要给它赋值。举一个例子会使此变得清晰。假如你有一个类称为<code>MyClass</code>和这个类的一个实例<code>MyObject</code>。当你调用这个对象的方法<code>MyObject.method(arg1, arg2)</code>的时候，这会由Python自动转为<code>MyClass.method(MyObject, arg1, arg2)</code>——这就是<code>self</code>的原理了。</p>
+<p>这也意味着如果你有一个不需要参数的方法，你还是得给这个方法定义一个<code>self</code>参数。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch11.html#s01">上一页</a></th>
+<th width="60%" align="center"><a href="ch11.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch11s03.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">简介</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">类</th>
+</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 数据结构 / 字典 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第9章 数据结构</th>
+<tr>
+<th width="20%" align="left"><a href="ch09s03.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">字典</span></th>
+<th align="right"><a href="ch09s05.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>字典</h1>
+<p>字典类似于你通过联系人名字查找地址和联系人详细情况的地址簿，即，我们把<strong>键</strong>（名字）和<strong>值</strong>（详细情况）联系在一起。注意，键必须是唯一的，就像如果有两个人恰巧同名的话，你无法找到正确的信息。</p>
+<p>注意，你只能使用不可变的对象（比如字符串）来作为字典的键，但是你可以不可变或可变的对象作为字典的值。基本说来就是，你应该只使用简单的对象作为键。</p>
+<p>键值对在字典中以这样的方式标记：<code>d = {key1 : value1, key2 : value2 }</code>。注意它们的键/值对用冒号分割，而各个对用逗号分割，所有这些都包括在花括号中。</p>
+<p>记住字典中的键/值对是没有顺序的。如果你想要一个特定的顺序，那么你应该在使用前自己对它们排序。</p>
+<p>字典是<code>dict</code>类的实例/对象。</p>
+
+<h2><a name="using">使用字典</a></h2>
+<p class="exampletitle"><a name="e94">例9.4 使用字典</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: using_dict.py<br>
+<br>
+# 'ab' is short for 'a'ddress'b'ook</code><br>
+<br>
+<code>ab = {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cite">'Swaroop'&nbsp;&nbsp;&nbsp;</code><code>: </code><code class="cite">'swaroopch@byteofpython.info'</code><code>,</code><br>
+<code class="cite">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Larry'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>: </code><code class="cite">'larry@wall.org'</code><code>,</code><br>
+<code class="cite">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Matsumoto'&nbsp;</code><code>: </code><code class="cite">'matz@ruby-lang.org'</code><code>,</code><br>
+<code class="cite">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Spammer'&nbsp;&nbsp;&nbsp;</code><code>: </code><code class="cite">'spammer@hotmail.com'</code><br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code><br>
+<br>
+<code class="key">print </code><code class="cite">"Swaroop's address is %s" </code><code>% ab[</code><code class="cite">'Swaroop'</code><code>]</code><br>
+<br>
+<code class="comment"># Adding a key/value pair</code><br>
+<code>ab[</code><code class="cite">'Guido'</code><code>] = </code><code class="cite">'guido@python.org'</code><br>
+<br>
+<code class="comment"># Deleting a key/value pair</code><br>
+<code class="key">del </code><code>ab[</code><code class="cite">'Spammer'</code><code>]</code><br>
+<br>
+<code class="key">print </code><code class="cite">'\nThere are %d contacts in the address-book\n' </code><code>% </code><code class="func">len</code><code>(ab)</code><br>
+<code class="key">for </code><code>name, address </code><code class="key">in </code><code>ab.items():</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'Contact %s at %s' </code><code>% (name, address)</code><br>
+<br>
+<code class="key">if </code><code class="cite">'Guido' </code><code class="key">in </code><code>ab: </code><code class="comment"># OR ab.has_key('Guido')</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">"\nGuido's address is %s" </code><code>% ab[</code><code class="cite">'Guido'</code><code>]</code>
+</p>
+<p>（源文件：<a href="code/using_dict.py">code/using_dict.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python using_dict.py<br>
+Swaroop's address is swaroopch@byteofpython.info<br>
+<br>
+There are 4 contacts in the address-book<br>
+<br>
+Contact Swaroop at swaroopch@byteofpython.info<br>
+Contact Matsumoto at matz@ruby-lang.org<br>
+Contact Larry at larry@wall.org<br>
+Contact Guido at guido@python.org<br>
+<br>
+Guido's address is guido@python.org
+</code></p>
+
+<h2>它如何工作</h2>
+<p>我们使用已经介绍过的标记创建了字典<code>ab</code>。然后我们使用在列表和元组章节中已经讨论过的索引操作符来指定键，从而使用键/值对。我们可以看到字典的语法同样十分简单。</p>
+<p>我们可以使用索引操作符来寻址一个键并为它赋值，这样就增加了一个新的键/值对，就像在上面的例子中我们对Guido所做的一样。</p>
+<p>我们可以使用我们的老朋友——<code>del</code>语句来删除键/值对。我们只需要指明字典和用索引操作符指明要删除的键，然后把它们传递给<code>del</code>语句就可以了。执行这个操作的时候，我们无需知道那个键所对应的值。</p>
+<p>接下来，我们使用字典的<code>items</code>方法，来使用字典中的每个键/值对。这会返回一个元组的列表，其中每个元组都包含一对项目——键与对应的值。我们抓取这个对，然后分别赋给<code>for..in</code>循环中的变量<code>name</code>和<code>address</code>然后在for－块中打印这些值。</p>
+<p>我们可以使用<code>in</code>操作符来检验一个键/值对是否存在，或者使用<code>dict</code>类的<code>has_key</code>方法。你可以使用<code>help(dict)</code>来查看<code>dict</code>类的完整方法列表。</p>
+<p><strong>关键字参数与字典。</strong>如果换一个角度看待你在函数中使用的关键字参数的话，你已经使用了字典了！只需想一下——你在函数定义的参数列表中使用的键/值对。当你在函数中使用变量的时候，它只不过是使用一个字典的键（这在编译器设计的术语中被称作 <dfn>符号表</dfn> ）。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch09s03.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch09.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch09s05.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">元组</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">序列</th>
+</tr>
+</table>
+
+</body>
+</html>
