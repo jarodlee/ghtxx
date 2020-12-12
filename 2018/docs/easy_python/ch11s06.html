@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 面向对象的编程 / 类与对象的方法 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第11章 面向对象的编程</th>
+<tr>
+<th width="20%" align="left"><a href="ch11s05.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">类与对象的方法</span></th>
+<th align="right"><a href="ch11s07.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>类与对象的方法</h1>
+<p>我们已经讨论了类与对象的功能部分，现在我们来看一下它的数据部分。事实上，它们只是与类和对象的<strong>名称空间</strong> <dfn>绑定</dfn> 的普通变量，即这些名称只在这些类与对象的前提下有效。</p>
+<p>有两种类型的 <dfn>域</dfn> ——类的变量和对象的变量，它们根据是类还是对象 <dfn>拥有</dfn> 这个变量而区分。</p>
+<p><dfn>类的变量</dfn> 由一个类的所有对象（实例）共享使用。只有一个类变量的拷贝，所以当某个对象对类的变量做了改动的时候，这个改动会反映到所有其他的实例上。</p>
+<p><dfn>对象的变量</dfn> 由类的每个对象/实例拥有。因此每个对象有自己对这个域的一份拷贝，即它们不是共享的，在同一个类的不同实例中，虽然对象的变量有相同的名称，但是是互不相关的。通过一个例子会使这个易于理解。</p>
+
+<h2><a name="using">使用类与对象的变量</a></h2>
+<p class="exampletitle"><a name="e114">例11.4 使用类与对象的变量</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: objvar.py</code><br>
+<br>
+<code class="key">class </code><code class="func">Person</code><code>:</code><br>
+<code class="cite">&nbsp;&nbsp;&nbsp;&nbsp;'''Represents a person.'''</code><br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;population = </code><code class="cite">0</code><br>
+<br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;def </code><code class="func">__init__</code><code>(self, name):</code><br>
+<code class="cite">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''Initializes the person's data.'''</code><br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.name = name</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'(Initializing %s)' </code><code>% self.name</code><br>
+<br>
+<code class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# When this person is created, he/she<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# adds to the population</code><br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Person.population += </code><code class="cite">1</code><br>
+<br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;def </code><code class="func">__del__</code><code>(self):</code><br>
+<code class="cite">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''I am dying.'''</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'%s says bye.' </code><code>% self.name</code><br>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Person.population -= </code><code class="cite">1</code><br>
+<br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if </code><code>Person.population == </code><code class="cite">0</code><code>:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'I am the last one.'</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else</code><code>:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'There are still %d people left.' </code><code>% Person.population</code><br>
+<br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;def </code><code class="func">sayHi</code><code>(self):</code><br>
+<code class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''Greeting by the person.<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Really, that's all it does.'''</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'Hi, my name is %s.' </code><code>% self.name</code><br>
+<br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;def </code><code class="func">howMany</code><code>(self):</code><br>
+<code class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''Prints the current population.'''</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if </code><code>Person.population == </code><code class="cite">1</code><code>:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'I am the only person here.'</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else</code><code>:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'We have %d persons here.' </code><code>% Person.population</code><br>
+<br>
+<code>swaroop = Person(</code><code class="cite">'Swaroop'</code><code>)<br>
+swaroop.sayHi()<br>
+swaroop.howMany()<br>
+<br>
+kalam = Person(</code><code class="cite">'Abdul Kalam'</code><code>)<br>
+kalam.sayHi()<br>
+kalam.howMany()<br>
+<br>
+swaroop.sayHi()<br>
+swaroop.howMany()</code>
+</p>
+<p>（源文件：<a href="code/objvar.py">code/objvar.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python objvar.py<br>
+(Initializing Swaroop)<br>
+Hi, my name is Swaroop.<br>
+I am the only person here.<br>
+(Initializing Abdul Kalam)<br>
+Hi, my name is Abdul Kalam.<br>
+We have 2 persons here.<br>
+Hi, my name is Swaroop.<br>
+We have 2 persons here.<br>
+Abdul Kalam says bye.<br>
+There are still 1 people left.<br>
+Swaroop says bye.<br>
+I am the last one.
+</code></p>
+
+<h2>它如何工作</h2>
+<p>这是一个很长的例子，但是它有助于说明类与对象的变量的本质。这里，<code>population</code>属于<code>Person</code>类，因此是一个类的变量。<code>name</code>变量属于对象（它使用<code>self</code>赋值）因此是对象的变量。</p>
+<p>观察可以发现<code>__init__</code>方法用一个名字来初始化<code>Person</code>实例。在这个方法中，我们让<code>population</code>增加<code>1</code>，这是因为我们增加了一个人。同样可以发现，<code>self.name</code>的值根据每个对象指定，这表明了它作为对象的变量的本质。</p>
+<p>记住，你<strong>只</strong>能使用<code>self</code>变量来参考同一个对象的变量和方法。这被称为 <dfn>属性参考</dfn> 。</p>
+<p>在这个程序中，我们还看到<strong>docstring</strong>对于类和方法同样有用。我们可以在运行时使用<code>Person.__doc__</code>和<code>Person.sayHi.__doc__</code>来分别访问类与方法的文档字符串。</p>
+<p>就如同<code>__init__</code>方法一样，还有一个特殊的方法<code>__del__</code>，它在对象消逝的时候被调用。对象消逝即对象不再被使用，它所占用的内存将返回给系统作它用。在这个方法里面，我们只是简单地把<code>Person.population</code>减<code>1</code>。</p>
+<p>当对象不再被使用时，<code>__del__</code>方法运行，但是很难保证这个方法究竟在 <dfn>什么时候</dfn> 运行。如果你想要指明它的运行，你就得使用<code>del</code>语句，就如同我们在以前的例子中使用的那样。</p>
+
+<p class="notebox">
+<span class="boxtitle">给C++/Java/C#程序员的注释</span><br>
+Python中所有的类成员（包括数据成员）都是 <dfn>公共的</dfn> ，所有的方法都是 <dfn>有效的</dfn> 。<br>
+只有一个例外：如果你使用的数据成员名称以 <dfn>双下划线前缀</dfn> 比如<code>__privatevar</code>，Python的名称管理体系会有效地把它作为私有变量。<br>
+这样就有一个惯例，如果某个变量只想在类或对象中使用，就应该以单下划线前缀。而其他的名称都将作为公共的，可以被其他类/对象使用。记住这只是一个惯例，并不是Python所要求的（与双下划线前缀不同）。<br>
+同样，注意<code>__del__</code>方法与 <dfn>destructor</dfn> 的概念类似。
+</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch11s05.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch11.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch11s07.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">__init__方法</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">继承</th>
+</tr>
+</table>
+
+</body>
+</html>

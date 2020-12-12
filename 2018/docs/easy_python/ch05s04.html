@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 运算符与表达式 / 表达式 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第5章 运算符与表达式</th>
+<tr>
+<th width="20%" align="left"><a href="ch05s03.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">表达式</span></th>
+<th align="right"><a href="ch05s05.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>表达式</h1>
+<h2><a name="using">使用表达式</a></h2>
+
+<p class="exampletitle"><a name="e51">例5.1 使用表达式</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: expression.py</code><br>
+<br>
+<code>length = </code><code class="cite">5</code><br>
+<code>breadth = </code><code class="cite">2</code><br>
+<code>area = length * breadth</code><br>
+<code class="key">print </code><code class="cite">'Area is'</code><code>, area</code><br>
+<code class="key">print </code><code class="cite">'Perimeter is'</code><code>, </code>
+<code class="cite">2 </code><code>* (length + breadth)</code>
+</p>
+<p>（源文件：<a href="code/expression.py">code/expression.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python expression.py<br>
+Area is 10<br>
+Perimeter is 14
+</code></p>
+
+<h2>它如何工作</h2>
+<p>矩形的长度与宽度存储在以它们命名的变量中。我们借助表达式使用它们计算矩形的面积和边长。我们表达式<code>length * breadth</code>的结果存储在变量<code>area</code>中，然后用<code>print</code>语句打印。在另一个打印语句中，我们直接使用表达式<code>2 * (length + breadth)</code>的值。</p>
+<p>另外，注意Python如何打印“漂亮的”输出。尽管我们没有在<code>'Area is'</code>和变量<code>area</code>之间指定空格，Python自动在那里放了一个空格，这样我们就可以得到一个清晰漂亮的输出，而程序也变得更加易读（因为我们不需要担心输出之间的空格问题）。这是Python如何使程序员的生活变得更加轻松的一个例子。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="http://www.byteofpython.info/language/chinese/ch05s3.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch05.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch05s05.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">运算符优先级</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">概括</th>
+</tr>
+</table>
+
+</body>
+</html>

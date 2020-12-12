@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 异常 / 引发异常 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第13章 异常</th>
+<tr>
+<th width="20%" align="left"><a href="ch13s02.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">引发异常</span></th>
+<th align="right"><a href="ch13s04.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>引发异常</h1>
+
+<p>你可以使用<code>raise</code>语句 <dfn>引发</dfn> 异常。你还得指明错误/异常的名称和伴随异常 <dfn>触发的</dfn> 异常对象。你可以引发的错误或异常应该分别是一个<code>Error</code>或<code>Exception</code>类的直接或间接导出类。</p>
+
+<h2><a name="how">如何引发异常</a></h2>
+
+<p class="exampletitle"><a name="e132">例13.2 如何引发异常</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: raising.py</code><br>
+<br>
+<code class="key">class </code><code class="func">ShortInputException</code><code>(Exception):</code><br>
+<code class="cite">&nbsp;&nbsp;&nbsp;&nbsp;'''A user-defined exception class.'''</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;def </code><code class="func">__init__</code><code>(self, length, atleast):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exception.__init__(self)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.length = length<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.atleast = atleast</code><br>
+<br>
+<code class="key">try</code><code>:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;s = </code><code class="func">raw_input</code><code>(</code><code class="cite">'Enter something --> '</code><code>)</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;if </code><code class="func">len</code><code>(s) &lt; </code><code class="cite">3</code><code>:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;raise ShortInputException(</code><code class="func">len</code><code>(s), </code><code class="cite">3</code><code>)</code><br>
+<code class="comment">&nbsp;&nbsp;&nbsp;&nbsp;# Other work can continue as usual here</code><br>
+<code class="key">except </code><code>EOFError:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'\nWhy did you do an EOF on me?'</code><br>
+<code class="key">except </code><code>ShortInputException, x:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'ShortInputException: The input was of length %d, \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;was expecting at least %d' </code><code>% (x.length, x.atleast)</code><br>
+<code class="key">else</code><code>:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'No exception was raised.'
+</code>
+</p>
+<p>源文件（<a href="code/raising.py">code/raising.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python raising.py<br>
+Enter something --&gt;<br>
+Why did you do an EOF on me?<br>
+<br>
+$ python raising.py<br>
+Enter something --&gt; ab<br>
+ShortInputException: The input was of length 2, was expecting at least 3<br>
+<br>
+$ python raising.py<br>
+Enter something --&gt; abc<br>
+No exception was raised.
+</code></p>
+
+<h2>它如何工作</h2>
+<p>这里，我们创建了我们自己的异常类型，其实我们可以使用任何预定义的异常/错误。这个新的异常类型是<code>ShortInputException</code>类。它有两个域——<code>length</code>是给定输入的长度，<code>atleast</code>则是程序期望的最小长度。</p>
+<p>在<code>except</code>从句中，我们提供了错误类和用来表示错误/异常对象的变量。这与函数调用中的形参和实参概念类似。在这个特别的<code>except</code>从句中，我们使用异常对象的<code>length</code>和<code>atleast</code>域来为用户打印一个恰当的消息。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch13s02.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch13.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch13s04.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">try..except</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">try..finally</th>
+</tr>
+</table>
+
+</body>
+</html>

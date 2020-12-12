@@ -1,0 +1,18 @@
+nav:
+  - title: "教育理念"
+    section: services
+
+  - title: "教育特色"
+    section: portfolio
+
+  - title: "校史文化"
+    section: timeline
+
+  - title: "教育团队"
+    section: team
+
+  - title: "信息反馈"
+    section: contact
+
+  - title: "少儿编程"
+    url: /2018/program.html

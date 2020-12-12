@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 模块 / 制造你自己的模块 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第8章 模块</th>
+<tr>
+<th width="20%" align="left"><a href="ch08s04.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">制造你自己的模块</span></th>
+<th align="right"><a href="ch08s06.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>制造你自己的模块</h1>
+<p>创建你自己的模块是十分简单的，你一直在这样做！每个Python程序也是一个模块。你已经确保它具有<code>.py</code>扩展名了。下面这个例子将会使它更加清晰。</p>
+
+<h2><a name="creating">创建你自己的模块</a></h2>
+<p class="exampletitle"><a name="e83">例8.3 如何创建你自己的模块</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: mymodule.py</code><br>
+<br>
+<code class="key">def </code><code class="func">sayhi</code><code>():</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'Hi, this is mymodule speaking.'</code><br>
+<br>
+<code>version = </code><code class="cite">'0.1'</code><br>
+<br>
+<code class="comment"># End of mymodule.py</code>
+</p>
+<p>（源文件：<a href="code/mymodule.py">code/mymodule.py</a>）</p>
+
+<p>上面是一个 <dfn>模块</dfn> 的例子。你已经看到，它与我们普通的Python程序相比并没有什么特别之处。我们接下来将看看如何在我们别的Python程序中使用这个模块。</p>
+<p>记住这个模块应该被放置在我们输入它的程序的同一个目录中，或者在<code>sys.path</code>所列目录之一。</p>
+
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: mymodule_demo.py</code><br>
+<br>
+<code class="key">import </code><code>mymodule</code><br>
+<br>
+<code>mymodule.sayhi()</code><br>
+<code class="key">print </code><code class="cite">'Version'</code><code>, mymodule.version</code>
+</p>
+<p>（源文件：<a href="code/mymodule_demo.py">code/mymodule_demo.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python mymodule_demo.py<br>
+Hi, this is mymodule speaking.<br>
+Version 0.1
+</code></p>
+
+<h2>它如何工作</h2>
+<p>注意我们使用了相同的点号来使用模块的成员。Python很好地重用了相同的记号来，使我们这些Python程序员不需要不断地学习新的方法。</p>
+
+<h2><a name="from">from..import</a></h2>
+<p>下面是一个使用<code>from..import</code>语法的版本。</p>
+
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: mymodule_demo2.py</code><br>
+<br>
+<code class="key">from </code><code>mymodule </code><code class="key">import </code><code>sayhi, version</code><br>
+<code class="comment"># Alternative:<br>
+# from mymodule import *</code><br>
+<br>
+<code>sayhi()</code><br>
+<code class="key">print </code><code class="cite">'Version'</code><code>, version</code>
+</p>
+<p>（源文件：<a href="code/mymodule_demo2.py">code/mymodule_demo2.py</a>）</p>
+
+<p><code>mymodule_demo2.py</code>的输出与<code>mymodule_demo.py</code>完全相同。</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch08s04.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch08.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch08s06.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">模块的__name__</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">dir()函数</th>
+</tr>
+</table>
+
+</body>
+</html>

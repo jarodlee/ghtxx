@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+@import url(stylesheet/text.css);
+@import url(stylesheet/box.css);
+-->
+</style>
+<title>简明 Python 教程 / 控制流 / while语句 </title>
+</head>
+
+<body>
+<table width="100%">
+<tr>
+<th colspan="3" align="center"><span class="header">简明 Python 教程</span></th>
+</tr>
+<th colspan="3" align="center">第6章 控制流</th>
+<tr>
+<th width="20%" align="left"><a href="ch06s02.html">上一页</a></th>
+<th width="60%" align="center"><span class="header2">while语句</span></th>
+<th align="right"><a href="ch06s04.html">下一页</a></th>
+</tr>
+</table>
+
+<hr noshade>
+
+<h1>while语句</h1>
+<p>只要在一个条件为真的情况下，<code>while</code>语句允许你重复执行一块语句。<code>while</code>语句是所谓 <dfn>循环</dfn> 语句的一个例子。<code>while</code>语句有一个可选的<code>else</code>从句。</p>
+
+<h2><a name="using">使用while语句</a></h2>
+<p class="exampletitle"><a name="e62">例6.2 使用while语句</a></p>
+<p class="filebox">
+<code class="comment">#!/usr/bin/python<br>
+# Filename: while.py</code><br>
+<br>
+<code>number = </code><code class="cite">23</code><br>
+<code>running = </code><code class="func">True</code><br>
+<br>
+<code class="key">while </code><code>running:</code><br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;guess = </code><code class="func">int</code><code>(</code><code class="func">raw_input</code><code>(</code><code class="cite">'Enter an integer : '</code><code>))</code><br>
+<br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;if </code><code>guess == number:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'Congratulations, you guessed it.' </code><br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;running = </code><code class="func">False </code><code class="comment"># this causes the while loop to stop</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;elif </code><code>guess < number:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'No, it is a little higher than that' </code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;else</code><code>:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'No, it is a little lower than that' </code><br>
+<code class="key">else</code><code>:</code><br>
+<code class="key">&nbsp;&nbsp;&nbsp;&nbsp;print </code><code class="cite">'The while loop is over.'
+ </code><br>
+<code class="comment">&nbsp;&nbsp;&nbsp;&nbsp;# Do anything else you want to do here</code><br>
+<br>
+<code class="key">print </code><code class="cite">'Done'</code>
+</p>
+<p>（源文件：<a href="code/while.py">code/while.py</a>）</p>
+
+<h2>输出</h2>
+<p class="codebox"><code>
+$ python while.py<br>
+Enter an integer : 50<br>
+No, it is a little lower than that.<br>
+Enter an integer : 22<br>
+No, it is a little higher than that.<br>
+Enter an integer : 23<br>
+Congratulations, you guessed it.<br>
+The while loop is over.<br>
+Done
+</code></p>
+
+<h2>它如何工作</h2>
+<p>在这个程序中，我们仍然使用了猜数游戏作为例子，但是这个例子的优势在于用户可以不断的猜数，直到他猜对为止——这样就不需要像前面那个例子那样为每次猜测重复执行一遍程序。这个例子恰当地说明了<code>while</code>语句的使用。</p>
+<p>我们把<code>raw_input</code>和<code>if</code>语句移到了<code>while</code>循环内，并且在while循环开始前把<code>running</code>变量设置为<code>True</code>。首先，我们检验变量<code>running</code>是否为<code>True</code>，然后执行后面的 <dfn>while-块</dfn> 。在执行了这块程序之后，再次检验条件，在这个例子中，条件是<code>running</code>变量。如果它是真的，我们再次执行while-块，否则，我们继续执行可选的else-块，并接着执行下一个语句。</p>
+<p>当<code>while</code>循环条件变为<code>False</code>的时候，<code>else</code>块才被执行——这甚至也可能是在条件第一次被检验的时候。如果<code>while</code>循环有一个<code>else</code>从句，它将始终被执行，除非你的<code>while</code>循环将永远循环下去不会结束！</p>
+<p><code>True</code>和<code>False</code>被称为布尔类型。你可以分别把它们等效地理解为值<code>1</code>和<code>0</code>。在检验重要条件的时候，布尔类型十分重要，它们并不是真实的值<code>1</code>。</p>
+<p>else块事实上是多余的，因为你可以把其中的语句放在同一块（与<code>while</code>相同）中，跟在<code>while</code>语句之后，这样可以取得相同的效果。</p>
+
+<p class="notebox">
+<span class="boxtitle">给C/C++程序员的注释</span><br>
+记住，你可以在<code>while</code>循环中使用一个<code>else</code>从句。
+</p>
+
+<hr noshade>
+
+<table width="100%">
+<tr>
+<th width="20%" align="left"><a href="ch06s02.html">上一页</a></th>
+<th width="60%" align="center"><a href="ch06.html">上一级</a></th>
+<th width="20%" align="right"><a href="ch06s04.html">下一页</a></th>
+</tr>
+<tr>
+<th width="20%" align="left">if语句</th>
+<th width="60%" align="center"><a href="index.html">首页</a></th>
+<th align="right">for循环</th>
+</tr>
+</table>
+
+</body>
+</html>
