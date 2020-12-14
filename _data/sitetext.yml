@@ -104,7 +104,7 @@ team:
             icon: fab fa-twitter
           - url: http://www.ahedu.cn/eschool/index.php?m=School&c=Index&a=index&schoolId=2300000001000636340
             icon: fab fa-facebook-f
-          - url: http://www.ahedu.cn/
+          - url: https://mp.weixin.qq.com/
             icon: fab fa-linkedin-in
       - name: "综合组"
         role: "信息技术"
@@ -114,7 +114,7 @@ team:
             icon: fab fa-twitter
           - url: https://courses.geek-8.com/curriculum
             icon: fab fa-facebook-f
-          - url: http://www.ahedu.cn/
+          - url: https://mp.weixin.qq.com/
             icon: fab fa-linkedin-in
       - name: "数学组"
         role: "万物皆数字"
@@ -124,7 +124,7 @@ team:
             icon: fab fa-twitter
           - url: http://www.ahedu.cn/eschool/index.php?m=School&c=Index&a=index&schoolId=2300000001000636340
             icon: fab fa-facebook-f
-          - url: http://www.ahedu.cn/
+          - url: https://mp.weixin.qq.com/
             icon: fab fa-linkedin-in
 
 contact:
