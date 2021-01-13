@@ -14,7 +14,7 @@ caption:
 {:.list-inline}
 - 时间 : 2002-11
 - 学科: 信息技术
-- 赛事: [全国信息技术奥赛](http://oj.noi.cn)（NOIP）
+- 赛事: [在线扫雷赛](https://minesweeper.online/zh/)
 - [计算机考级](https://www.nct-test.com/)
 - [国家地理](https://www.natgeomedia.com/)
 - [全历史](https://www.allhistory.com/)
