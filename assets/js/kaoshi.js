@@ -1,0 +1,39 @@
+
+<div id="piaofu" style="position:absolute; z-index:9999; border:0px solid #ccc;">
+    <div style="text-align:right;">
+         <a href="javascript:void(0)" onclick="javascript:closePiaofu()" style="background-color: #A00;color:#fff; padding:0px 5px; text-decoration:none; font-size:12px;">[关闭]</a>
+    </div>
+    <a href="https://ks.wjx.top/vj/PGs4R4F.aspx" target="_blank" style="">
+        <img src="/images/kaoshi.png" border="0" width="200" height="100" />
+    </a>
+</div>
+
+<script>
+function closePiaofu(){
+    document.getElementById("piaofu").style.display = "none";
+}
+
+var x = 50,y = 160;
+var xin = true, yin = true;
+var step = 0.8;
+var delay = 10;
+var obj=document.getElementById("piaofu");
+function piaofu(){
+    var L=T=0;
+    var R = $(document).width()-obj.offsetWidth;
+    var B = $(window).height()-obj.offsetHeight;
+    $("#piaofu").css('left', function(){return x + $(document).scrollLeft();});
+    $("#piaofu").css('top', function(){return y + $(document).scrollTop();});
+    
+    x = x + step*(xin?1:-1)
+    if (x < L){ xin = true; x = L;}
+    if (x > R){ xin = false; x = R;}
+    y = y + step*(yin?1:-1);
+    if (y < T) { yin = true; y = T; }
+    if (y > B) { yin = false; y = B; }
+}
+var itl = setInterval("piaofu()", delay);    
+obj.onmouseover=function(){clearInterval(itl)}
+obj.onmouseout=function(){itl=setInterval("piaofu()", delay)}
+
+</script>
