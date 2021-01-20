@@ -11,7 +11,7 @@ caption:
 ---
 高花亭小学所有教师 **不忘初心** 坚持教学与教研相辅相成，不断提高各学科研究能力与水平。
 
-<script type='text/javascript' src='https://ks.wjx.top/handler/jqemed.ashx?activity=82363703&width=800&source=iframe&tm=1&sm=t'></script>
+<script type='text/javascript' src='https://ks.wjx.top/handler/jqemed.ashx?activity=105053593&width=800&source=iframe&tm=1&sm=t'></script>
 
 {:.list-inline}
 - 省级课题: 2项
