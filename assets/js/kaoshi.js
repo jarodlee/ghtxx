@@ -1,38 +1,14 @@
-<!DOCTYPE html>
-<html>
-
-  {% include head.html %}
-
-  <body id="page-top">
-
-      {{ content }}
-
-	  {% include footer.html %}
-
-	  <!-- Bootstrap core JavaScript -->
-	  <script src="assets/js/jquery.min.js"></script>
-	  <script src="assets/js/bootstrap.bundle.min.js"></script>
-
-	  <!-- Plugin JavaScript -->
-	  <script src="assets/js/jquery.easing.min.js"></script>
-
-	  <!-- Contact form JavaScript -->
-	  <script src="assets/js/jqBootstrapValidation.js"></script>
-	  <script src="assets/js/contact_me.js"></script>
-
-	  <!-- Custom scripts for this template -->
-	  <script src="assets/js/agency.min.js"></script>
 
 <div id="piaofu" style="position:absolute; z-index:9999; border:0px solid #ccc;">
     <div style="text-align:right;">
-               <!--<a href="javascript:void(0)" onclick="javascript:closePiaofu()" style="background-color: #A00;color:#fff; padding:0px 5px; text-decoration:none; font-size:12px;">[关闭]</a> -->
+         <a href="javascript:void(0)" onclick="javascript:closePiaofu()" style="background-color: #A00;color:#fff; padding:0px 5px; text-decoration:none; font-size:12px;">[关闭]</a>
     </div>
     <a href="https://ks.wjx.top/vj/PGs4R4F.aspx" target="_blank" style="">
-        <img src="images/kaoshi.png" border="0" width="200" height="100" />
+        <img src="/images/kaoshi.png" border="0" width="200" height="100" />
     </a>
 </div>
-<script>
 
+<script>
 function closePiaofu(){
     document.getElementById("piaofu").style.display = "none";
 }
@@ -61,6 +37,3 @@ obj.onmouseover=function(){clearInterval(itl)}
 obj.onmouseout=function(){itl=setInterval("piaofu()", delay)}
 
 </script>
-	  
-  </body>
-</html>
