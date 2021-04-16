@@ -1,8 +1,8 @@
 header:
     title: Welcome to our GHTxx!
     text:
-    button: 课题研究
-    buttonlink: "https://mp.weixin.qq.com/mp/homepage?__biz=MjM5NDQxNzgyMQ==&hid=2&sn=d7c6a18e6516f39e7dee5d0ceae49c08"
+    button: 校园新闻
+    buttonlink: "https://mp.weixin.qq.com/mp/homepage?__biz=MjM5NDQxNzgyMQ==&hid=1&sn=1cf155e43cf85892bd4d230b52d117f9"
 
 services:
     title: "教育理念"
@@ -100,31 +100,31 @@ team:
         role: "国学、语言、文字"
         image: assets/img/team/yuwen.jpg
         social:
-          - url: http://jtj.anqing.gov.cn/
+          - url: https://mp.weixin.qq.com/mp/homepage?__biz=MjM5NDQxNzgyMQ==&hid=2&sn=d7c6a18e6516f39e7dee5d0ceae49c08
             icon: fab fa-twitter
-          - url: http://www.ahedu.cn/eschool/index.php?m=School&c=Index&a=index&schoolId=2300000001000636340
+          - url: https://mp.weixin.qq.com/mp/homepage?__biz=MjM5NDQxNzgyMQ==&hid=2&sn=d7c6a18e6516f39e7dee5d0ceae49c08
             icon: fab fa-facebook-f
-          - url: https://mp.weixin.qq.com/
+          - url: https://mp.weixin.qq.com/mp/homepage?__biz=MjM5NDQxNzgyMQ==&hid=2&sn=d7c6a18e6516f39e7dee5d0ceae49c08
             icon: fab fa-linkedin-in
       - name: "综合组"
         role: "信息技术"
         image: assets/img/team/lxj.jpg
         social:
-          - url: https://weibo.com/jarodlee
+          - url: https://tv.cctv.com/live/cctvjilu
             icon: fab fa-twitter
           - url: https://tv.cctv.com/live/cctvjilu
             icon: fab fa-facebook-f
-          - url: https://mp.weixin.qq.com/
+          - url: https://tv.cctv.com/live/cctvjilu
             icon: fab fa-linkedin-in
       - name: "数学组"
         role: "万物皆数字"
         image: assets/img/team/shuxue.jpg
         social:
-          - url: http://jtj.anqing.gov.cn/
+          - url: http://www.ahedu.cn/eschool/index.php?m=School&c=Index&a=index&schoolId=2300000001000636340
             icon: fab fa-twitter
           - url: http://www.ahedu.cn/eschool/index.php?m=School&c=Index&a=index&schoolId=2300000001000636340
             icon: fab fa-facebook-f
-          - url: https://mp.weixin.qq.com/
+          - url: http://www.ahedu.cn/eschool/index.php?m=School&c=Index&a=index&schoolId=2300000001000636340
             icon: fab fa-linkedin-in
 
 contact:
