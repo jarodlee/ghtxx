@@ -35,7 +35,7 @@ timeline:
     events:
       - title: "创校阶段"
         year: "1985-1998"
-        desc: "1985年9月市教育委员会任命熊德芳同志为高花亭小学校长，主持学校工作，筹备学校成立事宜。1985年11月学校正式挂牌成立"
+        desc: "1985年9月市教育委员会筹备学校成立事宜，当年11月学校正式挂牌成立"
         image: assets/img/timeline/1.jpg
         alt:
       - title: "网校上线"
@@ -54,13 +54,13 @@ timeline:
         image: assets/img/timeline/4.jpg
         alt:
       - title: "开源版网校"
-        year: "2018-2020"
+        year: "2018-2024"
         desc: "[大道至简](/2018),随着移动互联网的兴起,学校网站全面转入github全球开源大潮,并采用HTML5与微信结合,让校园信息更快的与家长们互动"
         image: assets/img/timeline/5.jpg
         alt:
-      - title: "2021 Jekyll Start"
-        year: "2020 Dec."
-        desc: "[未来已来](/2020-jinsai.htm),未来可期!"
+      - title: "2024 GHTxx reStart"
+        year: "2024 Dec."
+        desc: "[未来已来](/2020-jinsai.htm),杨校长到校任职，未来可期!"
         image: assets/img/timeline/6.jpg
         alt:
         # you can enforce the aligment
@@ -87,7 +87,7 @@ clients:
         url: http://jtj.anqing.gov.cn/
         logo: assets/img/clients/themeforest.jpg
       - title: "区政务平台"
-        url: http://www.aqdg.com:8080/edoas2/oa.jsp
+        url: https://www.aqdgq.gov.cn/public/column/2000004001?type=4&action=list
         logo: assets/img/clients/creative-market.jpg
 
 team:
@@ -112,9 +112,9 @@ team:
         social:
           - url: https://tv.cctv.com/live/cctvjilu
             icon: fab fa-twitter
-          - url: https://tv.cctv.com/live/cctvjilu
+          - url: https://ghtxx.cn
             icon: fab fa-facebook-f
-          - url: https://tv.cctv.com/live/cctvjilu
+          - url: https://i.ghtxx.cn
             icon: fab fa-linkedin-in
       - name: "数学组"
         role: "万物皆数字"
