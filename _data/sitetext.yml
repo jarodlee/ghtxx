@@ -60,7 +60,7 @@ timeline:
         alt:
       - title: "2024 GHTxx reStart"
         year: "2024 Dec."
-        desc: "[未来已来](/2020-jinsai.htm),杨校长到校任职，未来可期!"
+        desc: "[未来已来](https://ghtxx.cn/),杨校长到校任职，未来可期!"
         image: assets/img/timeline/6.jpg
         alt:
         # you can enforce the aligment
@@ -100,11 +100,11 @@ team:
         role: "国学、语言、文字"
         image: assets/img/team/yuwen.jpg
         social:
-          - url: https://mp.weixin.qq.com/mp/homepage?__biz=MjM5NDQxNzgyMQ==&hid=2&sn=d7c6a18e6516f39e7dee5d0ceae49c08
+          - url: /2020-jinsai.htm
             icon: fab fa-twitter
-          - url: https://mp.weixin.qq.com/mp/homepage?__biz=MjM5NDQxNzgyMQ==&hid=2&sn=d7c6a18e6516f39e7dee5d0ceae49c08
+          - url: https://y.ghtxx.cn
             icon: fab fa-facebook-f
-          - url: https://mp.weixin.qq.com/mp/homepage?__biz=MjM5NDQxNzgyMQ==&hid=2&sn=d7c6a18e6516f39e7dee5d0ceae49c08
+          - url: https://192.168.110.5/
             icon: fab fa-linkedin-in
       - name: "综合组"
         role: "信息技术"
