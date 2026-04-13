@@ -12,7 +12,7 @@
 # in the templates via {{ site.myvariable }}.
 
 # theme: jekyll-agency    # 已移除：改用 remote_theme
-remote_theme: OWNER/REPO   # <-- 把 OWNER/REPO 替换为主题仓库，例如 "username/jekyll-agency"
+remote_theme: pages-themes/primer   # <- 已替换为有效远程主题（可改为你指定的 owner/repo）
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
