@@ -11,20 +11,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-theme: jekyll-agency
-
-url    : "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-
-title      : 高花亭小学
-email      : lxj@ghtxx.cn #this is also the email contact forms will go to
-description: "安庆市 高花亭 小学 官方网站"
-author     : GHTxx
-# logo:     #optional, defaults to site title
-  # path: assets\img\clients\creative-market.jpg
-  # height: 60 #height in px, defaults to 52px
-
+# theme: jekyll-agency    # 已移除：改用 remote_theme
+remote_theme: OWNER/REPO   # <-- 把 OWNER/REPO 替换为主题仓库，例如 "username/jekyll-agency"
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
 
 analytics:
